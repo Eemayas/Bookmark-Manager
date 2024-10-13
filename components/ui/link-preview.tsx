@@ -75,7 +75,6 @@ export const LinkPreview = ({
     const offsetFromCenter = (eventOffsetX - targetRect.width / 2) / 2; // Reduce the effect to make it subtle
     x.set(offsetFromCenter);
   };
-  console.log(cn("text-black dark:text-white", className));
 
   return (
     <>
