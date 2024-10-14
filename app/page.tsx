@@ -12,8 +12,6 @@ type DataStructure = {
   [key: string]: NestedCategory;
 };
 const Home = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
   const websites: DataStructure = {
     Technology: {
       Programming: {
@@ -200,27 +198,62 @@ const Home = () => {
       ],
     },
   };
+  function flattenWebsites(websites: DataStructure): Website[] {
+    const flattenedWebsites: Website[] = [];
 
+    function traverse(obj: any, path: string[] = []) {
+      for (const [key, value] of Object.entries(obj)) {
+        if (Array.isArray(value)) {
+          flattenedWebsites.push(
+            ...value.map((site) => ({
+              ...site,
+              categories: [...path, key].join("/"),
+            })),
+          );
+        } else if (typeof value === "object" && value !== null) {
+          traverse(value, [...path, key]);
+        }
+      }
+    }
+
+    traverse(websites);
+    return flattenedWebsites;
+  }
+
+  // Usage example:
+  const flatWebsites = flattenWebsites(websites);
+  console.log({ flatWebsites });
+
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(
+    Object.keys(websites)[0],
+  );
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Grouped Websites</h1>
-      <div className="flex gap-4 mb-6">
+      <h1 className="py-4 text-center font-sans text-4xl font-bold tracking-tight md:text-5xl lg:text-7xl">
+        <span className="bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text text-transparent [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
+          Bookmarks Manager
+        </span>
+      </h1>
+      <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
+
+      <div className="mb-6 flex flex-wrap justify-center gap-3">
         {Object.keys(websites).map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded ${
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ease-in-out ${
               selectedCategory === category
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 text-gray-800"
+                ? "bg-blue-500 text-white shadow-md hover:bg-blue-600"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
             }`}
           >
             {category}
           </button>
         ))}
       </div>
+      <WebsitesDisplay websites={flatWebsites} />
       {selectedCategory && (
-        <CategoryGroup
+        <CategoryGroupByFolder
           categories={{ [selectedCategory]: websites[selectedCategory] }}
           level={0}
         />
@@ -229,20 +262,34 @@ const Home = () => {
   );
 };
 
+const WebsitesDisplay: React.FC<{
+  websites: Website[];
+}> = ({ websites }) => {
+  return (
+    <div className="flex flex-wrap gap-5">
+      {websites.map((website) => (
+        <Card key={website.id} website={website} />
+      ))}
+    </div>
+  );
+};
+
 // New recursive component to display categories and websites
-const CategoryGroup: React.FC<{
+const CategoryGroupByFolder: React.FC<{
   categories: Record<string, any>;
   level: number;
 }> = ({ categories, level }) => {
   return (
     <div className={`ml-${level * 4}`}>
       {Object.entries(categories).map(([category, content]) => {
-        console.log(`Category: ${category}`, content);
+        // console.log(`Category: ${category}`, content);
         return (
           <div key={category} className="mb-4">
-            <h2 className={`text-${3 - level}xl font-semibold mb-2`}>
-              {category}
-            </h2>
+            {/* {level !== 0 && (<h1 className={`text-${3 - level}xl md:text-${6 - level}xl lg:text-${7 - level}xl font-bold  font-sans tracking-tight py-4`}>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
+        {category}
+        </span>
+      </h1>)} */}
             {Array.isArray(content) ? (
               <div className="flex flex-wrap gap-4">
                 {content.map((website: Website) => (
@@ -251,7 +298,7 @@ const CategoryGroup: React.FC<{
               </div>
             ) : null}
             {!Array.isArray(content) && (
-              <CategoryGroup categories={content} level={level + 1} />
+              <CategoryGroupByFolder categories={content} level={level + 1} />
             )}
           </div>
         );
