@@ -1,9 +1,9 @@
 /** @format */
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { LinkPreview } from "@/components/ui/link-preview";
 import { Website } from "./types"; // Import shared type
-import { CodeCard } from "@/components/Card";
-import personalBookmarks from "../constants/bookmarks.json";
+import { Card, CodeCard } from "@/components/Card";
 type NestedCategory = {
   [key: string]: Website[] | NestedCategory;
 };
@@ -224,6 +224,10 @@ const Home = () => {
   const flatWebsites = flattenWebsites(websites);
   console.log({ flatWebsites });
 
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(
+    Object.keys(websites)[0],
+  );
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="py-4 text-center font-sans text-4xl font-bold tracking-tight md:text-5xl lg:text-7xl">
@@ -233,12 +237,77 @@ const Home = () => {
       </h1>
       <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
 
-      <div className="flex flex-wrap gap-5">
-        {personalBookmarks.map((website) => (
-          <CodeCard key={website.id} website={website} />
+      <div className="mb-6 flex flex-wrap justify-center gap-3">
+        {Object.keys(websites).map((category) => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ease-in-out ${
+              selectedCategory === category
+                ? "bg-blue-500 text-white shadow-md hover:bg-blue-600"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+            }`}
+          >
+            {category}
+          </button>
         ))}
       </div>
+        
+      <WebsitesDisplay websites={flatWebsites} />
+      {selectedCategory && (
+        <CategoryGroupByFolder
+          categories={{ [selectedCategory]: websites[selectedCategory] }}
+          level={0}
+        />
+      )}
     </div>
   );
 };
+
+const WebsitesDisplay: React.FC<{
+  websites: Website[];
+}> = ({ websites }) => {
+  return (
+    <div className="flex flex-wrap gap-5">
+      {websites.map((website) => (
+        <CodeCard key={website.id} website={website} />
+        // <Card key={website.id} website={website} />
+      ))}
+    </div>
+  );
+};
+
+// New recursive component to display categories and websites
+const CategoryGroupByFolder: React.FC<{
+  categories: Record<string, any>;
+  level: number;
+}> = ({ categories, level }) => {
+  return (
+    <div className={`ml-${level * 4}`}>
+      {Object.entries(categories).map(([category, content]) => {
+        // console.log(`Category: ${category}`, content);
+        return (
+          <div key={category} className="mb-4">
+            {/* {level !== 0 && (<h1 className={`text-${3 - level}xl md:text-${6 - level}xl lg:text-${7 - level}xl font-bold  font-sans tracking-tight py-4`}>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
+        {category}
+        </span>
+      </h1>)} */}
+            {Array.isArray(content) ? (
+              <div className="flex flex-wrap gap-4">
+                {content.map((website: Website) => (
+                  <Card key={website.id} website={website} />
+                ))}
+              </div>
+            ) : null}
+            {!Array.isArray(content) && (
+              <CategoryGroupByFolder categories={content} level={level + 1} />
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 export default Home;
