@@ -233,7 +233,7 @@ const Home = () => {
       </h1>
       <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
 
-      <div className="flex flex-wrap gap-5">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3">
         {personalBookmarks.map((website) => (
           <CodeCard key={website.id} website={website} />
         ))}

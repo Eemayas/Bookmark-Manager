@@ -3,9 +3,12 @@
     "id": 1,
     "name": "Planets-Flutter: creating a Planet card",
     "url": "https://sergiandreplace.com/planets-flutter-creating-a-planet-card/",
-    "description": "No description",
+    "description": "Tutorial on creating a planet card UI in Fluttersdvsd sdvsd sdvds sdvsd sdvsd sdvsd sds" ,
     "tags": [
-      "bookmarks"
+      "flutter",
+      "ui",
+      "tutorial",
+      "card design"
     ],
     "categories": "Bookmarks bar / website / flutter / card design"
   },
@@ -13,9 +16,12 @@
     "id": 2,
     "name": "Minimal UI Design in Flutter - Best Flutter apps",
     "url": "http://bestflutterapps.com/minimal-ui-design-in-flutter",
-    "description": "No description",
+    "description": "Examples and inspiration for minimal UI design in Flutter",
     "tags": [
-      "bookmarks"
+      "flutter",
+      "ui",
+      "design",
+      "minimal"
     ],
     "categories": "Bookmarks bar / website / flutter / card design"
   },
@@ -23,9 +29,12 @@
     "id": 3,
     "name": "Planets-Flutter: creating a Planet card",
     "url": "https://sergiandreplace.com/planets-flutter-creating-a-planet-card/",
-    "description": "No description",
+    "description": "Tutorial on creating a planet card UI in Flutter",
     "tags": [
-      "bookmarks"
+      "flutter",
+      "ui",
+      "tutorial",
+      "card design"
     ],
     "categories": "Bookmarks bar / website / flutter"
   },
@@ -33,9 +42,12 @@
     "id": 4,
     "name": "Minimal UI Design in Flutter - Best Flutter apps",
     "url": "http://bestflutterapps.com/minimal-ui-design-in-flutter",
-    "description": "No description",
+    "description": "Examples and inspiration for minimal UI design in Flutter",
     "tags": [
-      "bookmarks"
+      "flutter",
+      "ui",
+      "design",
+      "minimal"
     ],
     "categories": "Bookmarks bar / website / flutter"
   },
@@ -43,9 +55,12 @@
     "id": 5,
     "name": "Rive - Build interactive animations that run anywhere",
     "url": "https://rive.app/",
-    "description": "No description",
+    "description": "Tool for creating and using interactive animations in Flutter and other platforms",
     "tags": [
-      "bookmarks"
+      "flutter",
+      "animation",
+      "tool",
+      "interactive"
     ],
     "categories": "Bookmarks bar / website / flutter / animation"
   },
@@ -53,9 +68,12 @@
     "id": 6,
     "name": "Rive - Build interactive animations that run anywhere",
     "url": "https://rive.app/",
-    "description": "No description",
+    "description": "Tool for creating and using interactive animations in Flutter and other platforms",
     "tags": [
-      "bookmarks"
+      "flutter",
+      "animation",
+      "tool",
+      "interactive"
     ],
     "categories": "Bookmarks bar / website / flutter"
   },
@@ -63,9 +81,12 @@
     "id": 7,
     "name": "Flutter Component Library",
     "url": "https://fluttercomponentlibrary.com/?fbclid=IwAR0x7VSHPijwEqSVAaHLEo2z6nAklHbxmO3PoHWXXEOhBYP4px3_8384cCs",
-    "description": "No description",
+    "description": "Collection of reusable Flutter components and widgets",
     "tags": [
-      "bookmarks"
+      "flutter",
+      "components",
+      "widgets",
+      "library"
     ],
     "categories": "Bookmarks bar / website / flutter"
   },
@@ -73,9 +94,12 @@
     "id": 8,
     "name": "Planets-Flutter: creating a Planet card",
     "url": "https://sergiandreplace.com/planets-flutter-creating-a-planet-card/",
-    "description": "No description",
+    "description": "Tutorial on creating a planet card UI in Flutter",
     "tags": [
-      "bookmarks"
+      "flutter",
+      "ui",
+      "tutorial",
+      "card design"
     ],
     "categories": "Bookmarks bar / website / card design"
   },
@@ -83,9 +107,12 @@
     "id": 9,
     "name": "Minimal UI Design in Flutter - Best Flutter apps",
     "url": "http://bestflutterapps.com/minimal-ui-design-in-flutter",
-    "description": "No description",
+    "description": "Examples and inspiration for minimal UI design in Flutter",
     "tags": [
-      "bookmarks"
+      "flutter",
+      "ui",
+      "design",
+      "minimal"
     ],
     "categories": "Bookmarks bar / website / card design"
   },
@@ -93,9 +120,12 @@
     "id": 10,
     "name": "Planets-Flutter: creating a Planet card",
     "url": "https://sergiandreplace.com/planets-flutter-creating-a-planet-card/",
-    "description": "No description",
+    "description": "Tutorial on creating a planet card UI in Flutter",
     "tags": [
-      "bookmarks"
+      "flutter",
+      "ui",
+      "tutorial",
+      "card design"
     ],
     "categories": "Bookmarks bar / website"
   },
