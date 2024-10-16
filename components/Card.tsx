@@ -57,7 +57,7 @@ export const CodeCard: React.FC<CardProps> = ({
   };
 
   return (
-    <div className="card mx-auto min-w-96 rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1">
+    <div className="card mx-auto min-w-96 max-w-96 rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1 max-h-fit">
       <div className="header m-1 mt-2 flex items-center justify-between space-x-4 rounded-md pl-2 pr-2">
         <div className="flex items-center space-x-2">
           <span className="red inline-block size-4 rounded-full bg-[#ff605c]" />
@@ -66,13 +66,16 @@ export const CodeCard: React.FC<CardProps> = ({
         </div>
 
         <div className="flex-grow text-center">
-          <p className="font-mono text-lg text-white" id="title2">
+          <p
+            className="max-w-full overflow-hidden hyphens-manual whitespace-normal break-all font-mono text-lg text-white"
+            id="title2"
+          >
             {website.name}
           </p>
 
           <LinkPreview
             url={website.url}
-            className="font-mono text-sm font-medium text-blue-500 underline transition-colors duration-300 hover:text-gray-100 dark:text-blue-500"
+            className="max-w-full break-all font-mono text-sm font-medium text-blue-500 underline transition-colors duration-300 hover:text-gray-100 dark:text-blue-500"
           >
             {website.url}
           </LinkPreview>
