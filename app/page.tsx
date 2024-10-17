@@ -19,32 +19,37 @@ type DataStructure = {
 };
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState<string>(""); // State for search term
-  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false); // State for dropdown visibility
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
-  // Function to toggle dropdown visibility
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const [selectedFilterFiled, setSelectedFilterFiled] = useState("Website");
+  const [selectedFilterSearchBar, setSelectedFilterSearchBar] =
+    useState("Website");
   // Filter bookmarks based on search term
-  const filteredBookmarks = personalBookmarks.filter((website) => {
-    const searchValue = searchTerm.toLowerCase();
+  const filteredBookmarks: Website[] = personalBookmarks
+    .filter((website) => {
+      const searchValue = searchTerm.toLowerCase();
 
-    if (selectedFilterFiled === "Website") {
-      return website.name.toLowerCase().includes(searchValue);
-    } else if (selectedFilterFiled === "Link") {
-      return website.url.toLowerCase().includes(searchValue);
-    } else if (selectedFilterFiled === "Tags") {
-      return website.tags.some((tag) =>
-        tag.toLowerCase().includes(searchValue),
-      ); // Check if any tag matches
-    } else if (selectedFilterFiled === "Folder") {
-      return website.categories.toLowerCase().includes(searchValue);
-    }
+      if (selectedFilterSearchBar === "Website") {
+        return website.name.toLowerCase().includes(searchValue);
+      } else if (selectedFilterSearchBar === "Link") {
+        return website.url.toLowerCase().includes(searchValue);
+      } else if (selectedFilterSearchBar === "Tags") {
+        return website.tags.some((tag) =>
+          tag.toLowerCase().includes(searchValue),
+        ); // Check if any tag matches
+      } else if (selectedFilterSearchBar === "Folder") {
+        return website.categories.toLowerCase().includes(searchValue);
+      }
 
-    return false;
-  });
+      return false;
+    })
+    .filter((website) => {
+      // Check if the website tags include any of the selectedTags
+      if (selectedTags.length === 0) return true; // If no tags are selected, include all
+
+      return selectedTags.every((tag) =>
+        website.tags.includes(tag.toLowerCase()),
+      );
+    });
 
   const filterOptions = [
     { label: "Website", value: "Website" },
@@ -53,16 +58,18 @@ const Home = () => {
     { label: "Folder", value: "Folder" },
   ];
 
+  // Count the tags
+  const tagCount: Record<string, number> = {};
+
+  filteredBookmarks.forEach((bookmark) => {
+    bookmark.tags.forEach((tag) => {
+      tagCount[tag] = (tagCount[tag] || 0) + 1;
+    });
+  });
+  console.log({ tagCount });
+
   return (
     <div className="container mx-auto p-4">
-      <h1 className="py-4 text-center font-sans text-4xl font-bold tracking-tight md:text-5xl lg:text-7xl">
-        <span className="bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text text-transparent [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
-          Bookmarks Manager
-        </span>
-      </h1>
-
-      <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
-
       <form className="mx-auto max-w-lg rounded-md border-2 border-blue-500">
         <div className="flex">
           <DropdownMenu>
@@ -70,7 +77,7 @@ const Home = () => {
               aria-label="Field Filter"
               className="z-10 mx-auto inline-flex w-28 flex-shrink-0 items-center justify-between rounded-s-md bg-gray-100 px-4 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
             >
-              {selectedFilterFiled}{" "}
+              {selectedFilterSearchBar}{" "}
               <svg
                 className="ms-2.5 h-2.5 w-2.5"
                 aria-hidden="true"
@@ -91,7 +98,7 @@ const Home = () => {
               {filterOptions.map((option) => (
                 <DropdownMenuItem
                   key={option.value}
-                  onSelect={() => setSelectedFilterFiled(option.value)}
+                  onSelect={() => setSelectedFilterSearchBar(option.value)}
                 >
                   {option.label}
                 </DropdownMenuItem>
@@ -118,9 +125,10 @@ const Home = () => {
           </div>
         </div>
       </form>
+      <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
 
       <div className="flex">
-        <Sidebar />
+        <Sidebar tagCount={tagCount} setSelectedTags={setSelectedTags} />
         {/* <GridLayout /> */}
         <div className="mx-auto columns-1 gap-4 space-y-5 md:columns-2 lg:columns-2">
           {filteredBookmarks.map((website) => (
@@ -134,7 +142,13 @@ const Home = () => {
 export default Home;
 import Link from "next/link";
 
-export function Sidebar() {
+export function Sidebar({
+  tagCount,
+  setSelectedTags,
+}: {
+  tagCount: Record<string, number>;
+  setSelectedTags: React.Dispatch<React.SetStateAction<string[]>>;
+}) {
   return (
     <aside className="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-64 shrink-0 lg:sticky lg:block lg:self-start">
       {/* <aside className="w-64 shrink-0 lg:sticky lg:self-start"></aside> */}
@@ -176,33 +190,19 @@ export function Sidebar() {
               {/* Installation Section */}
               <div className="pb-4">
                 <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold text-black dark:text-white">
-                  Installation
+                  Tags
                 </h4>
                 <div className="grid grid-flow-row auto-rows-max text-sm">
-                  <Link
-                    className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
-                    href="/docs/install-nextjs"
-                  >
-                    Install Next.js
-                  </Link>
-                  <Link
-                    className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
-                    href="/docs/install-tailwindcss"
-                  >
-                    Install Tailwind CSS
-                  </Link>
-                  <Link
-                    className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
-                    href="/docs/add-utilities"
-                  >
-                    Add utilities
-                  </Link>
-                  <Link
-                    className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
-                    href="/docs/cli"
-                  >
-                    CLI
-                  </Link>
+                  {Object.keys(tagCount).map((tag, index) => (
+                    <div
+                      className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 capitalize text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
+                      onClick={() => {
+                        setSelectedTags((prev) => [...prev, tag]);
+                      }}
+                    >
+                      {tag} ({tagCount[tag]})
+                    </div>
+                  ))}
                 </div>
               </div>
 
