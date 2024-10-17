@@ -2,11 +2,7 @@
 
 "use client";
 import React, { useState, useEffect } from "react";
-import { BackgroundGradient } from "./ui/background-gradient";
-import Image from "next/image";
 import { Website } from "@/app/types";
-import { encode } from "qss";
-import Link from "next/link";
 import { LinkPreview } from "./ui/link-preview";
 
 type CardProps = {
@@ -20,7 +16,7 @@ type CardProps = {
   | { isStatic?: false; imageSrc?: never }
 );
 
-export const CodeCard: React.FC<CardProps> = ({
+export const BookMarkCard: React.FC<CardProps> = ({
   website,
   width = 200,
   height = 125,
@@ -57,7 +53,7 @@ export const CodeCard: React.FC<CardProps> = ({
   };
 
   return (
-    <div className="card mx-auto max-h-fit min-w-96 break-inside-avoid rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1">
+    <div className="card mx-auto max-h-fit break-inside-avoid rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1">
       <div className="header m-1 mt-2 flex items-center justify-between space-x-4 rounded-md pl-2 pr-2">
         <div className="flex items-center space-x-2">
           <span className="red inline-block size-4 rounded-full bg-[#ff605c]" />
@@ -90,20 +86,30 @@ export const CodeCard: React.FC<CardProps> = ({
         </button>
       </div>
       <div className="mt-5 space-y-4 rounded-md bg-[#49465c] p-4 font-mono text-white focus:outline-none">
-        {/* <Image
-          src={src}
-          alt="jordans"
-          height="200"
-          width="200"
-          className="w-[300px] rounded-md object-contain"
-        /> */}
         <p className="line-clamp-3 text-lg text-white">{website.description}</p>
-        <div className="hide-scrollbar mt-5 flex overflow-x-auto pb-2">
-          <div className="flex flex-nowrap gap-2">
+
+        <div className=" ">
+          <style>
+            {`
+            [data-radix-scroll-area-viewport] {
+              scrollbar-width: none; /* Firefox */
+              -ms-overflow-style: none; /* Internet Explorer and Edge */
+              -webkit-overflow-scrolling: touch; /* iOS */
+            }
+            [data-radix-scroll-area-viewport]::-webkit-scrollbar {
+              display: none; /* Safari and Chrome */
+            }
+          `}
+          </style>
+
+          <div
+            className="scroll flex h-full flex-row flex-wrap gap-2 overflow-x-auto"
+            data-radix-scroll-area-viewport=""
+          >
             {website.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-block flex-shrink-0 rounded-full border border-blue-200 bg-blue-100 px-3 py-1 text-xs font-normal capitalize text-blue-800 shadow-sm transition-all duration-300 hover:bg-blue-200 hover:text-blue-900 hover:shadow-md"
+                className="inline-block rounded-full border border-blue-200 bg-blue-100 px-3 py-1 text-xs font-normal capitalize text-blue-800 shadow-sm transition-all duration-300 hover:bg-blue-200 hover:text-blue-900 hover:shadow-md"
               >
                 {tag}
               </span>
@@ -198,3 +204,12 @@ export const CodeCard: React.FC<CardProps> = ({
     </div>
   );
 };
+{
+  /* <Image
+          src={src}
+          alt="jordans"
+          height="200"
+          width="200"
+          className="w-[300px] rounded-md object-contain"
+        /> */
+}
