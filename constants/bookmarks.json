@@ -3,10 +3,11 @@
     "id": 1,
     "name": "Planets-Flutter: creating a Planet card",
     "url": "https://sergiandreplace.com/planets-flutter-creating-a-planet-card/",
-    "description": "No description",
+    "description": "A guide on creating visually appealing planet cards using Flutter.",
     "tags": [
-      "bookmarks",
-      "hey"
+      "Flutter",
+      "UI Design",
+      "Card Component"
     ],
     "categories": "Bookmarks bar / website / flutter / card design"
   },
@@ -14,9 +15,11 @@
     "id": 2,
     "name": "Minimal UI Design in Flutter - Best Flutter apps",
     "url": "http://bestflutterapps.com/minimal-ui-design-in-flutter",
-    "description": "No description",
+    "description": "An article showcasing minimal UI design principles and examples using Flutter.",
     "tags": [
-      "bookmarks"
+      "Flutter",
+      "UI Design",
+      "Minimal Design"
     ],
     "categories": "Bookmarks bar / website / flutter / card design"
   },
@@ -24,9 +27,11 @@
     "id": 3,
     "name": "Rive - Build interactive animations that run anywhere",
     "url": "https://rive.app/",
-    "description": "No description",
+    "description": "A platform to create and integrate interactive animations for various platforms.",
     "tags": [
-      "bookmarks"
+      "Animation",
+      "Flutter",
+      "UI/UX"
     ],
     "categories": "Bookmarks bar / website / flutter / animation"
   },
@@ -34,9 +39,11 @@
     "id": 4,
     "name": "Flutter Component Library",
     "url": "https://fluttercomponentlibrary.com/?fbclid=IwAR0x7VSHPijwEqSVAaHLEo2z6nAklHbxmO3PoHWXXEOhBYP4px3_8384cCs",
-    "description": "No description",
+    "description": "A collection of reusable components and widgets for Flutter developers.",
     "tags": [
-      "bookmarks"
+      "Flutter",
+      "Components",
+      "UI Library"
     ],
     "categories": "Bookmarks bar / website / flutter"
   },
@@ -44,9 +51,11 @@
     "id": 5,
     "name": "kucse_ce2020 - Google Groups",
     "url": "https://groups.google.com/g/kucse_ce2020",
-    "description": "No description",
+    "description": "Google Group for discussions related to the Computer Engineering Class of 2020.",
     "tags": [
-      "bookmarks"
+      "Class",
+      "Community",
+      "Discussions"
     ],
     "categories": "Bookmarks bar / website / Class"
   },
@@ -54,9 +63,11 @@
     "id": 6,
     "name": "AlgoExpert | Ace the Coding Interviews",
     "url": "https://www.algoexpert.io/product?r=ads&gclid=Cj0KCQjws-OEBhCkARIsAPhOkIb94UftMwENY9iy5VaGE3VQFhAdpfdn3XrOX2-WiDgO-8NNtmSwPlsaAlUIEALw_wcB",
-    "description": "No description",
+    "description": "A platform for preparing for coding interviews with detailed problem solutions.",
     "tags": [
-      "bookmarks"
+      "Coding",
+      "Interview Preparation",
+      "Algorithms"
     ],
     "categories": "Bookmarks bar / website / Class"
   },
@@ -64,9 +75,11 @@
     "id": 7,
     "name": "Home - YugenAnime",
     "url": "https://yugen.to/",
-    "description": "No description",
+    "description": "Watch anime online with subbed and dubbed options.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Streaming",
+      "Entertainment"
     ],
     "categories": "Bookmarks bar / website / Anime"
   },
@@ -74,9 +87,11 @@
     "id": 8,
     "name": "Watch Anime Online, Watch English Anime Online Subbed, Dubbed",
     "url": "https://9anime.pl/home",
-    "description": "No description",
+    "description": "Platform for watching anime online, offering both subbed and dubbed versions.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Streaming",
+      "Subbed and Dubbed"
     ],
     "categories": "Bookmarks bar / website / Anime"
   },
@@ -84,9 +99,11 @@
     "id": 9,
     "name": "9anime - Watch Anime online with DUB and SUB for FREE",
     "url": "https://9animetv.to/",
-    "description": "No description",
+    "description": "Free anime streaming site providing both dubbed and subbed anime.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Streaming",
+      "Free Anime"
     ],
     "categories": "Bookmarks bar / website / Anime"
   },
@@ -94,9 +111,11 @@
     "id": 10,
     "name": "Anime Timetable | Air Times | Calendar Chart | Winter 2023",
     "url": "https://animeschedule.net/",
-    "description": "No description",
+    "description": "A schedule for upcoming anime episodes and air times.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Schedule",
+      "Calendar"
     ],
     "categories": "Bookmarks bar / website / Anime"
   },
@@ -104,9 +123,11 @@
     "id": 11,
     "name": "CSS: Cascading Style Sheets | MDN",
     "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    "description": "No description",
+    "description": "MDN documentation and resources for learning and using CSS.",
     "tags": [
-      "bookmarks"
+      "CSS",
+      "Web Development",
+      "Documentation"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -114,9 +135,11 @@
     "id": 12,
     "name": "Color Palettes for Designers and Artists - Color Hunt",
     "url": "https://colorhunt.co/",
-    "description": "No description",
+    "description": "A collection of color palettes for designers and artists.",
     "tags": [
-      "bookmarks"
+      "Web Design",
+      "Colors",
+      "UI Design"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -124,9 +147,11 @@
     "id": 13,
     "name": "Introducing icon fonts and web fonts - Flaticon",
     "url": "https://www.flaticon.com/iconfonts",
-    "description": "No description",
+    "description": "A resource for finding and integrating icon and web fonts into projects.",
     "tags": [
-      "bookmarks"
+      "Icons",
+      "Web Fonts",
+      "UI Design"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -134,9 +159,11 @@
     "id": 14,
     "name": "CodeSandbox",
     "url": "https://codesandbox.io/s/new",
-    "description": "No description",
+    "description": "Online code editor for web development, supporting various frameworks.",
     "tags": [
-      "bookmarks"
+      "Web Development",
+      "Code Editor",
+      "Sandbox"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -144,9 +171,11 @@
     "id": 15,
     "name": "favicon.ico Generator",
     "url": "https://www.favicon.cc/",
-    "description": "No description",
+    "description": "An online tool for creating and customizing favicon icons.",
     "tags": [
-      "bookmarks"
+      "Icons",
+      "Web Design",
+      "Tools"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -154,9 +183,11 @@
     "id": 16,
     "name": "airbnb/javascript: JavaScript Style Guide",
     "url": "https://github.com/airbnb/javascript",
-    "description": "No description",
+    "description": "Airbnb's popular JavaScript style guide for writing clean and consistent code.",
     "tags": [
-      "bookmarks"
+      "JavaScript",
+      "Style Guide",
+      "Best Practices"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -164,9 +195,11 @@
     "id": 17,
     "name": "DevDocs API Documentation",
     "url": "https://devdocs.io/",
-    "description": "No description",
+    "description": "API documentation for web development technologies in a searchable format.",
     "tags": [
-      "bookmarks"
+      "API",
+      "Documentation",
+      "Web Development"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -174,9 +207,11 @@
     "id": 18,
     "name": "Tutorial: Intro to React – React",
     "url": "https://reactjs.org/tutorial/tutorial.html",
-    "description": "No description",
+    "description": "An official React tutorial introducing key concepts and building components.",
     "tags": [
-      "bookmarks"
+      "React",
+      "Tutorial",
+      "Web Development"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -184,9 +219,11 @@
     "id": 19,
     "name": "Transparent Textures",
     "url": "https://www.transparenttextures.com/",
-    "description": "No description",
+    "description": "A collection of transparent textures for web design.",
     "tags": [
-      "bookmarks"
+      "Textures",
+      "Web Design",
+      "Backgrounds"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -194,9 +231,11 @@
     "id": 20,
     "name": "(292) Short intro to Locofy.ai - YouTube",
     "url": "https://www.youtube.com/watch?v=zG3QrRcrNGI",
-    "description": "No description",
+    "description": "A YouTube video providing an introduction to Locofy.ai for UI design automation.",
     "tags": [
-      "bookmarks"
+      "UI Design",
+      "Automation",
+      "YouTube"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -204,9 +243,11 @@
     "id": 21,
     "name": "Web Development Course Resources | The App Brewery",
     "url": "https://www.appbrewery.co/p/web-development-course-resources/",
-    "description": "No description",
+    "description": "Comprehensive resources for learning web development, including coding tutorials and exercises.",
     "tags": [
-      "bookmarks"
+      "web development",
+      "learning resources",
+      "tutorials"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -214,9 +255,11 @@
     "id": 22,
     "name": "CSS Gradient — Generator, Maker, and Background",
     "url": "https://cssgradient.io/",
-    "description": "No description",
+    "description": "An online tool for creating and customizing CSS gradients.",
     "tags": [
-      "bookmarks"
+      "CSS",
+      "design tools",
+      "gradients"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -224,19 +267,25 @@
     "id": 23,
     "name": "27,095 Conversation Icons - Free in SVG, PNG, ICO - IconScout",
     "url": "https://iconscout.com/icons/conversation",
-    "description": "No description",
+    "description": "A collection of free conversation icons available in multiple formats such as SVG, PNG, and ICO.",
     "tags": [
-      "bookmarks"
+      "icons",
+      "design assets",
+      "SVG"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
     "id": 24,
-    "name": "(634) Create Responsive Admin Dashboard | HTML CSS JavaScript | With Source Code - YouTube",
+    "name": "Create Responsive Admin Dashboard | HTML CSS JavaScript | With Source Code - YouTube",
     "url": "https://www.youtube.com/watch?v=CkVrmLLHmuI",
-    "description": "No description",
+    "description": "YouTube tutorial on building a responsive admin dashboard using HTML, CSS, and JavaScript, with source code provided.",
     "tags": [
-      "bookmarks"
+      "dashboard",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "tutorial"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -244,19 +293,25 @@
     "id": 25,
     "name": "Select logo type | LOGO.com",
     "url": "https://app.logo.com/flow/type",
-    "description": "No description",
+    "description": "An online tool to create and customize logos for businesses and personal projects.",
     "tags": [
-      "bookmarks"
+      "logo design",
+      "branding",
+      "design tools"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
     "id": 26,
-    "name": " How to Import GLTF Models in Three.js - YouTube",
+    "name": "How to Import GLTF Models in Three.js - YouTube",
     "url": "https://www.youtube.com/watch?v=WBe3xrV4CPM",
-    "description": "No description",
+    "description": "YouTube tutorial on importing GLTF models using the Three.js library.",
     "tags": [
-      "bookmarks"
+      "Three.js",
+      "3D models",
+      "GLTF",
+      "JavaScript",
+      "tutorial"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -264,9 +319,12 @@
     "id": 27,
     "name": "Creating a game in Three.js - LogRocket Blog",
     "url": "https://blog.logrocket.com/creating-game-three-js/",
-    "description": "No description",
+    "description": "A blog post detailing how to create a game using the Three.js library.",
     "tags": [
-      "bookmarks"
+      "Three.js",
+      "game development",
+      "JavaScript",
+      "web development"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -274,9 +332,11 @@
     "id": 28,
     "name": "Beautiful Orbit Components to React",
     "url": "https://reactjsexample.com/beautiful-orbit-components-to-react/",
-    "description": "No description",
+    "description": "A collection of beautiful React components inspired by Orbit design.",
     "tags": [
-      "bookmarks"
+      "React",
+      "UI components",
+      "web development"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -284,9 +344,11 @@
     "id": 29,
     "name": "Spline - 3D Design tool in the browser with real-time collaboration",
     "url": "https://spline.design/download",
-    "description": "No description",
+    "description": "A browser-based 3D design tool offering real-time collaboration features.",
     "tags": [
-      "bookmarks"
+      "3D design",
+      "collaboration tools",
+      "web design"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -294,9 +356,11 @@
     "id": 30,
     "name": "Introduction - shadcn/ui",
     "url": "https://ui.shadcn.com/docs",
-    "description": "No description",
+    "description": "Documentation for shadcn's UI components library for modern web development.",
     "tags": [
-      "bookmarks"
+      "UI components",
+      "web development",
+      "React"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -304,9 +368,12 @@
     "id": 31,
     "name": "700+ CSS Icons, Customizable, Retina Ready & API",
     "url": "https://css.gg/",
-    "description": "No description",
+    "description": "A collection of customizable and retina-ready CSS icons for use in web projects.",
     "tags": [
-      "bookmarks"
+      "icons",
+      "CSS",
+      "web design",
+      "UI assets"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -314,9 +381,11 @@
     "id": 32,
     "name": "cssbuttons.app | Over 60+ Free CSS Buttons To Use",
     "url": "https://cssbuttons.app/",
-    "description": "No description",
+    "description": "A library of over 60 CSS button designs, free for use in web projects.",
     "tags": [
-      "bookmarks"
+      "CSS",
+      "buttons",
+      "UI components"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -324,9 +393,11 @@
     "id": 33,
     "name": "ZiShop",
     "url": "https://zishop.vercel.app/digital",
-    "description": "No description",
+    "description": "An online platform for digital shopping, offering a variety of digital products.",
     "tags": [
-      "bookmarks"
+      "e-commerce",
+      "digital products",
+      "shopping"
     ],
     "categories": "Bookmarks bar / website / Web Designing"
   },
@@ -334,9 +405,12 @@
     "id": 34,
     "name": "NPTEL :: Computer Science and Engineering - NOC:Ethical Hacking",
     "url": "https://archive.nptel.ac.in/courses/106/105/106105217/#",
-    "description": "No description",
+    "description": "NPTEL course on ethical hacking, covering various aspects of cybersecurity and penetration testing.",
     "tags": [
-      "bookmarks"
+      "cybersecurity",
+      "ethical hacking",
+      "NPTEL",
+      "education"
     ],
     "categories": "Bookmarks bar / website / ethical hacking"
   },
@@ -344,9 +418,11 @@
     "id": 35,
     "name": "Watch Online Hindi Movies, Dubbed Movies, TV Shows - Awards, Documentaries and More.",
     "url": "https://www.hindilinks4u.to/",
-    "description": "No description",
+    "description": "A platform for streaming Hindi movies, dubbed movies, and TV shows online.",
     "tags": [
-      "bookmarks"
+      "movies",
+      "streaming",
+      "Hindi cinema"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -354,19 +430,23 @@
     "id": 36,
     "name": "Khatrimazafull | Khatrimazafull.com Download HD Movies 100MB , 300MB , 720p",
     "url": "https://khatrimazafull.to/",
-    "description": "No description",
+    "description": "A site offering HD movie downloads in various file sizes.",
     "tags": [
-      "bookmarks"
+      "movie downloads",
+      "HD movies",
+      "Bollywood"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
   {
     "id": 37,
-    "name": "Watch All Movies & Tv Series In Hindi, Online,Free Download, Korean Drama in Hindi, Hollywood Dubbed, KatmovieHD - LordHD",
+    "name": "Watch All Movies & TV Series In Hindi, Online, Free Download, Korean Drama in Hindi, Hollywood Dubbed, KatmovieHD - LordHD",
     "url": "https://lordhd.in/",
-    "description": "No description",
+    "description": "A site to stream or download movies and TV series in Hindi, including Hollywood dubbed and Korean dramas.",
     "tags": [
-      "bookmarks"
+      "movies",
+      "TV series",
+      "Hindi dubbed"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -374,19 +454,23 @@
     "id": 38,
     "name": "Search and Browse YIFY Movies Torrent Downloads - YTS",
     "url": "https://yts.mx/browse-movies",
-    "description": "No description",
+    "description": "A platform for browsing and downloading movies via YIFY torrents.",
     "tags": [
-      "bookmarks"
+      "torrents",
+      "movie downloads",
+      "YIFY"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
   {
     "id": 39,
     "name": "eMovies - Free Movies & TV-Series Online",
-    "url": "https://emovies.io/free-movies.html?__cf_chl_jschl_tk__=b3f309235bca086160f84b1fa264a085304ccba5-1607694475-0-AUMULy0BgOrkJF3p5mc3xjBRXsES0inclKiwci_M7rgWqOApiH9I7LJpE2LMgm_0W1TNnApa4belJBfe0PgBJYaxHhbEP6FjgOrnSyh8oSb-AGbBr_SIP2NrRU6fhyTqk4sBRgZLPY6Y38GOfvBvoPvE4POcp7u83XSIpgecG4ClSGS5b_ErL41tDwbEBw-ndwcerseMMRmykjux0b2U7YcpkYLsgqkcRNe3zzm4uwvWdMkWGtv8iO2_1NvbTXDlgCPW3o-6UU_4xWCUlLtgJm5X-rfuQiz7X1gDZlGskixfUDOKleQGy2YHx9urTePe3P_Vnum6_KNRXLm6F8UAJ_s",
-    "description": "No description",
+    "url": "https://emovies.io/free-movies.html?__cf_chl_jschl_tk__=b3f309235bca086160f84b1fa264a085304ccba5-1607694475-0-AUMULy0BgOrkJF3p5mc3xjBRXsES0inclKiwci_M7rgWqOApiH9I7LJpE2LMgm_0W1TNnApa4belJBfe0PgBJYaxHhbEP6FjgOrnSyh8oSb-AGbBr_SIP2NrRU6fhyTqk4sBRgZLPY6Y38GOfvBvoPvE4POcp7u83XSIpgecG4ClSGS5b_ErL41tDwbEB82cBSiyg",
+    "description": "A site for streaming free movies and TV series online.",
     "tags": [
-      "bookmarks"
+      "movies",
+      "TV series",
+      "free streaming"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -394,9 +478,11 @@
     "id": 40,
     "name": "Fmovies: Watch Free Movies Online - Just Faster And Better",
     "url": "http://www7.fmovies.sc/",
-    "description": "No description",
+    "description": "Stream a wide selection of movies online for free, offering fast and high-quality playback.",
     "tags": [
-      "bookmarks"
+      "Streaming",
+      "Movies",
+      "Entertainment"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -404,9 +490,12 @@
     "id": 41,
     "name": "123Movies - Watch Movies Online Free & TV Series in 1080p Quality",
     "url": "https://wvw1.123movies.net/",
-    "description": "No description",
+    "description": "Watch movies and TV series online in HD quality for free with an extensive library.",
     "tags": [
-      "bookmarks"
+      "Streaming",
+      "Movies",
+      "TV Shows",
+      "Entertainment"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -414,9 +503,11 @@
     "id": 42,
     "name": "The Official Home of YIFY Movies Torrent Download - YTS",
     "url": "https://yts.mx/",
-    "description": "No description",
+    "description": "Download high-quality movie torrents in small file sizes from the official YTS website.",
     "tags": [
-      "bookmarks"
+      "Torrents",
+      "Movies",
+      "Downloads"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -424,9 +515,12 @@
     "id": 43,
     "name": "AnimeKayo - Best Site To Download Anime Encodes, Manga & Music",
     "url": "https://animekayo.com/",
-    "description": "No description",
+    "description": "Download anime, manga, and music in different formats and quality levels from AnimeKayo.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Downloads",
+      "Manga",
+      "Music"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -434,9 +528,12 @@
     "id": 44,
     "name": "AnimeHeaven - Watch HD Anime Online Free",
     "url": "https://animeheaven.ru/",
-    "description": "No description",
+    "description": "Watch a wide selection of HD anime series and movies online for free.",
     "tags": [
-      "bookmarks"
+      "Streaming",
+      "Anime",
+      "HD",
+      "Entertainment"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -444,9 +541,12 @@
     "id": 45,
     "name": "KickassTorrents - Download torrents from Kickass Torrents",
     "url": "https://kickasstorrents.to/",
-    "description": "No description",
+    "description": "Access and download a variety of torrents including movies, music, software, and more.",
     "tags": [
-      "bookmarks"
+      "Torrents",
+      "Downloads",
+      "Movies",
+      "Software"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -454,9 +554,12 @@
     "id": 46,
     "name": "123anime - Watch download Anime Online English Sub and Dub",
     "url": "https://123animes.mobi/",
-    "description": "No description",
+    "description": "Stream and download English-subbed and dubbed anime series online.",
     "tags": [
-      "bookmarks"
+      "Streaming",
+      "Anime",
+      "English Dub",
+      "Subtitles"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -464,9 +567,12 @@
     "id": 47,
     "name": "Where and How to Batch Download Anime Most Efficiently?",
     "url": "https://www.videoconverterfactory.com/tips/batch-download-anime.html",
-    "description": "No description",
+    "description": "Guide on the most efficient methods for batch downloading anime series.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Guides",
+      "Downloads",
+      "Batch Processing"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -474,9 +580,12 @@
     "id": 48,
     "name": "Watch Free Movies and TV Shows Online | Free Streaming Video | Tubi",
     "url": "https://tubitv.com/",
-    "description": "No description",
+    "description": "Stream a wide range of movies and TV shows online for free on Tubi.",
     "tags": [
-      "bookmarks"
+      "Streaming",
+      "Movies",
+      "TV Shows",
+      "Entertainment"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -484,9 +593,12 @@
     "id": 49,
     "name": "Cineb.net - Watch Full HD Movies Online and Stream Free Movies Online Now",
     "url": "https://cineb.net/",
-    "description": "No description",
+    "description": "Stream HD movies online for free with a vast collection of genres.",
     "tags": [
-      "bookmarks"
+      "Streaming",
+      "Movies",
+      "HD",
+      "Entertainment"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -494,9 +606,11 @@
     "id": 50,
     "name": "GOKU - Watch Movies Online & Free Movies Streaming",
     "url": "https://goku.to/",
-    "description": "No description",
+    "description": "Watch free movies online and stream a variety of genres and titles.",
     "tags": [
-      "bookmarks"
+      "Streaming",
+      "Movies",
+      "Entertainment"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -504,9 +618,13 @@
     "id": 51,
     "name": "FilmyZilla Bollywood Hollywood Hindi Dubbed Movies Filmywap 2022 Filmyzilla 2023 FilmyzillaHD 2023",
     "url": "https://www.filmyzilla.credit/",
-    "description": "No description",
+    "description": "Download Bollywood, Hollywood, and Hindi dubbed movies for free from FilmyZilla.",
     "tags": [
-      "bookmarks"
+      "Downloads",
+      "Movies",
+      "Bollywood",
+      "Hollywood",
+      "Hindi Dubbed"
     ],
     "categories": "Bookmarks bar / website / Film"
   },
@@ -514,91 +632,112 @@
     "id": 52,
     "name": "AniDL",
     "url": "https://anidl.org/",
-    "description": "No description",
+    "description": "A platform to download anime series and episodes in different formats.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Downloads",
+      "Series"
     ],
-    "categories": "Bookmarks bar / website / Anime wesite"
+    "categories": "Bookmarks bar / website / Anime website"
   },
   {
     "id": 53,
     "name": "[AnimeRG]",
     "url": "https://animereleasegroup.blogspot.com/p/main.html",
-    "description": "No description",
+    "description": "Anime Release Group offering a collection of anime downloads and resources.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Downloads",
+      "Groups"
     ],
-    "categories": "Bookmarks bar / website / Anime wesite"
+    "categories": "Bookmarks bar / website / Anime website"
   },
   {
     "id": 54,
     "name": "Kayoanime » News, Reviews & Updates of Anime",
     "url": "https://kayoanime.com/",
-    "description": "No description",
+    "description": "Read news, reviews, and updates about the latest anime series and releases.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "News",
+      "Reviews",
+      "Updates"
     ],
-    "categories": "Bookmarks bar / website / Anime wesite"
+    "categories": "Bookmarks bar / website / Anime website"
   },
   {
     "id": 55,
     "name": "AnimeKaizoku",
     "url": "https://animekaizoku.com/",
-    "description": "No description",
+    "description": "Download high-quality anime series and episodes with various formats available.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Downloads",
+      "Quality"
     ],
-    "categories": "Bookmarks bar / website / Anime wesite"
+    "categories": "Bookmarks bar / website / Anime website"
   },
   {
     "id": 56,
     "name": "Browse :: Nyaa",
     "url": "https://nyaa.si/",
-    "description": "No description",
+    "description": "Torrent site for downloading anime series, movies, and other related content.",
     "tags": [
-      "bookmarks"
+      "Torrents",
+      "Anime",
+      "Downloads"
     ],
-    "categories": "Bookmarks bar / website / Anime wesite"
+    "categories": "Bookmarks bar / website / Anime website"
   },
   {
     "id": 57,
     "name": "AniDB",
     "url": "https://anidb.net/",
-    "description": "No description",
+    "description": "Database providing detailed information on anime series, characters, and episodes.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Database",
+      "Information"
     ],
-    "categories": "Bookmarks bar / website / Anime wesite"
+    "categories": "Bookmarks bar / website / Anime website"
   },
   {
     "id": 58,
     "name": "AnimeNana - Let's Go",
-    "url": "https://animenana.com/?__cf_chl_jschl_tk__=4abb07893b5043f97207817ca2d0ca48d105fa7c-1623252199-0-ARNAlLZ4GDTIayNymz1xkCZ94xL8JMiJx1h0qp38VbW9jvlj-u1qrMSbc4jUFal_g3qEO1Qok5o2I6p31h2ojowgFMAUa6_2bra21vLLHWXDg2KUFtRLrWoZDVBIKm9KOdX8VeJruyET9oxL5ImID_hzfI8-EUiJv431XyZ-0cby7oNVJfRjgD2PfXjIotCF_lzVd6-UqcLwWeXdjERLb_xBbpZ_VjMABcCogirPWgKUzB5Rhl2R7NOBJdtdroVNXT_xdgeREr1-YsCxmiqIiNkIio1W_KqFTcpJjTJ-p85M-075InFhHVGGshMN584EITZMKjXwfTCWKzCb4VtdR8_buePeSVBZy-xR6pmjSlz2KY1Dl-Q-PdMIOuz8a9uvyjSE6NGy85t7-x0-rHy3xQk",
-    "description": "No description",
+    "url": "https://animenana.com/",
+    "description": "Watch and stream anime series online with English subtitles.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Streaming",
+      "Subtitles"
     ],
-    "categories": "Bookmarks bar / website / Anime wesite"
+    "categories": "Bookmarks bar / website / Anime website"
   },
   {
     "id": 59,
     "name": "9anime - Watch Anime Online, Watch English Anime Online Subbed",
     "url": "https://ww.9animes.org/",
-    "description": "No description",
+    "description": "Stream English-subbed anime series and movies online for free.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Streaming",
+      "Subtitles",
+      "Entertainment"
     ],
-    "categories": "Bookmarks bar / website / Anime wesite"
+    "categories": "Bookmarks bar / website / Anime website"
   },
   {
     "id": 60,
     "name": "Muse Asia - YouTube",
     "url": "https://www.youtube.com/c/MuseAsia/playlists",
-    "description": "No description",
+    "description": "Official Muse Asia YouTube channel with anime playlists available for streaming.",
     "tags": [
-      "bookmarks"
+      "Anime",
+      "Streaming",
+      "YouTube",
+      "Official"
     ],
-    "categories": "Bookmarks bar / website / Anime wesite"
+    "categories": "Bookmarks bar / website / Anime website"
   },
   {
     "id": 61,

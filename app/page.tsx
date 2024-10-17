@@ -35,7 +35,7 @@ const Home = () => {
       } else if (selectedFilterSearchBar === "Tags") {
         return website.tags.some((tag) =>
           tag.toLowerCase().includes(searchValue),
-        ); // Check if any tag matches
+        );
       } else if (selectedFilterSearchBar === "Folder") {
         return website.categories.toLowerCase().includes(searchValue);
       }
@@ -45,10 +45,12 @@ const Home = () => {
     .filter((website) => {
       // Check if the website tags include any of the selectedTags
       if (selectedTags.length === 0) return true; // If no tags are selected, include all
-
-      return selectedTags.every((tag) =>
-        website.tags.includes(tag.toLowerCase()),
-      );
+      console.log({ selectedTags });
+      return selectedTags.every((tag) => {
+        return website.tags
+          .map((t) => t.toLowerCase())
+          .includes(tag.toLowerCase());
+      });
     });
 
   const filterOptions = [
@@ -59,13 +61,26 @@ const Home = () => {
   ];
 
   // Count the tags
-  const tagCount: Record<string, number> = {};
+  let tagCount: Record<string, number> = {};
 
   filteredBookmarks.forEach((bookmark) => {
     bookmark.tags.forEach((tag) => {
       tagCount[tag] = (tagCount[tag] || 0) + 1;
     });
   });
+
+  // Sort the tags in alphabetical order
+  const sortedTagCount = Object.keys(tagCount)
+    .sort()
+    .reduce(
+      (acc, key) => {
+        acc[key] = tagCount[key];
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
+
+  tagCount = sortedTagCount;
   console.log({ tagCount });
 
   return (
@@ -128,7 +143,11 @@ const Home = () => {
       <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
 
       <div className="flex">
-        <Sidebar tagCount={tagCount} setSelectedTags={setSelectedTags} />
+        <Sidebar
+          tagCount={tagCount}
+          setSelectedTags={setSelectedTags}
+          selectedTags={selectedTags}
+        />
         {/* <GridLayout /> */}
         <div className="mx-auto columns-1 gap-4 space-y-5 md:columns-2 lg:columns-2">
           {filteredBookmarks.map((website) => (
@@ -145,9 +164,11 @@ import Link from "next/link";
 export function Sidebar({
   tagCount,
   setSelectedTags,
+  selectedTags,
 }: {
   tagCount: Record<string, number>;
   setSelectedTags: React.Dispatch<React.SetStateAction<string[]>>;
+  selectedTags: string[];
 }) {
   return (
     <aside className="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-64 shrink-0 lg:sticky lg:block lg:self-start">
@@ -193,44 +214,30 @@ export function Sidebar({
                   Tags
                 </h4>
                 <div className="grid grid-flow-row auto-rows-max text-sm">
-                  {Object.keys(tagCount).map((tag, index) => (
-                    <div
-                      className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 capitalize text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
-                      onClick={() => {
-                        setSelectedTags((prev) => [...prev, tag]);
-                      }}
-                    >
-                      {tag} ({tagCount[tag]})
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* All Components Section */}
-              <div className="pb-4">
-                <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold text-black dark:text-white">
-                  All Components
-                </h4>
-                <div className="grid grid-flow-row auto-rows-max text-sm">
-                  <Link
-                    className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
-                    href="/components/3d-card-effect"
-                  >
-                    3D Card Effect
-                  </Link>
-                  <Link
-                    className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
-                    href="/components/3d-pin"
-                  >
-                    3D Pin
-                  </Link>
-                  <Link
-                    className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
-                    href="/components/animated-modal"
-                  >
-                    Animated Modal
-                  </Link>
-                  {/* Add more component links similarly */}
+                  {Object.keys(tagCount).map((tag, index) => {
+                    const s = selectedTags;
+                    const t = tag;
+                    const test = s.includes(t);
+                    const test2 = selectedTags.includes(tag);
+                    console.log({ test, tag, test2 });
+                    return (
+                      <button
+                        key={`tag-selection-${index}`}
+                        className={`flex w-full items-center rounded-md border border-transparent px-2 py-1 capitalize transition duration-200 hover:translate-x-1 hover:underline ${selectedTags.includes(tag) ? "text-emerald-500" : ""} `}
+                        onClick={() => {
+                          setSelectedTags((prev) => {
+                            if (prev.includes(tag)) {
+                              return prev.filter((t) => t !== tag);
+                            } else {
+                              return [...prev, tag];
+                            }
+                          });
+                        }}
+                      >
+                        {tag} ({tagCount[tag]})
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -242,6 +249,7 @@ export function Sidebar({
 }
 
 import { useState, useMemo } from "react";
+import { log } from "console";
 
 const GridLayout = () => {
   const [columns, setColumns] = useState<number>(3);
