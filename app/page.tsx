@@ -171,24 +171,23 @@ export function Sidebar({
   selectedTags: string[];
 }) {
   return (
-    <aside className="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-64 shrink-0 lg:sticky lg:block lg:self-start">
-      {/* <aside className="w-64 shrink-0 lg:sticky lg:self-start"></aside> */}
+    <aside className="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-64 shrink-0 lg:sticky lg:block lg:self-start overflow-hidden">
       <div className="relative h-full overflow-hidden py-6 pr-6 lg:py-8">
         <style>
           {`
             [data-radix-scroll-area-viewport] {
-              scrollbar-width: none;
-              -ms-overflow-style: none;
-              -webkit-overflow-scrolling: touch;
+              scrollbar-width: none; /* Firefox */
+              -ms-overflow-style: none; /* Internet Explorer and Edge */
+              -webkit-overflow-scrolling: touch; /* iOS */
             }
             [data-radix-scroll-area-viewport]::-webkit-scrollbar {
-              display: none;
+              display: none; /* Safari and Chrome */
             }
           `}
         </style>
         <div
           data-radix-scroll-area-viewport=""
-          className="scroll h-full w-full overflow-hidden rounded-[inherit]"
+          className="scroll h-full w-full overflow-y-auto"
         >
           <div style={{ minWidth: "100%", display: "table" }}>
             <div className="w-full">
@@ -214,30 +213,23 @@ export function Sidebar({
                   Tags
                 </h4>
                 <div className="grid grid-flow-row auto-rows-max text-sm">
-                  {Object.keys(tagCount).map((tag, index) => {
-                    const s = selectedTags;
-                    const t = tag;
-                    const test = s.includes(t);
-                    const test2 = selectedTags.includes(tag);
-                    console.log({ test, tag, test2 });
-                    return (
-                      <button
-                        key={`tag-selection-${index}`}
-                        className={`flex w-full items-center rounded-md border border-transparent px-2 py-1 capitalize transition duration-200 hover:translate-x-1 hover:underline ${selectedTags.includes(tag) ? "text-emerald-500" : ""} `}
-                        onClick={() => {
-                          setSelectedTags((prev) => {
-                            if (prev.includes(tag)) {
-                              return prev.filter((t) => t !== tag);
-                            } else {
-                              return [...prev, tag];
-                            }
-                          });
-                        }}
-                      >
-                        {tag} ({tagCount[tag]})
-                      </button>
-                    );
-                  })}
+                  {Object.keys(tagCount).map((tag, index) => (
+                    <button
+                      key={`tag-selection-${index}`}
+                      className={`flex w-full items-center rounded-md border border-transparent px-2 py-1 capitalize transition duration-200 hover:translate-x-1 hover:underline ${selectedTags.includes(tag) ? "text-emerald-500" : ""} `}
+                      onClick={() => {
+                        setSelectedTags((prev) => {
+                          if (prev.includes(tag)) {
+                            return prev.filter((t) => t !== tag);
+                          } else {
+                            return [...prev, tag];
+                          }
+                        });
+                      }}
+                    >
+                      {tag} ({tagCount[tag]})
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
