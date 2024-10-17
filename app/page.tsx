@@ -4,6 +4,12 @@ import React from "react";
 import { Website } from "./types"; // Import shared type
 import { CodeCard } from "@/components/Card";
 import personalBookmarks from "../constants/bookmarks.json";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 type NestedCategory = {
   [key: string]: Website[] | NestedCategory;
 };
@@ -12,217 +18,40 @@ type DataStructure = {
   [key: string]: NestedCategory;
 };
 const Home = () => {
-  // const websites: DataStructure = {
-  //   Technology: {
-  //     Programming: {
-  //       Community: [
-  //         {
-  //           id: 1,
-  //           name: "Stack Overflow",
-  //           url: "https://stackoverflow.com",
-  //           description:
-  //             "A platform for developers to ask and answer coding questions.",
-  //           tags: ["programming", "development", "coding"],
-  //           categories: "Technology/Programming/Community",
-  //         },
-  //       ],
-  //       "Version Control": [
-  //         {
-  //           id: 5,
-  //           name: "GitHub",
-  //           url: "https://github.com",
-  //           description:
-  //             "A platform for hosting and collaborating on open-source projects.",
-  //           tags: ["version control", "open source", "repositories"],
-  //           categories: "Technology/Programming/Version Control",
-  //         },
-  //       ],
-  //     },
-  //     "Web Development": {
-  //       Documentation: [
-  //         {
-  //           id: 2,
-  //           name: "MDN Web Docs",
-  //           url: "https://developer.mozilla.org",
-  //           description: "Comprehensive documentation for web developers.",
-  //           tags: ["web development", "HTML", "CSS", "JavaScript"],
-  //           categories: "Technology/Web Development/Documentation",
-  //         },
-  //       ],
-  //     },
-  //     News: {
-  //       Community: [
-  //         {
-  //           id: 6,
-  //           name: "Hacker News",
-  //           url: "https://news.ycombinator.com",
-  //           description:
-  //             "A community-driven platform for sharing and discussing technology and startup news.",
-  //           tags: ["news", "technology", "startups"],
-  //           categories: "Technology/News/Community",
-  //         },
-  //       ],
-  //     },
-  //   },
-  //   Education: {
-  //     "Online Courses": {
-  //       "Free Resources": [
-  //         {
-  //           id: 3,
-  //           name: "Khan Academy",
-  //           url: "https://www.khanacademy.org",
-  //           description:
-  //             "A non-profit educational platform providing free courses on a variety of subjects.",
-  //           tags: ["education", "learning", "courses"],
-  //           categories: "Education/Online Courses/Free Resources",
-  //         },
-  //       ],
-  //       "Professional Development": [
-  //         {
-  //           id: 4,
-  //           name: "Coursera",
-  //           url: "https://www.coursera.org",
-  //           description:
-  //             "Online learning platform offering courses from top universities.",
-  //           tags: ["education", "online courses", "universities"],
-  //           categories: "Education/Online Courses/Professional Development",
-  //         },
-  //       ],
-  //     },
-  //   },
-  //   Design: {
-  //     Portfolio: {
-  //       Showcase: [
-  //         {
-  //           id: 7,
-  //           name: "Behance",
-  //           url: "https://www.behance.net",
-  //           description: "A platform to showcase and discover creative work.",
-  //           tags: ["design", "creativity", "portfolio"],
-  //           categories: "Design/Portfolio/Showcase",
-  //         },
-  //       ],
-  //     },
-  //     Try: [
-  //       {
-  //         id: 18,
-  //         name: "Dribbblesss",
-  //         url: "https://dribbble.codvsdvm",
-  //         description:
-  //           "A community fsdvsvsor designers to share their work and get feedback.",
-  //         tags: ["design", "feedback", "community"],
-  //         categories: "Design/Try",
-  //       },
-  //     ],
-  //   },
-  //   "Social Media": {
-  //     Forums: {
-  //       General: [
-  //         {
-  //           id: 9,
-  //           name: "Reddit",
-  //           url: "https://www.reddit.com",
-  //           description:
-  //             "A network of communities based on people's interests.",
-  //           tags: ["social media", "community", "forums"],
-  //           categories: "Social Media/Forums/General",
-  //         },
-  //         {
-  //           id: 9,
-  //           name: "Reddit",
-  //           url: "https://www.reddit.com",
-  //           description:
-  //             "A network of communities based on people's interests.",
-  //           tags: ["social media", "community", "forums"],
-  //           categories: "Social Media/Forums/General",
-  //         },
-  //         {
-  //           id: 9,
-  //           name: "Reddit",
-  //           url: "https://www.reddit.com",
-  //           description:
-  //             "A network of communities based on people's interests.",
-  //           tags: ["social media", "community", "forums"],
-  //           categories: "Social Media/Forums/General",
-  //         },
-  //         {
-  //           id: 9,
-  //           name: "Reddit",
-  //           url: "https://www.reddit.com",
-  //           description:
-  //             "A network of communities based on people's interests.",
-  //           tags: ["social media", "community", "forums"],
-  //           categories: "Social Media/Forums/General",
-  //         },
-  //         {
-  //           id: 9,
-  //           name: "Reddit",
-  //           url: "https://www.reddit.com",
-  //           description:
-  //             "A network of communities based on people's interests.",
-  //           tags: ["social media", "community", "forums"],
-  //           categories: "Social Media/Forums/General",
-  //         },
-  //         {
-  //           id: 9,
-  //           name: "Reddit",
-  //           url: "https://www.reddit.com",
-  //           description:
-  //             "A network of communities based on people's interests.",
-  //           tags: ["social media", "community", "forums"],
-  //           categories: "Social Media/Forums/General",
-  //         },
-  //         {
-  //           id: 9,
-  //           name: "Reddit",
-  //           url: "https://www.reddit.com",
-  //           description:
-  //             "A network of communities based on people's interests.",
-  //           tags: ["social media", "community", "forums"],
-  //           categories: "Social Media/Forums/General",
-  //         },
-  //       ],
-  //     },
-  //   },
-  //   Business: {
-  //     Startups: [
-  //       {
-  //         id: 10,
-  //         name: "Product Hunt",
-  //         url: "https://www.producthunt.com",
-  //         description:
-  //           "A place to discover the latest tech products and startups.",
-  //         tags: ["startups", "technology", "products"],
-  //         categories: "Business/Startups",
-  //       },
-  //     ],
-  //   },
-  // };
-  // function flattenWebsites(websites: DataStructure): Website[] {
-  //   const flattenedWebsites: Website[] = [];
+  const [searchTerm, setSearchTerm] = useState<string>(""); // State for search term
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false); // State for dropdown visibility
 
-  //   function traverse(obj: any, path: string[] = []) {
-  //     for (const [key, value] of Object.entries(obj)) {
-  //       if (Array.isArray(value)) {
-  //         flattenedWebsites.push(
-  //           ...value.map((site) => ({
-  //             ...site,
-  //             categories: [...path, key].join("/"),
-  //           })),
-  //         );
-  //       } else if (typeof value === "object" && value !== null) {
-  //         traverse(value, [...path, key]);
-  //       }
-  //     }
-  //   }
+  // Function to toggle dropdown visibility
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
-  //   traverse(websites);
-  //   return flattenedWebsites;
-  // }
+  const [selectedFilterFiled, setSelectedFilterFiled] = useState("Website");
+  // Filter bookmarks based on search term
+  const filteredBookmarks = personalBookmarks.filter((website) => {
+    const searchValue = searchTerm.toLowerCase();
 
-  // // Usage example:
-  // const flatWebsites = flattenWebsites(websites);
-  // console.log({ flatWebsites });
+    if (selectedFilterFiled === "Website") {
+      return website.name.toLowerCase().includes(searchValue);
+    } else if (selectedFilterFiled === "Link") {
+      return website.url.toLowerCase().includes(searchValue);
+    } else if (selectedFilterFiled === "Tags") {
+      return website.tags.some((tag) =>
+        tag.toLowerCase().includes(searchValue),
+      ); // Check if any tag matches
+    } else if (selectedFilterFiled === "Folder") {
+      return website.categories.toLowerCase().includes(searchValue);
+    }
+
+    return false;
+  });
+
+  const filterOptions = [
+    { label: "Website", value: "Website" },
+    { label: "Link", value: "Link" },
+    { label: "Tags", value: "Tags" },
+    { label: "Folder", value: "Folder" },
+  ];
 
   return (
     <div className="container mx-auto p-4">
@@ -231,46 +60,73 @@ const Home = () => {
           Bookmarks Manager
         </span>
       </h1>
-      <div className="grid-cols-[repeat(auto-fill),minmax(9%,1fr))] grid gap-x-4 gap-y-0 p-4">
-        <div className="flex h-96 items-center justify-center bg-blue-300 p-4">
-          Item 1 - Short Content
-        </div>
-        <div className="col-span-2 flex h-16 items-center justify-center bg-green-300 p-4">
-          Item 2 - This item has longer content. It will take more height based
-          on its content.
-        </div>
-        <div className="flex items-center justify-center bg-red-300 p-4">
-          Item 3 - Short Content
-        </div>
-        <div className="col-span-2 flex items-center justify-center bg-yellow-300 p-4">
-          Item 4 - Another long content item that will take as much space as it
-          needs to fit the content.
-        </div>
-        <div className="flex items-center justify-center bg-purple-300 p-4">
-          Item 5 - Short Content
-        </div>
-        <div className="col-span-3 flex items-center justify-center bg-pink-300 p-4">
-          Item 6 - Even longer content that might wrap over multiple lines.
-        </div>
-      </div>
-
-      <div className="mb-4 grid grid-cols-[repeat(auto-fit,minmax(9%,1fr))] grid-rows-[repeat(auto-fill,minmax(4%,1fr))] gap-4">
-        <div className="h-72 bg-gray-200 p-4">1st</div>
-        <div className="h-14 bg-gray-200 p-4">2nd</div>
-        <div className="h-14 bg-gray-200 p-4">3rd</div>
-        <div className="h-72 bg-gray-200 p-4">4th</div>
-      </div>
 
       <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
+
+      <form className="mx-auto max-w-lg rounded-md border-2 border-blue-500">
+        <div className="flex">
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              aria-label="Field Filter"
+              className="z-10 mx-auto inline-flex w-28 flex-shrink-0 items-center justify-between rounded-s-md bg-gray-100 px-4 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
+            >
+              {selectedFilterFiled}{" "}
+              <svg
+                className="ms-2.5 h-2.5 w-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-32">
+              {filterOptions.map((option) => (
+                <DropdownMenuItem
+                  key={option.value}
+                  onSelect={() => setSelectedFilterFiled(option.value)}
+                >
+                  {option.label}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <div className="mx-auto flex w-full max-w-md overflow-hidden px-4 py-3 font-[sans-serif]">
+            <input
+              type="email"
+              placeholder="Search Something..."
+              className="w-full bg-transparent text-sm outline-none"
+              onChange={(e) => setSearchTerm(e.target.value)}
+              value={searchTerm}
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 192.904 192.904"
+              width="16px"
+              className="fill-gray-600"
+            >
+              <path d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z"></path>
+            </svg>
+          </div>
+        </div>
+      </form>
+
       <div className="flex">
         <Sidebar />
-        {/* <div className="flex-1 pl-4"> */}
-        <div className="mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {personalBookmarks.map((website) => (
+        {/* <GridLayout /> */}
+        <div className="mx-auto columns-1 gap-4 space-y-5 md:columns-2 lg:columns-2">
+          {filteredBookmarks.map((website) => (
             <CodeCard key={website.id} website={website} />
           ))}
         </div>
-        {/* </div> */}
       </div>
     </div>
   );
@@ -384,3 +240,53 @@ export function Sidebar() {
     </aside>
   );
 }
+
+import { useState, useMemo } from "react";
+
+const GridLayout = () => {
+  const [columns, setColumns] = useState<number>(3);
+  const [columnGap, setColumnGap] = useState<number>(1);
+
+  // Handle changes for each setting
+  const handleColumnsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setColumns(parseInt(e.target.value));
+  };
+
+  const handleColumnGapChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setColumnGap(parseInt(e.target.value));
+  };
+
+  // Generate random heights for grid items
+  const randomHeights = useMemo(() => {
+    return Array(12)
+      .fill(0)
+      .map(() => Math.floor(Math.random() * (300 - 100 + 1) + 100));
+  }, []);
+
+  return (
+    <div className="w-[900px]">
+      <div
+        className="bg-black p-4"
+        style={{
+          columnCount: columns,
+          columnGap: `${columnGap}rem`,
+        }}
+      >
+        {["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"].map(
+          (item, index) => (
+            <div
+              key={item}
+              className="mb-4 break-inside-avoid bg-gray-800 p-4 text-center text-xl font-bold"
+              style={{
+                height: `${randomHeights[index]}px`,
+                width: "100%", // Allow the item to take full width of the column
+              }}
+            >
+              {item}
+            </div>
+          ),
+        )}
+      </div>
+    </div>
+  );
+};
