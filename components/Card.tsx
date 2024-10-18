@@ -86,7 +86,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
         </button>
       </div>
       <div className="mt-5 space-y-4 rounded-md bg-[#49465c] p-4 font-mono text-white focus:outline-none">
-        <p className="line-clamp-3 text-lg text-white">{website.description}</p>
+        {/* <p className="line-clamp-3 text-lg text-white">{website.description}</p> */}
 
         <div className=" ">
           <style>
