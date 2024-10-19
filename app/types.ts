@@ -2,7 +2,7 @@ export type Website = {
   id: number;
   name: string;
   url: string;
-  description: string;
+  description?: string;
   tags: string[];
   categories: string;
 };

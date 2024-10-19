@@ -21,8 +21,8 @@ export const NavBarImage =
 
 export const navLinks = [
   {
-    id: " ",
-    title: " ",
+    id: "popular",
+    title: "Popular ",
   },
   // {
   //   id: "property",
@@ -47,7 +47,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav
-      className={`sm:px-16 px-6 fixed top-0 z-20 flex w-full items-center border-b-2 border-gray-300 bg-white/30 py-5 opacity-80 backdrop-blur-md`}
+      className={`fixed top-0 z-20 flex w-full items-center border-b-2 border-gray-300 bg-white/30 px-6 py-5 opacity-80 backdrop-blur-md sm:px-16`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link
@@ -89,7 +89,7 @@ const Navbar = () => {
           <div className="flex flex-1 items-center justify-end md:hidden">
             <DropdownMenu
               onOpenChange={(
-                open: boolean | ((prevState: boolean) => boolean)
+                open: boolean | ((prevState: boolean) => boolean),
               ) => setToggle(open)}
             >
               <DropdownMenuTrigger aria-label="Small Screen navbar">

@@ -41,10 +41,11 @@ const Sidebar: React.FC<SidebarProps> = ({
                 <div className="grid grid-flow-row auto-rows-max text-sm">
                   <Link
                     className="group flex w-full items-center rounded-md border border-transparent px-2 py-1 text-muted-foreground transition duration-200 hover:translate-x-1 hover:text-emerald-500"
-                    href="https://twitter.com/mannupaaji"
+                    href="https://www.linkedin.com/in/prashant-manandhar"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Twitter @mannupaaji
+                    LinkedIn @prashant-manandhar
                   </Link>
                 </div>
               </div>
