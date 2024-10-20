@@ -32,7 +32,7 @@ export default function RootLayout({
       <body>
         <ThemeProviders>
           <NavBar />
-          <main className={`mx-auto max-w-[104rem] px-2 pt-24`}>
+          <main className={`mx-auto max-w-[104rem] px-5 pt-24`}>
             {children}
           </main>
           <div className="bg-red fixed bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-800 text-white">

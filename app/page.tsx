@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import personalBookmarks from "../constants/bookmarks.json";
 import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
 import { Website } from "./types";
@@ -60,33 +60,8 @@ const Home = () => {
     );
 
   tagCount = sortedTagCount;
-  const [displayCount, setDisplayCount] = useState<number>(20);
 
-  // Function to handle scroll event
-  const handleScroll = () => {
-    const bottom =
-      window.innerHeight + window.scrollY >= document.body.offsetHeight - 100; // Adjusted to trigger before reaching the bottom
-    if (bottom) {
-      console.log({
-        ibookmarkstoDisplaylength: filteredBookmarks.length, // Use ref to get latest value
-        iupdated: Math.min(displayCount + 20, filteredBookmarks.length),
-      });
-      setDisplayCount((prevCount) =>
-        Math.min(prevCount + 20, filteredBookmarks.length),
-      ); // Load more items
-    }
-  };
-  console.log({
-    bookmarkstoDisplaylength: filteredBookmarks.length,
-    updated: Math.min(displayCount + 20, filteredBookmarks.length),
-  });
-  // Add scroll event listener
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+
 
   return (
     <BookmarkLayout
@@ -98,7 +73,7 @@ const Home = () => {
       setSearchTerm={setSearchTerm}
       selectedFilterSearchBar={selectedFilterSearchBar}
       setSelectedFilterSearchBar={setSelectedFilterSearchBar}
-      displayCount={displayCount}
+      // displayCount={displayCount}
     />
   );
 };

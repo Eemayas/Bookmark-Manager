@@ -18,7 +18,7 @@ interface BookmarkLayoutProps {
   selectedFilterSearchBar: string;
   setSelectedFilterSearchBar: React.Dispatch<React.SetStateAction<string>>;
   sidebarMultiSelect?: boolean;
-  displayCount?: number;
+  // displayCount?: number;
 }
 
 const BookmarkLayout: React.FC<BookmarkLayoutProps> = ({
@@ -31,8 +31,45 @@ const BookmarkLayout: React.FC<BookmarkLayoutProps> = ({
   selectedFilterSearchBar,
   setSelectedFilterSearchBar,
   sidebarMultiSelect = true,
-  displayCount = 20,
+  // displayCount = 20,
 }) => {
+  const [displayCount, setDisplayCount] = useState<number>(20);
+
+  const filteredBookmarksRef = useRef(bookmarkstoDisplay); // Create a ref for filteredBookmarks
+
+  // Update the ref whenever filteredBookmarks changes
+  React.useEffect(() => {
+    filteredBookmarksRef.current = bookmarkstoDisplay;
+  }, [bookmarkstoDisplay]);
+
+  // Function to handle scroll event
+  const handleScroll = () => {
+    const bottom =
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 100; // Adjusted to trigger before reaching the bottom
+    if (bottom) {
+      console.log({
+        ibookmarkstoDisplaylength: filteredBookmarksRef.current.length, // Use ref to get latest value
+        iupdated: Math.min(
+          displayCount + 20,
+          filteredBookmarksRef.current.length,
+        ),
+      });
+      setDisplayCount((prevCount) =>
+        Math.min(prevCount + 20, filteredBookmarksRef.current.length),
+      ); // Load more items
+    }
+  };
+  console.log({
+    bookmarkstoDisplaylength: bookmarkstoDisplay.length,
+    updated: Math.min(displayCount + 20, bookmarkstoDisplay.length),
+  });
+  // Add scroll event listener
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="flex">
       <Sidebar
