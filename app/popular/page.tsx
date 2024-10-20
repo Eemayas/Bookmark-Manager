@@ -1,50 +1,76 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import popularlinkss from "@/constants/popularslinks.json";
+import { Website } from "../types";
+import Link from "next/link";
+import SearchBar from "@/layouts/BookmarkLayout/components/SearchBar";
+import { BookMarkCard } from "@/components/Card";
+import Sidebar from "@/layouts/BookmarkLayout/components/Sidebar";
+import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
+
+type PopularLinksType = {
+  [key: string]: Website[];
+};
 
 const PopularLinks = () => {
-  const axios = require("axios");
-  const cheerio = require("cheerio");
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [selectedTags, setSelectedTags] = useState<string[]>([
+    Object.keys(popularlinkss)[0],
+  ]);
+  const [selectedFilterSearchBar, setSelectedFilterSearchBar] =
+    useState("Website");
+  let tagCount: Record<string, number> = {};
 
-  async function scrapeWebsiteData(url: string | URL) {
-    try {
-      // Fetch the HTML content of the URL
-      const { data } = await axios.get(url);
+  Object.keys(popularlinkss).forEach((category) => {
+    tagCount[category] = (popularlinkss as PopularLinksType)[category].length;
+  });
 
-      // Load the HTML into cheerio
-      const $ = cheerio.load(data);
+  console.log({ tagCount });
+  // const
+  console.log({
+    selectedTags,
+    bookmarkstoDisplay: (popularlinkss as PopularLinksType)[selectedTags[0]],
+    bookmarkstoDisplaylengthssss: (popularlinkss as PopularLinksType)[
+      selectedTags[0]
+    ].length,
+  });
 
-      // Extract the meta title
-      const metaTitle = $('meta[name="title"]').attr("content");
-      const pageTitle = metaTitle || $("title").text();
+  return (
+    <BookmarkLayout
+      bookmarkstoDisplay={(popularlinkss as PopularLinksType)[selectedTags[0]]}
+      tagCount={tagCount}
+      setSelectedTags={setSelectedTags}
+      selectedTags={selectedTags}
+      searchTerm={searchTerm}
+      setSearchTerm={setSearchTerm}
+      selectedFilterSearchBar={selectedFilterSearchBar}
+      setSelectedFilterSearchBar={setSelectedFilterSearchBar}
+      sidebarMultiSelect={false}
+    />
+    // <div className="flex">
+    //   <Sidebar
+    //     tagCount={tagCount}
+    //     setSelectedTags={setSelectedTags}
+    //     selectedTags={selectedTags}
+    //     multiSelect={false}
+    //   />
 
-      // Extract the meta description
-      const metaDescription =
-        $('meta[name="description"]').attr("content") ||
-        "No description available";
-
-      // Extract the favicon URL
-      let favicon =
-        $('link[rel="icon"]').attr("href") ||
-        $('link[rel="shortcut icon"]').attr("href");
-      if (favicon && !favicon.startsWith("http")) {
-        // Convert to absolute URL if it's relative
-        const baseUrl = new URL(url);
-        favicon = new URL(favicon, baseUrl).href;
-      }
-
-      console.log("Title:", pageTitle);
-      console.log("Description:", metaDescription);
-      console.log("Favicon:", favicon || "No favicon available");
-    } catch (error) {
-      console.error("Error:", (error as Error).message);
-    }
-  }
-
-  // Example usage
-  scrapeWebsiteData(
-    "https://www.freepik.com/premium-photo/young-sport-woman-isolated-blue-background-making-money-gesture_21950180.htm#page=2&query=resume&position=1&from_view=keyword",
+    //   <main className="flex-1">
+    //     <SearchBar
+    //       searchTerm={searchTerm}
+    //       setSearchTerm={setSearchTerm}
+    //       selectedFilterSearchBar={selectedFilterSearchBar}
+    //       setSelectedFilterSearchBar={setSelectedFilterSearchBar}
+    //     />
+    //     <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
+    //     <div className="mx-auto columns-1 gap-4 space-y-5 md:columns-2 lg:columns-2">
+    //       {(popularlinkss as PopularLinksType)[selectedTags[0]].map((website) => (
+    //         <BookMarkCard key={website.id} website={website} />
+    //       ))}
+    //     </div>
+    //   </main>
+    // </div>
   );
-
-  return <div>PopularLinks</div>;
 };
 
 export default PopularLinks;

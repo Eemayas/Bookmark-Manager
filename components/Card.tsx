@@ -53,7 +53,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
   };
 
   return (
-    <div className="card mx-auto max-h-fit break-inside-avoid rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1">
+    <div className="card mx-auto w-full max-h-fit break-inside-avoid rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1">
       <div className="header m-1 mt-2 flex items-center justify-between space-x-4 rounded-md pl-2 pr-2">
         <div className="flex items-center space-x-2">
           <span className="red inline-block size-4 rounded-full bg-[#ff605c]" />
@@ -62,12 +62,20 @@ export const BookMarkCard: React.FC<CardProps> = ({
         </div>
 
         <div className="flex-grow text-center">
-          <p
-            className="max-w-full overflow-hidden hyphens-manual whitespace-normal break-all font-mono text-lg text-white"
-            id="title2"
-          >
-            {website.name}
-          </p>
+          <div className="flex flex-row items-center justify-center gap-2">
+            <img
+              src={`https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${website.url}/&size=32`}
+              alt={website.name}
+              className="size-5 rounded-[5px] object-cover shadow-lg" // Added box shadow
+            />
+
+            <p
+              className="max-w-full overflow-hidden hyphens-manual whitespace-normal break-all font-mono text-lg text-white"
+              id="title2"
+            >
+           {website.id}   {website.name}
+            </p>
+          </div>
 
           <LinkPreview
             url={website.url}
@@ -86,7 +94,13 @@ export const BookMarkCard: React.FC<CardProps> = ({
         </button>
       </div>
       <div className="mt-5 space-y-4 rounded-md bg-[#49465c] p-4 font-mono text-white focus:outline-none">
-        {/* <p className="line-clamp-3 text-lg text-white">{website.description}</p> */}
+        {website.description !== undefined ? (
+          <p className="text-md line-clamp-3 text-white">
+            {website.description}
+          </p>
+        ) : (
+          ""
+        )}
 
         <div className=" ">
           <style>
