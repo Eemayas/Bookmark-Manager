@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import personalBookmarks from "../constants/bookmarks.json";
 import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
 import { Website } from "./types";
+import BookmarkModal from "./(home)/components/BookmarkModal";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState<string>(""); // State for search term
@@ -63,6 +64,8 @@ const Home = () => {
 
   // New state for modal visibility and form data
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   const [newBookmark, setNewBookmark] = useState<Website>({
     id: 0,
     name: "",
@@ -93,56 +96,6 @@ const Home = () => {
 
   return (
     <div>
-      <button onClick={() => setIsModalOpen(true)}>Add Bookmark</button>{" "}
-      {/* Button to open modal */}
-      {isModalOpen && (
-        <div className="modal">
-          {/* Modal structure */}
-          <form onSubmit={handleAddBookmark}>
-            <input
-              type="text"
-              placeholder="Name"
-              value={newBookmark.name}
-              onChange={(e) =>
-                setNewBookmark({ ...newBookmark, name: e.target.value })
-              }
-              required
-            />
-            <input
-              type="url"
-              placeholder="URL"
-              value={newBookmark.url}
-              onChange={(e) =>
-                setNewBookmark({ ...newBookmark, url: e.target.value })
-              }
-              required
-            />
-            <input
-              type="text"
-              placeholder="Tags (comma separated)"
-              value={newBookmark.tags.join(", ")}
-              onChange={(e) =>
-                setNewBookmark({
-                  ...newBookmark,
-                  tags: e.target.value.split(",").map((tag) => tag.trim()),
-                })
-              }
-            />
-            <input
-              type="text"
-              placeholder="Categories"
-              value={newBookmark.categories}
-              onChange={(e) =>
-                setNewBookmark({ ...newBookmark, categories: e.target.value })
-              }
-            />
-            <button type="submit">Add Bookmark</button>
-            <button type="button" onClick={() => setIsModalOpen(false)}>
-              Cancel
-            </button>
-          </form>
-        </div>
-      )}
       <BookmarkLayout
         bookmarkstoDisplay={filteredBookmarks}
         tagCount={tagCount}
@@ -154,6 +107,7 @@ const Home = () => {
         setSelectedFilterSearchBar={setSelectedFilterSearchBar}
         // displayCount={displayCount}
       />
+      <BookmarkModal />
     </div>
   );
 };
