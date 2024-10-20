@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ThemeProviders } from "./providers";
+import { ReduxProviders, ThemeProviders } from "./providers";
 import NavBar from "@/components/NavBar";
 
 const geistSans = localFont({
@@ -30,20 +30,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProviders>
-          <NavBar />
-          <main className={`mx-auto max-w-[104rem] px-5 pt-24`}>
-            {children}
-          </main>
-          <div className="bg-red fixed bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-800 text-white">
-            <span className="xs:hidden block sm:hidden">xs</span>
-            <span className="hidden sm:block md:hidden">sm</span>
-            <span className="hidden md:block lg:hidden">md</span>
-            <span className="hidden lg:block xl:hidden">lg</span>
-            <span className="hidden xl:block 2xl:hidden">xl</span>
-            <span className="hidden 2xl:block">2xl</span>
-          </div>
-        </ThemeProviders>
+        <ReduxProviders>
+          <ThemeProviders>
+            <NavBar />
+            <main className={`mx-auto max-w-[104rem] px-5 pt-24`}>
+              {children}
+            </main>
+            <div className="bg-red fixed bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-800 text-white">
+              <span className="xs:hidden block sm:hidden">xs</span>
+              <span className="hidden sm:block md:hidden">sm</span>
+              <span className="hidden md:block lg:hidden">md</span>
+              <span className="hidden lg:block xl:hidden">lg</span>
+              <span className="hidden xl:block 2xl:hidden">xl</span>
+              <span className="hidden 2xl:block">2xl</span>
+            </div>
+          </ThemeProviders>
+        </ReduxProviders>
       </body>
     </html>
   );

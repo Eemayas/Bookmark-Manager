@@ -53,7 +53,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
   };
 
   return (
-    <div className="card mx-auto w-full max-h-fit break-inside-avoid rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1">
+    <div className="card mx-auto max-h-fit w-full break-inside-avoid rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1">
       <div className="header m-1 mt-2 flex items-center justify-between space-x-4 rounded-md pl-2 pr-2">
         <div className="flex items-center space-x-2">
           <span className="red inline-block size-4 rounded-full bg-[#ff605c]" />
@@ -73,7 +73,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
               className="max-w-full overflow-hidden hyphens-manual whitespace-normal break-all font-mono text-lg text-white"
               id="title2"
             >
-           {website.id}   {website.name}
+              {website.name}
             </p>
           </div>
 

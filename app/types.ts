@@ -5,6 +5,7 @@ export type Website = {
   description?: string;
   tags: string[];
   categories: string;
+  isFavorities?: boolean;
 };
 export type NestedCategory = {
   [key: string]: Website[] | NestedCategory;

@@ -1,7 +1,9 @@
 /** @format */
 
 "use client";
+import { store } from "@/store";
 import { ThemeProvider } from "next-themes";
+import { Provider } from "react-redux";
 
 export function ThemeProviders({ children }: { children: React.ReactNode }) {
   return (
@@ -9,4 +11,8 @@ export function ThemeProviders({ children }: { children: React.ReactNode }) {
       {children}
     </ThemeProvider>
   );
+}
+
+export function ReduxProviders({ children }: { children: React.ReactNode }) {
+  return <Provider store={store}>{children}</Provider>;
 }

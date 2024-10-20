@@ -125,7 +125,6 @@
     "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
     "description": "MDN documentation and resources for learning and using CSS.",
     "tags": [
-      "1fff",
       "CSS",
       "Web Development",
       "Documentation"
@@ -162,7 +161,6 @@
     "url": "https://codesandbox.io/s/new",
     "description": "Online code editor for web development, supporting various frameworks.",
     "tags": [
-      "1fff",
       "Web Development",
       "Code Editor",
       "Sandbox"
@@ -175,7 +173,6 @@
     "url": "https://www.favicon.cc/",
     "description": "An online tool for creating and customizing favicon icons.",
     "tags": [
-      "1fff",
       "Icons",
       "Web Design",
       "Tools"
@@ -188,7 +185,6 @@
     "url": "https://github.com/airbnb/javascript",
     "description": "Airbnb's popular JavaScript style guide for writing clean and consistent code.",
     "tags": [
-      "1fff",
       "JavaScript",
       "Style Guide",
       "Best Practices"
@@ -201,7 +197,6 @@
     "url": "https://devdocs.io/",
     "description": "API documentation for web development technologies in a searchable format.",
     "tags": [
-      "1fff",
       "API",
       "Documentation",
       "Web Development"
@@ -214,7 +209,6 @@
     "url": "https://reactjs.org/tutorial/tutorial.html",
     "description": "An official React tutorial introducing key concepts and building components.",
     "tags": [
-      "1fff",
       "React",
       "Tutorial",
       "Web Development"
@@ -227,7 +221,6 @@
     "url": "https://www.transparenttextures.com/",
     "description": "A collection of transparent textures for web design.",
     "tags": [
-      "1fff",
       "Textures",
       "Web Design",
       "Backgrounds"
@@ -240,7 +233,6 @@
     "url": "https://www.youtube.com/watch?v=zG3QrRcrNGI",
     "description": "A YouTube video providing an introduction to Locofy.ai for UI design automation.",
     "tags": [
-      "1fff",
       "UI Design",
       "Automation",
       "YouTube"
@@ -253,7 +245,6 @@
     "url": "https://www.appbrewery.co/p/web-development-course-resources/",
     "description": "Comprehensive resources for learning web development, including coding tutorials and exercises.",
     "tags": [
-      "1fff",
       "web development",
       "learning resources",
       "tutorials"
@@ -266,7 +257,6 @@
     "url": "https://cssgradient.io/",
     "description": "An online tool for creating and customizing CSS gradients.",
     "tags": [
-      "1fff",
       "CSS",
       "design tools",
       "gradients"
@@ -279,7 +269,6 @@
     "url": "https://iconscout.com/icons/conversation",
     "description": "A collection of free conversation icons available in multiple formats such as SVG, PNG, and ICO.",
     "tags": [
-      "1fff",
       "icons",
       "design assets",
       "SVG"
@@ -292,7 +281,6 @@
     "url": "https://www.youtube.com/watch?v=CkVrmLLHmuI",
     "description": "YouTube tutorial on building a responsive admin dashboard using HTML, CSS, and JavaScript, with source code provided.",
     "tags": [
-      "1fff",
       "dashboard",
       "HTML",
       "CSS",
@@ -307,7 +295,6 @@
     "url": "https://app.logo.com/flow/type",
     "description": "An online tool to create and customize logos for businesses and personal projects.",
     "tags": [
-      "1fff",
       "logo design",
       "branding",
       "design tools"
@@ -320,7 +307,6 @@
     "url": "https://www.youtube.com/watch?v=WBe3xrV4CPM",
     "description": "YouTube tutorial on importing GLTF models using the Three.js library.",
     "tags": [
-      "1fff",
       "Three.js",
       "3D models",
       "GLTF",
@@ -335,7 +321,6 @@
     "url": "https://blog.logrocket.com/creating-game-three-js/",
     "description": "A blog post detailing how to create a game using the Three.js library.",
     "tags": [
-      "1fff",
       "Three.js",
       "game development",
       "JavaScript",
@@ -349,7 +334,6 @@
     "url": "https://reactjsexample.com/beautiful-orbit-components-to-react/",
     "description": "A collection of beautiful React components inspired by Orbit design.",
     "tags": [
-      "1fff",
       "React",
       "UI components",
       "web development"
@@ -362,7 +346,6 @@
     "url": "https://spline.design/download",
     "description": "A browser-based 3D design tool offering real-time collaboration features.",
     "tags": [
-      "1fff",
       "3D design",
       "collaboration tools",
       "web design"
@@ -375,7 +358,6 @@
     "url": "https://ui.shadcn.com/docs",
     "description": "Documentation for shadcn's UI components library for modern web development.",
     "tags": [
-      "1fff",
       "UI components",
       "web development",
       "React"
@@ -388,7 +370,6 @@
     "url": "https://css.gg/",
     "description": "A collection of customizable and retina-ready CSS icons for use in web projects.",
     "tags": [
-      "1fff",
       "icons",
       "CSS",
       "web design",
@@ -402,7 +383,6 @@
     "url": "https://cssbuttons.app/",
     "description": "A library of over 60 CSS button designs, free for use in web projects.",
     "tags": [
-      "1fff",
       "CSS",
       "buttons",
       "UI components"
@@ -415,7 +395,6 @@
     "url": "https://zishop.vercel.app/digital",
     "description": "An online platform for digital shopping, offering a variety of digital products.",
     "tags": [
-      "1fff",
       "e-commerce",
       "digital products",
       "shopping"
@@ -428,7 +407,6 @@
     "url": "https://archive.nptel.ac.in/courses/106/105/106105217/#",
     "description": "NPTEL course on ethical hacking, covering various aspects of cybersecurity and penetration testing.",
     "tags": [
-      "1fff",
       "cybersecurity",
       "ethical hacking",
       "NPTEL",
@@ -442,7 +420,6 @@
     "url": "https://www.hindilinks4u.to/",
     "description": "A platform for streaming Hindi movies, dubbed movies, and TV shows online.",
     "tags": [
-      "1fff",
       "movies",
       "streaming",
       "Hindi cinema"
@@ -455,7 +432,6 @@
     "url": "https://khatrimazafull.to/",
     "description": "A site offering HD movie downloads in various file sizes.",
     "tags": [
-      "1fff",
       "movie downloads",
       "HD movies",
       "Bollywood"
@@ -468,7 +444,6 @@
     "url": "https://lordhd.in/",
     "description": "A site to stream or download movies and TV series in Hindi, including Hollywood dubbed and Korean dramas.",
     "tags": [
-      "1fff",
       "movies",
       "TV series",
       "Hindi dubbed"
@@ -481,7 +456,6 @@
     "url": "https://yts.mx/browse-movies",
     "description": "A platform for browsing and downloading movies via YIFY torrents.",
     "tags": [
-      "1fff",
       "torrents",
       "movie downloads",
       "YIFY"
@@ -494,7 +468,6 @@
     "url": "https://emovies.io/free-movies.html?__cf_chl_jschl_tk__=b3f309235bca086160f84b1fa264a085304ccba5-1607694475-0-AUMULy0BgOrkJF3p5mc3xjBRXsES0inclKiwci_M7rgWqOApiH9I7LJpE2LMgm_0W1TNnApa4belJBfe0PgBJYaxHhbEP6FjgOrnSyh8oSb-AGbBr_SIP2NrRU6fhyTqk4sBRgZLPY6Y38GOfvBvoPvE4POcp7u83XSIpgecG4ClSGS5b_ErL41tDwbEB82cBSiyg",
     "description": "A site for streaming free movies and TV series online.",
     "tags": [
-      "1fff",
       "movies",
       "TV series",
       "free streaming"
@@ -507,7 +480,6 @@
     "url": "http://www7.fmovies.sc/",
     "description": "Stream a wide selection of movies online for free, offering fast and high-quality playback.",
     "tags": [
-      "1fff",
       "Streaming",
       "Movies",
       "Entertainment"
@@ -520,7 +492,6 @@
     "url": "https://wvw1.123movies.net/",
     "description": "Watch movies and TV series online in HD quality for free with an extensive library.",
     "tags": [
-      "1fff",
       "Streaming",
       "Movies",
       "TV Shows",
@@ -534,7 +505,6 @@
     "url": "https://yts.mx/",
     "description": "Download high-quality movie torrents in small file sizes from the official YTS website.",
     "tags": [
-      "1fff",
       "Torrents",
       "Movies",
       "Downloads"
@@ -547,7 +517,6 @@
     "url": "https://animekayo.com/",
     "description": "Download anime, manga, and music in different formats and quality levels from AnimeKayo.",
     "tags": [
-      "1fff",
       "Anime",
       "Downloads",
       "Manga",
@@ -561,7 +530,6 @@
     "url": "https://animeheaven.ru/",
     "description": "Watch a wide selection of HD anime series and movies online for free.",
     "tags": [
-      "1fff",
       "Streaming",
       "Anime",
       "HD",
@@ -575,7 +543,6 @@
     "url": "https://kickasstorrents.to/",
     "description": "Access and download a variety of torrents including movies, music, software, and more.",
     "tags": [
-      "1fff",
       "Torrents",
       "Downloads",
       "Movies",
@@ -589,7 +556,6 @@
     "url": "https://123animes.mobi/",
     "description": "Stream and download English-subbed and dubbed anime series online.",
     "tags": [
-      "1fff",
       "Streaming",
       "Anime",
       "English Dub",
@@ -603,7 +569,6 @@
     "url": "https://www.videoconverterfactory.com/tips/batch-download-anime.html",
     "description": "Guide on the most efficient methods for batch downloading anime series.",
     "tags": [
-      "1fff",
       "Anime",
       "Guides",
       "Downloads",
@@ -617,7 +582,6 @@
     "url": "https://tubitv.com/",
     "description": "Stream a wide range of movies and TV shows online for free on Tubi.",
     "tags": [
-      "1fff",
       "Streaming",
       "Movies",
       "TV Shows",
@@ -631,7 +595,6 @@
     "url": "https://cineb.net/",
     "description": "Stream HD movies online for free with a vast collection of genres.",
     "tags": [
-      "1fff",
       "Streaming",
       "Movies",
       "HD",
@@ -645,7 +608,6 @@
     "url": "https://goku.to/",
     "description": "Watch free movies online and stream a variety of genres and titles.",
     "tags": [
-      "1fff",
       "Streaming",
       "Movies",
       "Entertainment"
@@ -658,7 +620,6 @@
     "url": "https://www.filmyzilla.credit/",
     "description": "Download Bollywood, Hollywood, and Hindi dubbed movies for free from FilmyZilla.",
     "tags": [
-      "1fff",
       "Downloads",
       "Movies",
       "Bollywood",
@@ -673,7 +634,6 @@
     "url": "https://anidl.org/",
     "description": "A platform to download anime series and episodes in different formats.",
     "tags": [
-      "1fff",
       "Anime",
       "Downloads",
       "Series"
@@ -686,7 +646,6 @@
     "url": "https://animereleasegroup.blogspot.com/p/main.html",
     "description": "Anime Release Group offering a collection of anime downloads and resources.",
     "tags": [
-      "1fff",
       "Anime",
       "Downloads",
       "Groups"
@@ -699,7 +658,6 @@
     "url": "https://kayoanime.com/",
     "description": "Read news, reviews, and updates about the latest anime series and releases.",
     "tags": [
-      "1fff",
       "Anime",
       "News",
       "Reviews",
@@ -713,7 +671,6 @@
     "url": "https://animekaizoku.com/",
     "description": "Download high-quality anime series and episodes with various formats available.",
     "tags": [
-      "1fff",
       "Anime",
       "Downloads",
       "Quality"
@@ -726,7 +683,6 @@
     "url": "https://nyaa.si/",
     "description": "Torrent site for downloading anime series, movies, and other related content.",
     "tags": [
-      "1fff",
       "Torrents",
       "Anime",
       "Downloads"
@@ -739,7 +695,6 @@
     "url": "https://anidb.net/",
     "description": "Database providing detailed information on anime series, characters, and episodes.",
     "tags": [
-      "1fff",
       "Anime",
       "Database",
       "Information"
@@ -752,7 +707,6 @@
     "url": "https://animenana.com/",
     "description": "Watch and stream anime series online with English subtitles.",
     "tags": [
-      "1fff",
       "Anime",
       "Streaming",
       "Subtitles"
@@ -765,7 +719,6 @@
     "url": "https://ww.9animes.org/",
     "description": "Stream English-subbed anime series and movies online for free.",
     "tags": [
-      "1fff",
       "Anime",
       "Streaming",
       "Subtitles",
@@ -779,7 +732,6 @@
     "url": "https://www.youtube.com/c/MuseAsia/playlists",
     "description": "Official Muse Asia YouTube channel with anime playlists available for streaming.",
     "tags": [
-      "1fff",
       "Anime",
       "Streaming",
       "YouTube",
@@ -793,7 +745,6 @@
     "url": "https://animekisa.tv/",
     "description": "A website to find and watch anime with options for both subbed and dubbed content.",
     "tags": [
-      "1fff",
       "anime",
       "streaming"
     ],
@@ -805,7 +756,6 @@
     "url": "https://www.youtube.com/watch?v=NHfPhzadolQ&list=PLPQIFQlQEbTTKNpv4XTOv34a4uklY7WBT",
     "description": "Listen to the audiobook version of 'Reincarnated as a Slime' on YouTube.",
     "tags": [
-      "1fff",
       "anime",
       "audiobook",
       "YouTube"
@@ -818,7 +768,6 @@
     "url": "http://www.animatedexplanations.com/10-safe-websites-watch-animes/",
     "description": "A guide to ten safe websites for watching anime online.",
     "tags": [
-      "1fff",
       "anime",
       "guide"
     ],
@@ -830,7 +779,6 @@
     "url": "https://w11.tenseishitaraslimedattaken-manga.com/manga/tensei-shitara-slime-datta-ken-chapter-86/",
     "description": "Read Chapter 86 of the 'Tensei Shitara Slime Datta Ken' manga in English.",
     "tags": [
-      "1fff",
       "manga",
       "anime"
     ],
@@ -842,7 +790,6 @@
     "url": "https://manhwabookshelf.com/manga/ranker-who-lives-a-second-time/ch-099/",
     "description": "Read the manhwa 'Ranker Who Lives A Second Time' online.",
     "tags": [
-      "1fff",
       "manhwa",
       "anime"
     ],
@@ -854,7 +801,6 @@
     "url": "https://www.wallpaperflare.com/naruto-anime-uzumaki-naruto-jiraiya-naruto-shippuuden-wallpaper-ymsez/download/1920x1080",
     "description": "Download HD wallpapers featuring Naruto and other characters from Naruto Shippuden.",
     "tags": [
-      "1fff",
       "wallpaper",
       "anime"
     ],
@@ -866,7 +812,6 @@
     "url": "https://animeheaven.ru/animeheaven.eu",
     "description": "Watch anime online for free at AnimeHeaven.",
     "tags": [
-      "1fff",
       "anime",
       "streaming"
     ],
@@ -878,7 +823,6 @@
     "url": "https://9anime.to/user/watchlist",
     "description": "Manage your anime watchlist on 9Anime.",
     "tags": [
-      "1fff",
       "anime",
       "watchlist"
     ],
@@ -890,7 +834,6 @@
     "url": "https://animixplay.to/",
     "description": "Enjoy watching HD anime for free on AniMixPlay.",
     "tags": [
-      "1fff",
       "anime",
       "streaming"
     ],
@@ -902,7 +845,6 @@
     "url": "https://manhuaus.com/",
     "description": "Explore a variety of manhua on Manhuaus.",
     "tags": [
-      "1fff",
       "manhua",
       "comics"
     ],
@@ -914,7 +856,6 @@
     "url": "https://www.kaggle.com/",
     "description": "Join the Kaggle community for data science and machine learning competitions.",
     "tags": [
-      "1fff",
       "data science",
       "community"
     ],
@@ -926,7 +867,6 @@
     "url": "https://www.udemy.com/course/machine-learning-data-science-foundations-masterclass/",
     "description": "Learn the mathematical foundations necessary for machine learning.",
     "tags": [
-      "1fff",
       "online course",
       "machine learning"
     ],
@@ -938,7 +878,6 @@
     "url": "https://www.udemy.com/course/math-for-data-science-masterclass/",
     "description": "Master the mathematical concepts required for data science.",
     "tags": [
-      "1fff",
       "online course",
       "data science"
     ],
@@ -950,7 +889,6 @@
     "url": "https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/",
     "description": "Complete data science training to become a data scientist.",
     "tags": [
-      "1fff",
       "online course",
       "data science"
     ],
@@ -962,7 +900,6 @@
     "url": "https://www.coursera.org/learn/machine-learning#syllabus",
     "description": "Learn about regression and classification techniques in machine learning.",
     "tags": [
-      "1fff",
       "online course",
       "machine learning"
     ],
@@ -974,7 +911,6 @@
     "url": "https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/pandas_dataframe_ultraquick_tutorial.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=mlcc-prework&hl=en&fbclid=IwAR3GE4gwMmeOjb2XQO9ztbb9gfpefehsHxVGb8bi6rIajV7szzGFlgUQqNY",
     "description": "A quick tutorial on using Pandas DataFrames in Python.",
     "tags": [
-      "1fff",
       "tutorial",
       "data science"
     ],
@@ -986,7 +922,6 @@
     "url": "https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/numpy_ultraquick_tutorial.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=mlcc-prework&hl=en&fbclid=IwAR0thgUyGmQSX-JGMMpxOc6c5yB1u1NAf7QjCUxeqUE1_DcDNC7oNy4G4Os#scrollTo=CjHfYWhdQYtO",
     "description": "A quick tutorial on using NumPy for numerical computing in Python.",
     "tags": [
-      "1fff",
       "tutorial",
       "data science"
     ],
@@ -998,7 +933,6 @@
     "url": "https://legiit.com/sign-in",
     "description": "Login to Legiit, a freelancing platform.",
     "tags": [
-      "1fff",
       "freelancing",
       "login"
     ],
@@ -1010,7 +944,6 @@
     "url": "https://reactjsexample.com/personal-portfolio-build-with-react-js/",
     "description": "Example of a personal portfolio built with React.js.",
     "tags": [
-      "1fff",
       "portfolio",
       "React"
     ],
@@ -1022,7 +955,6 @@
     "url": "https://www.freepik.com/free-psd/modern-resume-template_21950180.htm#page=2&query=resume&position=1&from_view=keyword",
     "description": "Download a modern resume template for free.",
     "tags": [
-      "1fff",
       "resume",
       "template"
     ],
@@ -1034,7 +966,6 @@
     "url": "https://www.youtube.com/watch?v=W0bEL93tt4k&t=1s",
     "description": "A tutorial on how to create an easy slider using React and Framer Motion.",
     "tags": [
-      "1fff",
       "React",
       "Framer Motion",
       "Tutorial"
@@ -1047,7 +978,6 @@
     "url": "https://webdesign.tutsplus.com/tutorials/create-an-animated-sticky-header-on-scroll-with-a-bit-of-javascript--cms-93428",
     "description": "Learn to create a sticky header that animates on scroll using JavaScript.",
     "tags": [
-      "1fff",
       "JavaScript",
       "CSS",
       "Web Design"
@@ -1060,7 +990,6 @@
     "url": "https://www.youtube.com/watch?v=-eKLme-X9nY",
     "description": "A tutorial on implementing a loading animation in a React application.",
     "tags": [
-      "1fff",
       "React",
       "Loading Animation",
       "Tutorial"
@@ -1073,7 +1002,6 @@
     "url": "https://codesandbox.io/examples/package/react-blurhash",
     "description": "Examples demonstrating the usage of the react-blurhash library.",
     "tags": [
-      "1fff",
       "React",
       "Blurhash",
       "Examples"
@@ -1086,7 +1014,6 @@
     "url": "https://www.youtube.com/watch?v=a_f4vsNlKek&t=138s",
     "description": "Learn how to implement full-screen scrolling effects in a React application.",
     "tags": [
-      "1fff",
       "React",
       "Scrolling Effect",
       "Tutorial"
@@ -1099,7 +1026,6 @@
     "url": "https://developer.android.com/courses/android-basics-kotlin/course?gclid=CjwKCAjwvdajBhBEEiwAeMh1UyutI2nXUTKSI_tg8l8rDASwKNcKYV0w4_XgAifpsHyRupR6ggZllxoCzf4QAvD_BwE&gclsrc=aw.ds",
     "description": "Free course on Android basics using Kotlin programming language.",
     "tags": [
-      "1fff",
       "Kotlin",
       "Android",
       "Course"
@@ -1112,7 +1038,6 @@
     "url": "https://github.com/mohammednawas8/EasyFood",
     "description": "A GitHub repository for the EasyFood application, showcasing food-related features.",
     "tags": [
-      "1fff",
       "Kotlin",
       "GitHub",
       "App"
@@ -1125,7 +1050,6 @@
     "url": "https://angle.sh/pricing",
     "description": "Pricing page for Angle 4, a UI toolkit for building applications.",
     "tags": [
-      "1fff",
       "UI Toolkit",
       "Pricing"
     ],
@@ -1137,7 +1061,6 @@
     "url": "https://htmlrev.com/",
     "description": "Collection of free HTML templates for various projects.",
     "tags": [
-      "1fff",
       "HTML",
       "Templates",
       "Free Resources"
@@ -1150,7 +1073,6 @@
     "url": "https://uideck.com/",
     "description": "UIdeck offers a variety of free HTML landing page templates and UI kits.",
     "tags": [
-      "1fff",
       "HTML",
       "Landing Page",
       "Free Resources"
@@ -1163,7 +1085,6 @@
     "url": "https://html5up.net/",
     "description": "Responsive HTML5 and CSS3 templates for creating websites.",
     "tags": [
-      "1fff",
       "HTML5",
       "CSS3",
       "Templates"
@@ -1176,7 +1097,6 @@
     "url": "https://web3templates.com/",
     "description": "Website templates and landing pages specifically for Web3 projects.",
     "tags": [
-      "1fff",
       "Web3",
       "Templates",
       "Landing Pages"
@@ -1189,7 +1109,6 @@
     "url": "https://templatemo.com/",
     "description": "A collection of over 588 free HTML and CSS website templates.",
     "tags": [
-      "1fff",
       "HTML",
       "CSS",
       "Templates"
@@ -1202,7 +1121,6 @@
     "url": "https://angle.sh/",
     "description": "Device mockups available for Figma, Sketch, and Adobe XD.",
     "tags": [
-      "1fff",
       "Mockups",
       "Design Tools"
     ],
@@ -1214,7 +1132,6 @@
     "url": "https://cleanmock.com/",
     "description": "A platform for creating beautiful mockups of your designs.",
     "tags": [
-      "1fff",
       "Mockups",
       "Design Tools"
     ],
@@ -1226,7 +1143,6 @@
     "url": "https://deviceframes.com/",
     "description": "Generate 3D mockups of your designs on various devices.",
     "tags": [
-      "1fff",
       "Mockups",
       "3D Design"
     ],
@@ -1238,7 +1154,6 @@
     "url": "https://mockuuups.studio/",
     "description": "Access thousands of mockups to showcase your designs.",
     "tags": [
-      "1fff",
       "Mockups",
       "Design Tools"
     ],
@@ -1250,7 +1165,6 @@
     "url": "https://github.com/FadiHachani/MedicineReminder/blob/main/lib/notifications/NotificationManager.dart",
     "description": "Dart file for managing notifications in the Medicine Reminder app.",
     "tags": [
-      "1fff",
       "Dart",
       "Notifications",
       "GitHub"
@@ -1263,7 +1177,6 @@
     "url": "https://app.rotato.app/",
     "description": "Create stunning device mockups with this online app.",
     "tags": [
-      "1fff",
       "Mockups",
       "Design Tools"
     ],
@@ -1275,7 +1188,6 @@
     "url": "https://huggingface.co/datasets/carblacac/twitter-sentiment-analysis/viewer/default/test",
     "description": "Dataset for analyzing Twitter sentiment.",
     "tags": [
-      "1fff",
       "ML",
       "Dataset",
       "Sentiment Analysis"
@@ -1288,7 +1200,6 @@
     "url": "http://jmcauley.ucsd.edu/data/amazon/index_2014.html",
     "description": "Amazon review data for research purposes.",
     "tags": [
-      "1fff",
       "ML",
       "Dataset",
       "Amazon Reviews"
@@ -1301,7 +1212,6 @@
     "url": "https://www.kaggle.com/datasets/kazanova/sentiment140",
     "description": "Sentiment140 dataset for sentiment analysis tasks.",
     "tags": [
-      "1fff",
       "ML",
       "Dataset",
       "Sentiment Analysis"
@@ -1314,7 +1224,6 @@
     "url": "https://www.webmd.com/depression/guide/depression-anxiety-disorders",
     "description": "A comprehensive guide on depression and anxiety disorders.",
     "tags": [
-      "1fff",
       "Mental Health",
       "Guides"
     ],
@@ -1326,7 +1235,6 @@
     "url": "https://www.kaggle.com/datasets/sohailj/sentiment-analysis-dataset",
     "description": "Dataset for sentiment analysis projects.",
     "tags": [
-      "1fff",
       "ML",
       "Dataset",
       "Sentiment Analysis"
@@ -1339,7 +1247,6 @@
     "url": "https://archive.ics.uci.edu/ml/datasets/Sentiment+Labelled+Sentences",
     "description": "Dataset containing sentences labeled for sentiment analysis.",
     "tags": [
-      "1fff",
       "ML",
       "Dataset",
       "Sentiment Analysis"
@@ -1352,7 +1259,6 @@
     "url": "https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews",
     "description": "Dataset containing reviews of Amazon fine foods.",
     "tags": [
-      "1fff",
       "ML",
       "Dataset",
       "Amazon Reviews"
@@ -1365,7 +1271,6 @@
     "url": "https://daisyui.com/components/card/",
     "description": "A collection of card components built with Tailwind CSS for quick use in your projects.",
     "tags": [
-      "1fff",
       "Tailwind CSS",
       "Components"
     ],
@@ -1377,7 +1282,6 @@
     "url": "https://ui.shadcn.com/",
     "description": "A comprehensive UI library with components designed for React and Tailwind CSS.",
     "tags": [
-      "1fff",
       "Tailwind CSS",
       "React",
       "Components"
@@ -1390,7 +1294,6 @@
     "url": "https://tailwindcomponents.com/",
     "description": "A vast collection of free components and templates built with Tailwind CSS.",
     "tags": [
-      "1fff",
       "Tailwind CSS",
       "Templates",
       "Examples"
@@ -1403,7 +1306,6 @@
     "url": "https://daisyui.com/components/",
     "description": "Explore a wide range of components styled with Tailwind CSS for immediate use.",
     "tags": [
-      "1fff",
       "Tailwind CSS",
       "Components"
     ],
@@ -1415,7 +1317,6 @@
     "url": "https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/css/buttons/small/filled",
     "description": "Documentation for creating small filled buttons using the Tailwind CSS framework.",
     "tags": [
-      "1fff",
       "Tailwind CSS",
       "Buttons",
       "UI Components"
@@ -1428,7 +1329,6 @@
     "url": "https://preview.themeforest.net/item/genz-creative-personal-blog-portfolio-nextjs-template/full_screen_preview/42139590?_ga=2.39077795.1860617899.1700403651-737896263.1699628577",
     "description": "Preview of a Next.js template designed for creative personal blogs and portfolios.",
     "tags": [
-      "1fff",
       "Next.js",
       "Templates",
       "Portfolio"
@@ -1441,7 +1341,6 @@
     "url": "https://fluttercomponentlibrary.com/",
     "description": "A library of Flutter components for building mobile applications.",
     "tags": [
-      "1fff",
       "Flutter",
       "Components",
       "Mobile Development"
@@ -1454,7 +1353,6 @@
     "url": "https://www.flutterbricks.com/preview",
     "description": "A collection of pre-built widgets for Flutter applications to speed up development.",
     "tags": [
-      "1fff",
       "Flutter",
       "Widgets",
       "Mobile Development"
@@ -1467,7 +1365,6 @@
     "url": "https://www.subframe.com/library/components/alert",
     "description": "A platform offering various UI components to accelerate web application development.",
     "tags": [
-      "1fff",
       "UI Components",
       "Web Development"
     ],
@@ -1479,7 +1376,6 @@
     "url": "https://github.com/hevar/awesome-react-tailwindcss-ui-components?ref=dailydev",
     "description": "A curated list of UI components built with React and Tailwind CSS.",
     "tags": [
-      "1fff",
       "React",
       "Tailwind CSS",
       "Components"
@@ -1492,7 +1388,6 @@
     "url": "https://variantvault.chrisabdo.dev/?ck_subscriber_id=2311470955&utm_source=convertkit&utm_medium=email&utm_campaign=Copy-and-paste%20Framer%20Motion%20code?%20Sign%20me%20up!%20-%2014019240",
     "description": "A collection of animation variants for Framer Motion to enhance UI interactions.",
     "tags": [
-      "1fff",
       "Framer Motion",
       "Animations",
       "UI Components"
@@ -1505,7 +1400,6 @@
     "url": "https://blog.olivierlarose.com/tutorials/text-along-path",
     "description": "A tutorial on animating text along an SVG path using React and Framer Motion.",
     "tags": [
-      "1fff",
       "React",
       "SVG",
       "Tutorial"
@@ -1518,7 +1412,6 @@
     "url": "https://uiverse.io/",
     "description": "A resource for free UI elements and components designed with CSS and Tailwind.",
     "tags": [
-      "1fff",
       "UI Elements",
       "Tailwind CSS",
       "Resources"
@@ -1531,7 +1424,6 @@
     "url": "https://magicui.design/",
     "description": "A toolkit of UI components designed for modern web applications.",
     "tags": [
-      "1fff",
       "UI Components",
       "Web Development"
     ],
@@ -1543,7 +1435,6 @@
     "url": "https://codesandbox.io/p/sandbox/drag-to-select-demo-lge1c?file=%2Fsrc%2FApp.tsx",
     "description": "A demonstration of drag-to-select functionality implemented in a CodeSandbox project.",
     "tags": [
-      "1fff",
       "Drag Select",
       "CodeSandbox",
       "Demo"
@@ -1556,7 +1447,6 @@
     "url": "https://codesandbox.io/p/sandbox/dnd-demo-forked-2tyngq?file=%2Fsrc%2FMouseSelection.tsx%3A11%2C49",
     "description": "A forked demo showcasing drag-and-drop functionality in a CodeSandbox environment.",
     "tags": [
-      "1fff",
       "Drag and Drop",
       "CodeSandbox",
       "Demo"
@@ -1569,7 +1459,6 @@
     "url": "https://www.jobsnepal.com/job/architect-civil-engineer/115455",
     "description": "Job listing for an Architect/Civil Engineer position at ND Engineering Consultancy in Kathmandu.",
     "tags": [
-      "1fff",
       "Jobs",
       "Engineering",
       "Architecture"
@@ -1582,7 +1471,6 @@
     "url": "https://www.revdl.net/adobe-photoshop-lightroom-cc-apk-unlocked-llilil.html/?r=1058036586",
     "description": "Download the unlocked version of Adobe Photoshop Lightroom CC for Android.",
     "tags": [
-      "1fff",
       "Adobe",
       "Lightroom",
       "Photography"
@@ -1595,7 +1483,6 @@
     "url": "https://picsart.com/i/sticker-spiral-spiralneon-neon-neonstickers-overlay-overlays-318016727381211",
     "description": "A neon spiral sticker available for editing and use in digital projects.",
     "tags": [
-      "1fff",
       "Stickers",
       "Neon",
       "Graphics"
@@ -1608,7 +1495,6 @@
     "url": "https://www.media.io/?utm_source=youtube&utm_medium=GadgetByte&utm_campaign=200423OVleicx02",
     "description": "A free online tool for converting, editing, and compressing various file types.",
     "tags": [
-      "1fff",
       "File Converter",
       "Online Tools",
       "Media"
@@ -1621,7 +1507,6 @@
     "url": "https://www.nhs.uk/book-a-coronavirus-vaccination/do-you-have-an-nhs-number",
     "description": "Information on how to book a coronavirus vaccination through the NHS.",
     "tags": [
-      "1fff",
       "Health",
       "Vaccination",
       "NHS"
@@ -1634,7 +1519,6 @@
     "url": "https://onlineedlreg.dotm.gov.np/Nepal_DLReg/checkAppStatus.action",
     "description": "Online portal for checking the status of your driving license application in Nepal.",
     "tags": [
-      "1fff",
       "Driving License",
       "Government",
       "Nepal"
@@ -1647,7 +1531,6 @@
     "url": "https://www.kaggle.com/code/aherparesh/sentiment-analysis-on-amazon-product-rnn-97-acc",
     "description": "A Kaggle project demonstrating sentiment analysis on Amazon product reviews using RNN.",
     "tags": [
-      "1fff",
       "Machine Learning",
       "Sentiment Analysis",
       "Kaggle"
@@ -1660,7 +1543,6 @@
     "url": "https://dev.to/best_codes/10-fun-web-development-project-ideas-for-bored-coders-51dl",
     "description": "A list of ten engaging web development project ideas for developers looking for inspiration.",
     "tags": [
-      "1fff",
       "Web Development",
       "Projects",
       "Inspiration"
@@ -1673,7 +1555,6 @@
     "url": "https://sparknlp.org/2022/03/07/stopwords_iso_ne_3_0.html",
     "description": "A tool for removing stopwords from the Nepali language, featuring 488 entries.",
     "tags": [
-      "1fff",
       "NLP",
       "Stopwords",
       "Nepali"
@@ -1686,7 +1567,6 @@
     "url": "https://github.com/AI4Bharat/IndicXlit?tab=readme-ov-file#license",
     "description": "Transliteration models for 21 Indic languages, facilitating language processing tasks.",
     "tags": [
-      "1fff",
       "Transliteration",
       "Indic Languages",
       "AI"
@@ -1699,7 +1579,6 @@
     "url": "https://colab.research.google.com/drive/1P78Tbr6zhe-5LeiKk525N3SGPKn2ofGg?usp=sharing#scrollTo=GCCpEKTQj2Yy",
     "description": "A Colab notebook for running inference using IndicXlit transliteration models.",
     "tags": [
-      "1fff",
       "Transliteration",
       "Python",
       "Colab"
@@ -1712,7 +1591,6 @@
     "url": "https://github.com/llSourcell/How_to_make_a_language_translator",
     "description": "Code repository for building a language translator using deep learning techniques.",
     "tags": [
-      "1fff",
       "Language Translation",
       "Deep Learning",
       "AI"
@@ -1725,7 +1603,6 @@
     "url": "https://internshala.com/internships/matching-preferences/",
     "description": "A platform to find internships that match your preferences and skills.",
     "tags": [
-      "1fff",
       "Internships",
       "Jobs",
       "Career"
@@ -1738,7 +1615,6 @@
     "url": "https://github.com/bharadwaj1098/Machine_Translation/blob/main/Seq2Seq.ipynb",
     "description": "A Jupyter notebook demonstrating sequence-to-sequence models for machine translation.",
     "tags": [
-      "1fff",
       "Machine Translation",
       "Deep Learning",
       "NLP"
@@ -1751,7 +1627,6 @@
     "url": "https://github.com/axiftaj/FLutter-Bloc-Tutorials/blob/main/lib/view/favourite/favourite_screen.dart",
     "description": "Dart file for the favorite screen in a Flutter application using the Bloc pattern.",
     "tags": [
-      "1fff",
       "Flutter",
       "Dart",
       "Mobile Development"
@@ -1764,7 +1639,6 @@
     "url": "https://www.virustotal.com/gui/file-analysis/NGJjYmE4NWEzNzRjMjk5YzVjOTY0NzEwNDc1NmFhY2Q6MTcyNTU0NjQ0Ng==",
     "description": "A service for analyzing files and URLs for viruses and other threats.",
     "tags": [
-      "1fff",
       "Security",
       "Virus Analysis",
       "Online Tools"
@@ -1777,7 +1651,6 @@
     "url": "https://codepen.io/ThibaultJanBeyer/pen/YzvVYyR",
     "description": "A CodePen demo showcasing drag-to-select functionality for selecting multiple items.",
     "tags": [
-      "1fff",
       "Drag Select",
       "CodePen",
       "Demo"
@@ -1790,7 +1663,6 @@
     "url": "https://codesandbox.io/p/sandbox/react-5y8onl?file=%2Fpackage.json",
     "description": "A CodeSandbox project demonstrating the use of React for building web applications.",
     "tags": [
-      "1fff",
       "React",
       "CodeSandbox",
       "Web Development"
@@ -1803,7 +1675,6 @@
     "url": "https://codesandbox.io/p/sandbox/drag-to-select-demo-lge1c?file=%2Fsrc%2FApp.tsx",
     "description": "A demonstration of drag-to-select functionality implemented in a CodeSandbox project.",
     "tags": [
-      "1fff",
       "Drag Select",
       "CodeSandbox",
       "Demo"
@@ -1816,7 +1687,6 @@
     "url": "https://codesandbox.io/p/sandbox/dnd-demo-forked-2tyngq?file=%2Fsrc%2FMouseSelection.tsx%3A11%2C49",
     "description": "A forked demo showcasing drag-and-drop functionality in a CodeSandbox environment.",
     "tags": [
-      "1fff",
       "Drag and Drop",
       "CodeSandbox",
       "Demo"
@@ -1829,7 +1699,6 @@
     "url": "https://www.jobsnepal.com/job/architect-civil-engineer/115455",
     "description": "Job listing for an Architect/Civil Engineer position at ND Engineering Consultancy in Kathmandu.",
     "tags": [
-      "1fff",
       "Jobs",
       "Engineering",
       "Architecture"
@@ -1842,7 +1711,6 @@
     "url": "https://www.revdl.net/adobe-photoshop-lightroom-cc-apk-unlocked-llilil.html/?r=1058036586",
     "description": "Download the unlocked version of Adobe Photoshop Lightroom CC for Android.",
     "tags": [
-      "1fff",
       "Adobe",
       "Lightroom",
       "Photography"
@@ -1855,7 +1723,6 @@
     "url": "https://picsart.com/i/sticker-spiral-spiralneon-neon-neonstickers-overlay-overlays-318016727381211",
     "description": "A neon spiral sticker available for editing and use in digital projects.",
     "tags": [
-      "1fff",
       "Stickers",
       "Neon",
       "Graphics"
@@ -1868,7 +1735,6 @@
     "url": "https://www.media.io/?utm_source=youtube&utm_medium=GadgetByte&utm_campaign=200423OVleicx02",
     "description": "A free online tool for converting, editing, and compressing various file types.",
     "tags": [
-      "1fff",
       "File Converter",
       "Online Tools",
       "Media"
@@ -1881,7 +1747,6 @@
     "url": "https://www.nhs.uk/book-a-coronavirus-vaccination/do-you-have-an-nhs-number",
     "description": "Information on how to book a coronavirus vaccination through the NHS.",
     "tags": [
-      "1fff",
       "Health",
       "Vaccination",
       "NHS"
@@ -1894,7 +1759,6 @@
     "url": "https://onlineedlreg.dotm.gov.np/Nepal_DLReg/checkAppStatus.action",
     "description": "Online portal for checking the status of your driving license application in Nepal.",
     "tags": [
-      "1fff",
       "Driving License",
       "Government",
       "Nepal"
@@ -1907,7 +1771,6 @@
     "url": "https://www.kaggle.com/code/aherparesh/sentiment-analysis-on-amazon-product-rnn-97-acc",
     "description": "A Kaggle project demonstrating sentiment analysis on Amazon product reviews using RNN.",
     "tags": [
-      "1fff",
       "Machine Learning",
       "Sentiment Analysis",
       "Kaggle"
@@ -1920,7 +1783,6 @@
     "url": "https://dev.to/best_codes/10-fun-web-development-project-ideas-for-bored-coders-51dl",
     "description": "A list of ten engaging web development project ideas for developers looking for inspiration.",
     "tags": [
-      "1fff",
       "Web Development",
       "Projects",
       "Inspiration"
@@ -1933,7 +1795,6 @@
     "url": "https://codepen.io/apexcharts/pen/pxZKqL",
     "description": "An interactive dashboard example showcasing real-time data visualization using ApexCharts.",
     "tags": [
-      "1fff",
       "Data Visualization",
       "Dashboard",
       "ApexCharts"
@@ -1946,7 +1807,6 @@
     "url": "https://www.filmyzilla.com.ng/movie/15353/The-freelancer-(2023)-web-series.html",
     "description": "Watch the 2023 Hotstar original web series 'The Freelancer' available for free download.",
     "tags": [
-      "1fff",
       "Web Series",
       "Streaming",
       "Entertainment"
@@ -1959,7 +1819,6 @@
     "url": "https://www.slideshare.net/tekendray/b-sc-csit-computer-graphics-unit-2-by-tekendra-nath-yogi",
     "description": "Presentation slides covering the second unit of Computer Graphics for B. SC CSIT students.",
     "tags": [
-      "1fff",
       "Computer Graphics",
       "Education",
       "Presentation"
@@ -1972,7 +1831,6 @@
     "url": "https://www.abusaid.me/",
     "description": "A personal portfolio showcasing the projects and skills of Abu Said, a software developer specializing in web and mobile applications.",
     "tags": [
-      "1fff",
       "Software Development",
       "Portfolio",
       "Web Development",
