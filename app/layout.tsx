@@ -6,6 +6,7 @@ import "./globals.css";
 import { ReduxProviders, ThemeProviders } from "./providers";
 import NavBar from "@/components/NavBar";
 import TailwindScreenIndicators from "@/components/TailwindScreenIndicators";
+import TailwindScreenIndicators from "@/components/TailwindScreenIndicators";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
