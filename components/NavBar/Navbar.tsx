@@ -4,17 +4,16 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import ThemeSwitch from "./ThemeSwitch";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { CloseIcons, MenuIcons } from "../social-icons/icons";
 import ThemeSwitch from "./components/ThemeSwitch";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 export const NavBarImage =
   "https://images.unsplash.com/photo-1521239365713-1e26965c69ac?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -45,6 +44,17 @@ export const navLinks = [
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const { user, isLoading } = useUser();
+
+  function getInitials(fullName: string) {
+    const names = fullName.split(" "); // Split the full name by spaces
+    if (names.length < 2) return ""; // Handle cases with no last name
+
+    const firstNameInitial = names[0].charAt(0); // First letter of the first name
+    const lastNameInitial = names[names.length - 1].charAt(0); // First letter of the last name
+
+    return firstNameInitial + lastNameInitial; // Concatenate initials
+  }
   return (
     <nav
       className={`fixed top-0 z-20 flex w-full items-center border-b-2 border-gray-300 bg-white/30 px-6 py-5 opacity-80 backdrop-blur-md sm:px-16`}
@@ -117,6 +127,25 @@ const Navbar = () => {
           </div>
 
           <ThemeSwitch />
+          {!isLoading && !user && (
+            <Link
+              href="/api/auth/login"
+              className="rounded bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600"
+            >
+              Login
+            </Link>
+          )}
+          {user && user.picture && (
+            <Avatar>
+              <AvatarImage
+                src={user.picture || "https://github.com/shadcn.png"}
+                alt="Avatar Images"
+              />
+              <AvatarFallback>
+                {getInitials(user.name || "User")}
+              </AvatarFallback>
+            </Avatar>
+          )}
         </div>
       </div>
     </nav>

@@ -6,7 +6,7 @@ import "./globals.css";
 import { ReduxProviders, ThemeProviders } from "./providers";
 import NavBar from "@/components/NavBar";
 import TailwindScreenIndicators from "@/components/TailwindScreenIndicators";
-import TailwindScreenIndicators from "@/components/TailwindScreenIndicators";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,15 +32,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ReduxProviders>
-          <ThemeProviders>
-            <NavBar />
-            <main className={`mx-auto max-w-[104rem] px-5 pt-24`}>
-              {children}
-            </main>
-            {/* <TailwindScreenIndicators /> */}
-          </ThemeProviders>
-        </ReduxProviders>
+        <UserProvider>
+          <ReduxProviders>
+            <ThemeProviders>
+              <NavBar />
+              <main className={`mx-auto max-w-[104rem] px-5 pt-24`}>
+                {children}
+              </main>
+              <TailwindScreenIndicators />
+            </ThemeProviders>
+          </ReduxProviders>
+        </UserProvider>
       </body>
     </html>
   );

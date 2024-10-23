@@ -19,7 +19,7 @@ const ThemeSwitch = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className="mr-5">
+    <div className="mr-5 contents">
       <DropdownMenu>
         <DropdownMenuTrigger aria-label="Theme Changer">
           {resolvedTheme === "dark" ? <Moon /> : <Sun />}
