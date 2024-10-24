@@ -5,6 +5,7 @@ import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
 import { Website } from "./types";
 import BookmarkModal from "./(home)/components/BookmarkModal";
 import { run } from "@/lib/mongoose";
+import { main } from "@/extraction";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState<string>(""); // State for search term
