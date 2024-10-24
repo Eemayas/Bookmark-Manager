@@ -4,6 +4,7 @@ import personalBookmarks from "../constants/bookmarks.json";
 import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
 import { Website } from "./types";
 import BookmarkModal from "./(home)/components/BookmarkModal";
+import { main } from "@/extraction";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState<string>(""); // State for search term
