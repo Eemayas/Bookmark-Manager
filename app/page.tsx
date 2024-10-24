@@ -4,8 +4,6 @@ import personalBookmarks from "../constants/bookmarks.json";
 import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
 import { Website } from "./types";
 import BookmarkModal from "./(home)/components/BookmarkModal";
-import { run } from "@/lib/mongoose";
-import { main } from "@/extraction";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState<string>(""); // State for search term
@@ -96,31 +94,31 @@ const Home = () => {
     setIsModalOpen(false); // Close modal
   };
 
-  const addWebsite = async () => {
-    const website = {
-      id: 1,
-      name: "Example",
-      url: "https://example.com",
-      description: "This is an example website",
-      tags: ["example", "website"],
-      categories: "tech",
-      isFavorities: true,
-      email_address: ["contact@example.com"],
-    };
+  // const addWebsite = async () => {
+  //   const website = {
+  //     id: 1,
+  //     name: "Example",
+  //     url: "https://example.com",
+  //     description: "This is an example website",
+  //     tags: ["example", "website"],
+  //     categories: "tech",
+  //     isFavorities: true,
+  //     email_address: ["contact@example.com"],
+  //   };
 
-    const response = await fetch("http://localhost:3000/api/website", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(website),
-    });
+  //   const response = await fetch("http://localhost:3000/api/website", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(website),
+  //   });
 
-    const data = await response.json();
-    console.log(data);
-  };
-  addWebsite();
-  run();
+  //   const data = await response.json();
+  //   console.log(data);
+  // };
+  // addWebsite();
+
   return (
     <div>
       <BookmarkLayout
