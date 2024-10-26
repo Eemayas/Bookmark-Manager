@@ -27,6 +27,15 @@ export async function POST(req: Request) {
       );
     }
 
+    // Check if the URL already exists
+    const existingWebsite = await Website.findOne({ url });
+    if (existingWebsite) {
+      return NextResponse.json(
+        { error: "Website with this URL already exists" },
+        { status: 400 },
+      );
+    }
+
     // Create and save new website
     const newWebsite = new Website({
       id,

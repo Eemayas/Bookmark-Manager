@@ -95,30 +95,63 @@ const Home = () => {
   };
 
   // const addWebsite = async () => {
-  //   const website = {
-  //     id: 1,
-  //     name: "Example",
-  //     url: "https://example.com",
-  //     description: "This is an example website",
-  //     tags: ["example", "website"],
-  //     categories: "tech",
-  //     isFavorities: true,
-  //     email_address: ["contact@example.com"],
-  //   };
+  //   const failedIds: number[] = []; // Array to store IDs of failed requests
+  //   try {
+  //     await Promise.all(
+  //       personalBookmarks.map(async (website) => {
+  //         const tempWebsite = {
+  //           ...website,
+  //           email_address: ["contact@example.com"],
+  //         };
+  //         const response = await fetch("http://localhost:3000/api/website", {
+  //           method: "POST",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //           body: JSON.stringify(tempWebsite), // Use tempWebsite instead of website
+  //         });
 
-  //   const response = await fetch("http://localhost:3000/api/website", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(website),
-  //   });
-
-  //   const data = await response.json();
-  //   console.log(data);
+  //         if (!response.ok) {
+  //           failedIds.push(website.id); // Store the ID of the failed request
+  //           throw new Error(`Error: ${response.statusText}`); // Handle error response
+  //         }
+  //         const data = await response.json(); // Assuming the API returns JSON
+  //         console.log("Success:", data); // Log success message
+  //       }),
+  //     );
+  //   } catch (error) {
+  //     console.error("Failed to add websites:", error); // Log error message
+  //   }
+  //   console.log("Failed IDs:", failedIds); // Log the list of failed IDs
   // };
   // addWebsite();
 
+  // Example of calling the GET function from a client-side script
+  async function fetchWebsites() {
+    try {
+      const response = await fetch("/api/website", {
+        method: "GET", // Specify the method
+        headers: {
+          "Content-Type": "application/json", // Set the content type
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      console.log(
+        "Websites retrieved successfully:",
+        data.websites.sort((a: Website, b: Website) => a.id - b.id),
+      );
+    } catch (error) {
+      console.error("Failed to fetch websites:", error);
+    }
+  }
+
+  // Call the function to fetch websites
+  fetchWebsites();
   return (
     <div>
       <BookmarkLayout
