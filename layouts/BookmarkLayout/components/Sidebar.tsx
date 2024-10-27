@@ -56,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             <div className="w-full">
               {/* Follow for Updates Section */}
               <div className="pb-4">
-                <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold text-black dark:text-white">
+                <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold">
                   Follow for updates
                 </h4>
                 <div className="grid grid-flow-row auto-rows-max text-sm">
@@ -73,7 +73,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 
               {/* Tags Section */}
               <div className="pb-4">
-                <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold text-black dark:text-white">
+                <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold">
                   Tags
                 </h4>
                 <div className="grid grid-flow-row auto-rows-max text-sm">

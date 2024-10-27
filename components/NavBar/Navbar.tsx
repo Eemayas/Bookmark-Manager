@@ -135,6 +135,14 @@ const Navbar = () => {
               Login
             </Link>
           )}
+          {user && (
+            <Link
+              href="/api/auth/logout"
+              className="rounded bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600"
+            >
+              Logout
+            </Link>
+          )}
           {user && user.picture && (
             <Avatar>
               <AvatarImage
