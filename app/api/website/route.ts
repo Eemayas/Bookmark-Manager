@@ -1,5 +1,5 @@
 import { connectToDB } from "@/lib/mongoose";
-import Website from "@/models/Website";
+import Website, { IWebsite } from "@/models/Website";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 
@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   try {
     await connectToDB();
 
-    const body = await req.json();
+    const body: IWebsite = await req.json();
     const {
       id,
       name,
@@ -19,16 +19,23 @@ export async function POST(req: Request) {
       email_address,
     } = body;
 
-    // Validate required fields
-    if (!id || !name || !url || !tags || !categories) {
+    const missingFields = [];
+    if (!id) missingFields.push("id");
+    if (!name) missingFields.push("name");
+    if (!url) missingFields.push("url");
+    if (!tags) missingFields.push("tags");
+    if (!categories) missingFields.push("categories");
+    if (!email_address) missingFields.push("email_address");
+
+    if (missingFields.length > 0) {
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { error: `Missing required fields: ${missingFields.join(", ")}` },
         { status: 400 },
       );
     }
 
-    // Check if the URL already exists
-    const existingWebsite = await Website.findOne({ url });
+    // Check if the URL and name already exist
+    const existingWebsite = await Website.findOne({ url, name, email_address });
     if (existingWebsite) {
       return NextResponse.json(
         { error: "Website with this URL already exists" },
@@ -57,7 +64,7 @@ export async function POST(req: Request) {
   } catch (error) {
     console.error("Error creating website:", error);
     return NextResponse.json(
-      { error: "Failed to create website" },
+      { error: "Failed to create website", details: `${error}` },
       { status: 500 },
     );
   }
@@ -67,17 +74,26 @@ export async function GET(req: Request) {
   try {
     await connectToDB();
 
-    const websites = await Website.find(); // Fetch all websites
+    const { searchParams } = new URL(req.url);
+    const email_address = searchParams.get("email_address");
 
+    if (!email_address) {
+      return NextResponse.json(
+        { error: "Missing required query parameter: email_address" },
+        { status: 400 },
+      );
+    }
+
+    // Fetch websites for the specific email address
+    const websites = await Website.find({ email_address }); // Filter by email_address
     return NextResponse.json(
       { message: "Websites retrieved successfully", websites },
-
       { status: 200 },
     );
   } catch (error) {
     console.error("Error retrieving websites:", error);
     return NextResponse.json(
-      { error: "Failed to retrieve websites" },
+      { error: `Failed to retrieve websites`, details: `${error}` },
       { status: 500 },
     );
   }
@@ -100,9 +116,17 @@ export async function PUT(req: Request) {
     } = body;
 
     // Validate required fields
-    if (!id || !name || !url || !tags || !categories) {
+    const missingFields = [];
+    if (!id) missingFields.push("id");
+    if (!name) missingFields.push("name");
+    if (!url) missingFields.push("url");
+    if (!tags) missingFields.push("tags");
+    if (!categories) missingFields.push("categories");
+    if (!email_address) missingFields.push("email_address");
+
+    if (missingFields.length > 0) {
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { error: `Missing required fields: ${missingFields.join(", ")}` },
         { status: 400 },
       );
     }

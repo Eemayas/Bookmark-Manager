@@ -1,27 +1,22 @@
-import { useLayoutEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 const useWindowSize = () => {
-  const [size, setSize] = useState<[number, number]>([
-    window.innerWidth,
-    window.innerHeight,
-  ]);
+  const [size, setSize] = useState<[number, number]>([0, 0]); // Initialize with default values
 
-  useLayoutEffect(() => {
-    let timeoutId: NodeJS.Timeout;
+  useEffect(() => {
+    // Set size only after the component mounts
+    const handleResize = () => {
+      setSize([window.innerWidth, window.innerHeight]);
+    };
 
-    function updateSize() {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        setSize([window.innerWidth, window.innerHeight]);
-      }, 100); // Debounce time of 100ms
-    }
+    // Set initial size
+    handleResize();
 
-    window.addEventListener("resize", updateSize);
-    updateSize();
-
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
     return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener("resize", updateSize);
+      // Clean up the event listener
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
