@@ -6,8 +6,10 @@ import {
 } from "@/components/ui/animated-modal";
 import { InputField, TextAreaField } from "@/components/CustomsInputs";
 import { useState } from "react";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 function BookmarkModal() {
+  const { user } = useUser();
   const [formData, setFormData] = useState({
     name: "",
     link: "",
@@ -23,11 +25,33 @@ function BookmarkModal() {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     console.log("Dvsdvs");
     e.preventDefault();
     console.log("Form submitted", formData);
-    // onClose(); // Close the modal after submission (if needed)
+    const tempWebsite = {
+      ...formData,
+      email_address: user?.email,
+    };
+    console.log({ tempWebsite });
+    try {
+      const response = await fetch("http://localhost:3000/api/website", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(tempWebsite), // Use tempWebsite instead of website
+      });
+
+      if (!response.ok) {
+        console.log({ response });
+        throw new Error(`Error: ${response.statusText}`); // Handle error response
+      }
+      const data = await response.json(); // Assuming the API returns JSON
+      console.log("Success:", data); // Log success message
+    } catch (error) {
+      console.error("Failed to add websites:", error); // Log error message
+    }
   };
 
   return (

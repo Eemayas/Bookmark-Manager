@@ -17,7 +17,7 @@ const Home = () => {
   // Function to fetch websites
   async function fetchWebsites() {
     try {
-      const emailAddress = user?.email || ""; // Get the email address from the user object
+      const emailAddress = user?.nickname || ""; // Get the email address from the user object
       const response = await fetch(
         `http://localhost:3000/api/website?email_address=${encodeURIComponent(emailAddress)}`,
       );
@@ -80,7 +80,7 @@ const Home = () => {
       tagCount[tag] = (tagCount[tag] || 0) + 1;
     });
   });
-  // console.log({ filteredbookmarkstoDisplaylength: filteredBookmarks.length });
+
   // Sort the tags in alphabetical order
   const sortedTagCount = Object.keys(tagCount)
     .sort()

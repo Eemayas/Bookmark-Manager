@@ -25,15 +25,6 @@ const PopularLinks = () => {
     tagCount[category] = (popularlinkss as PopularLinksType)[category].length;
   });
 
-  console.log({ tagCount });
-  // const
-  console.log({
-    selectedTags,
-    bookmarkstoDisplay: (popularlinkss as PopularLinksType)[selectedTags[0]],
-    bookmarkstoDisplaylengthssss: (popularlinkss as PopularLinksType)[
-      selectedTags[0]
-    ].length,
-  });
 
   return (
     <BookmarkLayout

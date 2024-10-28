@@ -4,6 +4,12 @@
 import React, { useState, useEffect } from "react";
 import { Website } from "@/app/types";
 import { LinkPreview } from "./ui/link-preview";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalTrigger,
+} from "./ui/animated-modal";
 
 type CardProps = {
   website: Website;
@@ -181,6 +187,22 @@ export const BookMarkCard: React.FC<CardProps> = ({
             </button>
           </div>
         </div>
+
+        <Modal>
+          <ModalTrigger>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+            </svg>
+          </ModalTrigger>
+          <ModalBody>
+            <ModalContent>fvf</ModalContent>
+          </ModalBody>
+        </Modal>
 
         {showPopup && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
