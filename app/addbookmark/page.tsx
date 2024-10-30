@@ -1,11 +1,12 @@
-"use client"
+"use client";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import React from "react";
 import personalBookmarks from "@/constants/bookmarks.json";
+import popularBookmarks from "@/constants/popularslinks.json";
 
 const page = () => {
   const { user, isLoading } = useUser();
-  const addWebsite = async () => {
+  const addPersonalWebsite = async () => {
     const failedIds: number[] = []; // Array to store IDs of failed requests
     try {
       await Promise.all(
@@ -35,7 +36,14 @@ const page = () => {
     }
     console.log("Failed IDs:", failedIds); // Log the list of failed IDs
   };
-  addWebsite();
+
+  const addPopularWebistes = async () => {
+    // const tempWebiste=popularBookmarks[0]
+    // delete 
+    // console.log(personalBookmarks[0]);
+  };
+  // addPersonalWebsite();
+  addPopularWebistes();
   return <div>page</div>;
 };
 

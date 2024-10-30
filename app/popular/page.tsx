@@ -2,10 +2,6 @@
 import React, { useState } from "react";
 import popularlinkss from "@/constants/popularslinks.json";
 import { Website } from "../types";
-import Link from "next/link";
-import SearchBar from "@/layouts/BookmarkLayout/components/SearchBar";
-import { BookMarkCard } from "@/components/Card";
-import Sidebar from "@/layouts/BookmarkLayout/components/Sidebar";
 import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
 
 type PopularLinksType = {
@@ -24,7 +20,6 @@ const PopularLinks = () => {
   Object.keys(popularlinkss).forEach((category) => {
     tagCount[category] = (popularlinkss as PopularLinksType)[category].length;
   });
-
 
   return (
     <BookmarkLayout

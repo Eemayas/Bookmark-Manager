@@ -23,6 +23,7 @@ const WebsiteSchema: Schema = new Schema({
 });
 
 const Website: Model<IWebsite> =
-  mongoose.models.Website || mongoose.model<IWebsite>("Website", WebsiteSchema);
+  mongoose.models.Website ||
+  mongoose.model<IWebsite>("Personal_Website", WebsiteSchema);
 
 export default Website;
