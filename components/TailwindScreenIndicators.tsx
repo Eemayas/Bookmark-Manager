@@ -2,7 +2,7 @@ import React from "react";
 
 const TailwindScreenIndicators = () => {
   return (
-    <div className="bg-red fixed bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-800 text-white">
+    <div className="bg-red fixed bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-800 text-white">
       <span className="xs:hidden block sm:hidden">xs</span>
       <span className="hidden sm:block md:hidden">sm</span>
       <span className="hidden md:block lg:hidden">md</span>

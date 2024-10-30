@@ -7,6 +7,7 @@ import {
 import { InputField, TextAreaField } from "@/components/CustomsInputs";
 import { useState } from "react";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import { AddIcon } from "@/components/social-icons/icons";
 
 function BookmarkModal() {
   const { user } = useUser();
@@ -57,20 +58,10 @@ function BookmarkModal() {
   return (
     <div className="flex items-center justify-center py-40">
       <Modal>
-        <ModalTrigger className="group/modal-btn fixed bottom-6 right-10 flex justify-center rounded-full bg-blue-600 text-white transition duration-200 ease-in-out hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
-          <svg
-            className="-ms-1 me-1 h-5 w-5"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
+        <ModalTrigger className="fixed bottom-3 right-3 z-50 flex size-14 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 p-2 text-white shadow-xl">
+          <AddIcon />
         </ModalTrigger>
+
         <ModalBody>
           <ModalContent>
             <h4 className="mb-8 text-center text-lg font-bold text-neutral-600 md:text-2xl dark:text-neutral-100">
