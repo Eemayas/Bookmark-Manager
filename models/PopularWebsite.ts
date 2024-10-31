@@ -14,6 +14,6 @@ const popularLinksSchema = new Schema({
 });
 
 const PopularLinks =
-  models.PopularLinks || model("Popular_Links", popularLinksSchema);
+  models.Popular_Links || model("Popular_Links", popularLinksSchema);
 
 export default PopularLinks;
