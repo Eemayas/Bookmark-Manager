@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { TPopularWebsite } from "./types";
+import { PopularLinksType } from "./types";
 import { AppDispatch, RootState } from "@/store";
 import {
   addLink,
@@ -59,7 +59,7 @@ const PopularLinks = () => {
         <div key={category}>
           <h3>{category}</h3>
           <ul>
-            {links.map((link: TPopularWebsite) => (
+            {links.map((link: PopularLinksType) => (
               <li key={link.id}>
                 {link.name} -{" "}
                 <button

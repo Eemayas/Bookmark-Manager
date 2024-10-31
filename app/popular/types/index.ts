@@ -1,4 +1,4 @@
-export type TPopularWebsite = {
+export type PopularLinksType = {
   id?: number;
   name: string;
   url: string;
@@ -6,3 +6,6 @@ export type TPopularWebsite = {
   tags: string[];
   categories: string;
 };
+export interface PopularLinksCategoriesType {
+  [key: string]: PopularLinksType[]; // Allows dynamic string keys
+}

@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { TPopularWebsite } from "../types";
+import { PopularLinksType } from "../types";
 
 // Initial State
 interface PopularLinksState {
-  data: Record<string, TPopularWebsite[]>; // Dynamic categories
+  data: Record<string, PopularLinksType[]>; // Dynamic categories
   loading: boolean;
   error: string | null;
 }
@@ -37,7 +37,7 @@ export const fetchLinks = createAsyncThunk(
 export const addLink = createAsyncThunk(
   "popularLinks/addLink",
   async (
-    { category, newLink }: { category: string; newLink: TPopularWebsite },
+    { category, newLink }: { category: string; newLink: PopularLinksType },
     { rejectWithValue },
   ) => {
     try {
@@ -82,7 +82,7 @@ export const updateLink = createAsyncThunk(
       category,
       id,
       updateData,
-    }: { category: string; id: number; updateData: Partial<TPopularWebsite> },
+    }: { category: string; id: number; updateData: Partial<PopularLinksType> },
     { rejectWithValue },
   ) => {
     try {
