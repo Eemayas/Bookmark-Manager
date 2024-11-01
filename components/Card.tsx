@@ -10,9 +10,10 @@ import {
   ModalContent,
   ModalTrigger,
 } from "./ui/animated-modal";
+import { PopularLinksType } from "@/app/popular/types";
 
 type CardProps = {
-  website: Website;
+  website: Website | PopularLinksType;
   width?: number;
   height?: number;
   quality?: number;

@@ -9,6 +9,21 @@ export async function POST(req: Request) {
   const { category, newLink } = await req.json();
 
   try {
+    // Check if a link with the same name or URL already exists in the specified category
+    const existingLink = await PopularLinks.findOne({
+      [`data.${category}`]: {
+        $elemMatch: { $or: [{ name: newLink.name }, { url: newLink.url }] },
+      },
+    });
+
+    if (existingLink) {
+      return NextResponse.json(
+        { message: "Duplicate link found", category },
+        { status: 400 },
+      );
+    }
+
+    // If no duplicate is found, proceed with adding the new link
     const updatedData = await PopularLinks.findOneAndUpdate(
       {},
       { $push: { [`data.${category}`]: newLink } },

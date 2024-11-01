@@ -39,14 +39,6 @@ const page = () => {
   // };
 
   const addPopularWebistes = async () => {
-    Object.keys(popularBookmarks).map((categories: string, index) =>
-      console.log({
-        categories,
-        length:
-          popularBookmarks[categories as keyof typeof popularBookmarks].length,
-      }),
-    );
-
     // Object.keys(popularBookmarks).map((categories: string, index) =>
     //   (
     //     popularBookmarks[
@@ -71,6 +63,17 @@ const page = () => {
     //     }
     //   }),
     // );
+
+    Object.keys(popularBookmarks)
+      .sort()
+      .map((categories: string, index) =>
+        console.log({
+          categories,
+          length:
+            popularBookmarks[categories as keyof typeof popularBookmarks]
+              .length,
+        }),
+      );
   };
 
   addPopularWebistes();

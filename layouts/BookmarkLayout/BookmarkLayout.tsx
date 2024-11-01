@@ -7,9 +7,10 @@ import Sidebar from "./components/Sidebar";
 import SearchBar from "./components/SearchBar";
 import { MosaicList } from "@/components/MosaicList/MosaicList";
 import { Website } from "@/app/types";
+import { PopularLinksType } from "@/app/popular/types";
 
 interface BookmarkLayoutProps {
-  bookmarkstoDisplay: Website[];
+  bookmarkstoDisplay: Website[] | PopularLinksType[];
   tagCount: Record<string, number>;
   setSelectedTags: React.Dispatch<React.SetStateAction<string[]>>;
   selectedTags: string[];
