@@ -1,7 +1,6 @@
 import mongoose, { Document, Model, Schema, model, models } from "mongoose";
 
 const websiteSchema = new Schema({
-  id: { type: Number, required: true },
   name: { type: String, required: true },
   url: { type: String, required: true },
   description: { type: String, default: "" },
