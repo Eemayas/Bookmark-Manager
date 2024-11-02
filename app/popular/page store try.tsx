@@ -26,7 +26,6 @@ const PopularLinks = () => {
       addLink({
         category: "stock_photos",
         newLink: {
-          id: 5,
           name: "Another Photo Site",
           url: "https://anotherphotosite.com",
           tags: ["Stock Photos"],
@@ -59,7 +58,7 @@ const PopularLinks = () => {
         <div key={category}>
           <h3>{category}</h3>
           <ul>
-            {links.map((link: PopularLinksType) => (
+            {links.map((link: any) => (
               <li key={link.id}>
                 {link.name} -{" "}
                 <button

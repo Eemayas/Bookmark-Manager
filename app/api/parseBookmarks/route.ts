@@ -83,7 +83,6 @@ export async function GET() {
         if (!bookmarkSet.has(bookmark.link)) {
           bookmarkSet.add(bookmark.link);
           bookmarkList.push({
-            ____id: bookmarkList.length + 1,
             name: bookmark.name,
             url: bookmark.link,
             description: "No description",

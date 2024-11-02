@@ -88,7 +88,6 @@ export function main() {
       if (!bookmarkSet.has(bookmark.link)) {
         bookmarkSet.add(bookmark.link);
         bookmarkList.push({
-          id: bookmarkList.length + 1,
           name: bookmark.name,
           url: bookmark.link,
           description: 'No description',

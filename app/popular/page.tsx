@@ -32,8 +32,10 @@ const PopularLinks = () => {
 
   if (data) {
     Object.keys(data).forEach((category) => {
-      tagCount[category] =
-        (data as PopularLinksCategoriesType)[category]?.length || 0;
+      if ((data as PopularLinksCategoriesType)[category]?.length > 0) {
+        tagCount[category] =
+          (data as PopularLinksCategoriesType)[category]?.length || 0;
+      }
     });
   }
 

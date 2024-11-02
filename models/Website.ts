@@ -1,7 +1,6 @@
 import mongoose, { Document, Model, Schema } from "mongoose";
 
 export interface IWebsite extends Document {
-  id?: number;
   name: string;
   url: string;
   description?: string;
@@ -12,7 +11,6 @@ export interface IWebsite extends Document {
 }
 
 const WebsiteSchema: Schema = new Schema({
-  id: { type: Number },
   name: { type: String, required: true },
   url: { type: String, required: true },
   description: { type: String },

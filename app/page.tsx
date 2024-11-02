@@ -27,10 +27,7 @@ const Home = () => {
       }
 
       const data = await response.json();
-      console.log(
-        "Websites retrieved successfully:",
-        data.websites.sort((a: Website, b: Website) => a.id - b.id),
-      );
+      console.log("Websites retrieved successfully:", data.websites);
       setFetchedWebsites(data.websites); // Store fetched websites in state
     } catch (error) {
       console.error("Failed to fetch websites:", error);

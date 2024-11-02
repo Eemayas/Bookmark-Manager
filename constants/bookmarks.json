@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "name": "Planets-Flutter: creating a Planet card",
     "url": "https://sergiandreplace.com/planets-flutter-creating-a-planet-card/",
     "description": "A guide on creating visually appealing planet cards using Flutter.",
@@ -12,7 +11,6 @@
     "categories": "Bookmarks bar / website / flutter / card design"
   },
   {
-    "id": 2,
     "name": "Minimal UI Design in Flutter - Best Flutter apps",
     "url": "http://bestflutterapps.com/minimal-ui-design-in-flutter",
     "description": "An article showcasing minimal UI design principles and examples using Flutter.",
@@ -24,7 +22,6 @@
     "categories": "Bookmarks bar / website / flutter / card design"
   },
   {
-    "id": 3,
     "name": "Rive - Build interactive animations that run anywhere",
     "url": "https://rive.app/",
     "description": "A platform to create and integrate interactive animations for various platforms.",
@@ -36,7 +33,6 @@
     "categories": "Bookmarks bar / website / flutter / animation"
   },
   {
-    "id": 4,
     "name": "Flutter Component Library",
     "url": "https://fluttercomponentlibrary.com/?fbclid=IwAR0x7VSHPijwEqSVAaHLEo2z6nAklHbxmO3PoHWXXEOhBYP4px3_8384cCs",
     "description": "A collection of reusable components and widgets for Flutter developers.",
@@ -48,7 +44,6 @@
     "categories": "Bookmarks bar / website / flutter"
   },
   {
-    "id": 5,
     "name": "kucse_ce2020 - Google Groups",
     "url": "https://groups.google.com/g/kucse_ce2020",
     "description": "Google Group for discussions related to the Computer Engineering Class of 2020.",
@@ -60,7 +55,6 @@
     "categories": "Bookmarks bar / website / Class"
   },
   {
-    "id": 6,
     "name": "AlgoExpert | Ace the Coding Interviews",
     "url": "https://www.algoexpert.io/product?r=ads&gclid=Cj0KCQjws-OEBhCkARIsAPhOkIb94UftMwENY9iy5VaGE3VQFhAdpfdn3XrOX2-WiDgO-8NNtmSwPlsaAlUIEALw_wcB",
     "description": "A platform for preparing for coding interviews with detailed problem solutions.",
@@ -72,7 +66,6 @@
     "categories": "Bookmarks bar / website / Class"
   },
   {
-    "id": 7,
     "name": "Home - YugenAnime",
     "url": "https://yugen.to/",
     "description": "Watch anime online with subbed and dubbed options.",
@@ -84,7 +77,6 @@
     "categories": "Bookmarks bar / website / Anime"
   },
   {
-    "id": 8,
     "name": "Watch Anime Online, Watch English Anime Online Subbed, Dubbed",
     "url": "https://9anime.pl/home",
     "description": "Platform for watching anime online, offering both subbed and dubbed versions.",
@@ -96,7 +88,6 @@
     "categories": "Bookmarks bar / website / Anime"
   },
   {
-    "id": 9,
     "name": "9anime - Watch Anime online with DUB and SUB for FREE",
     "url": "https://9animetv.to/",
     "description": "Free anime streaming site providing both dubbed and subbed anime.",
@@ -108,7 +99,6 @@
     "categories": "Bookmarks bar / website / Anime"
   },
   {
-    "id": 10,
     "name": "Anime Timetable | Air Times | Calendar Chart | Winter 2023",
     "url": "https://animeschedule.net/",
     "description": "A schedule for upcoming anime episodes and air times.",
@@ -120,7 +110,6 @@
     "categories": "Bookmarks bar / website / Anime"
   },
   {
-    "id": 11,
     "name": "CSS: Cascading Style Sheets | MDN",
     "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
     "description": "MDN documentation and resources for learning and using CSS.",
@@ -132,7 +121,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 12,
     "name": "Color Palettes for Designers and Artists - Color Hunt",
     "url": "https://colorhunt.co/",
     "description": "A collection of color palettes for designers and artists.",
@@ -144,7 +132,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 13,
     "name": "Introducing icon fonts and web fonts - Flaticon",
     "url": "https://www.flaticon.com/iconfonts",
     "description": "A resource for finding and integrating icon and web fonts into projects.",
@@ -156,7 +143,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 14,
     "name": "CodeSandbox",
     "url": "https://codesandbox.io/s/new",
     "description": "Online code editor for web development, supporting various frameworks.",
@@ -168,7 +154,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 15,
     "name": "favicon.ico Generator",
     "url": "https://www.favicon.cc/",
     "description": "An online tool for creating and customizing favicon icons.",
@@ -180,7 +165,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 16,
     "name": "airbnb/javascript: JavaScript Style Guide",
     "url": "https://github.com/airbnb/javascript",
     "description": "Airbnb's popular JavaScript style guide for writing clean and consistent code.",
@@ -192,7 +176,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 17,
     "name": "DevDocs API Documentation",
     "url": "https://devdocs.io/",
     "description": "API documentation for web development technologies in a searchable format.",
@@ -204,7 +187,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 18,
     "name": "Tutorial: Intro to React – React",
     "url": "https://reactjs.org/tutorial/tutorial.html",
     "description": "An official React tutorial introducing key concepts and building components.",
@@ -216,7 +198,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 19,
     "name": "Transparent Textures",
     "url": "https://www.transparenttextures.com/",
     "description": "A collection of transparent textures for web design.",
@@ -228,7 +209,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 20,
     "name": "(292) Short intro to Locofy.ai - YouTube",
     "url": "https://www.youtube.com/watch?v=zG3QrRcrNGI",
     "description": "A YouTube video providing an introduction to Locofy.ai for UI design automation.",
@@ -240,7 +220,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 21,
     "name": "Web Development Course Resources | The App Brewery",
     "url": "https://www.appbrewery.co/p/web-development-course-resources/",
     "description": "Comprehensive resources for learning web development, including coding tutorials and exercises.",
@@ -252,7 +231,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 22,
     "name": "CSS Gradient — Generator, Maker, and Background",
     "url": "https://cssgradient.io/",
     "description": "An online tool for creating and customizing CSS gradients.",
@@ -264,7 +242,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 23,
     "name": "27,095 Conversation Icons - Free in SVG, PNG, ICO - IconScout",
     "url": "https://iconscout.com/icons/conversation",
     "description": "A collection of free conversation icons available in multiple formats such as SVG, PNG, and ICO.",
@@ -276,7 +253,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 24,
     "name": "Create Responsive Admin Dashboard | HTML CSS JavaScript | With Source Code - YouTube",
     "url": "https://www.youtube.com/watch?v=CkVrmLLHmuI",
     "description": "YouTube tutorial on building a responsive admin dashboard using HTML, CSS, and JavaScript, with source code provided.",
@@ -290,7 +266,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 25,
     "name": "Select logo type | LOGO.com",
     "url": "https://app.logo.com/flow/type",
     "description": "An online tool to create and customize logos for businesses and personal projects.",
@@ -302,7 +277,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 26,
     "name": "How to Import GLTF Models in Three.js - YouTube",
     "url": "https://www.youtube.com/watch?v=WBe3xrV4CPM",
     "description": "YouTube tutorial on importing GLTF models using the Three.js library.",
@@ -316,7 +290,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 27,
     "name": "Creating a game in Three.js - LogRocket Blog",
     "url": "https://blog.logrocket.com/creating-game-three-js/",
     "description": "A blog post detailing how to create a game using the Three.js library.",
@@ -329,7 +302,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 28,
     "name": "Beautiful Orbit Components to React",
     "url": "https://reactjsexample.com/beautiful-orbit-components-to-react/",
     "description": "A collection of beautiful React components inspired by Orbit design.",
@@ -341,7 +313,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 29,
     "name": "Spline - 3D Design tool in the browser with real-time collaboration",
     "url": "https://spline.design/download",
     "description": "A browser-based 3D design tool offering real-time collaboration features.",
@@ -353,7 +324,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 30,
     "name": "Introduction - shadcn/ui",
     "url": "https://ui.shadcn.com/docs",
     "description": "Documentation for shadcn's UI components library for modern web development.",
@@ -365,7 +335,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 31,
     "name": "700+ CSS Icons, Customizable, Retina Ready & API",
     "url": "https://css.gg/",
     "description": "A collection of customizable and retina-ready CSS icons for use in web projects.",
@@ -378,7 +347,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 32,
     "name": "cssbuttons.app | Over 60+ Free CSS Buttons To Use",
     "url": "https://cssbuttons.app/",
     "description": "A library of over 60 CSS button designs, free for use in web projects.",
@@ -390,7 +358,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 33,
     "name": "ZiShop",
     "url": "https://zishop.vercel.app/digital",
     "description": "An online platform for digital shopping, offering a variety of digital products.",
@@ -402,7 +369,6 @@
     "categories": "Bookmarks bar / website / Web Designing"
   },
   {
-    "id": 34,
     "name": "NPTEL :: Computer Science and Engineering - NOC:Ethical Hacking",
     "url": "https://archive.nptel.ac.in/courses/106/105/106105217/#",
     "description": "NPTEL course on ethical hacking, covering various aspects of cybersecurity and penetration testing.",
@@ -415,7 +381,6 @@
     "categories": "Bookmarks bar / website / ethical hacking"
   },
   {
-    "id": 35,
     "name": "Watch Online Hindi Movies, Dubbed Movies, TV Shows - Awards, Documentaries and More.",
     "url": "https://www.hindilinks4u.to/",
     "description": "A platform for streaming Hindi movies, dubbed movies, and TV shows online.",
@@ -427,7 +392,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 36,
     "name": "Khatrimazafull | Khatrimazafull.com Download HD Movies 100MB , 300MB , 720p",
     "url": "https://khatrimazafull.to/",
     "description": "A site offering HD movie downloads in various file sizes.",
@@ -439,7 +403,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 37,
     "name": "Watch All Movies & TV Series In Hindi, Online, Free Download, Korean Drama in Hindi, Hollywood Dubbed, KatmovieHD - LordHD",
     "url": "https://lordhd.in/",
     "description": "A site to stream or download movies and TV series in Hindi, including Hollywood dubbed and Korean dramas.",
@@ -451,7 +414,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 38,
     "name": "Search and Browse YIFY Movies Torrent Downloads - YTS",
     "url": "https://yts.mx/browse-movies",
     "description": "A platform for browsing and downloading movies via YIFY torrents.",
@@ -463,7 +425,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 39,
     "name": "eMovies - Free Movies & TV-Series Online",
     "url": "https://emovies.io/free-movies.html?__cf_chl_jschl_tk__=b3f309235bca086160f84b1fa264a085304ccba5-1607694475-0-AUMULy0BgOrkJF3p5mc3xjBRXsES0inclKiwci_M7rgWqOApiH9I7LJpE2LMgm_0W1TNnApa4belJBfe0PgBJYaxHhbEP6FjgOrnSyh8oSb-AGbBr_SIP2NrRU6fhyTqk4sBRgZLPY6Y38GOfvBvoPvE4POcp7u83XSIpgecG4ClSGS5b_ErL41tDwbEB82cBSiyg",
     "description": "A site for streaming free movies and TV series online.",
@@ -475,7 +436,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 40,
     "name": "Fmovies: Watch Free Movies Online - Just Faster And Better",
     "url": "http://www7.fmovies.sc/",
     "description": "Stream a wide selection of movies online for free, offering fast and high-quality playback.",
@@ -487,7 +447,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 41,
     "name": "123Movies - Watch Movies Online Free & TV Series in 1080p Quality",
     "url": "https://wvw1.123movies.net/",
     "description": "Watch movies and TV series online in HD quality for free with an extensive library.",
@@ -500,7 +459,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 42,
     "name": "The Official Home of YIFY Movies Torrent Download - YTS",
     "url": "https://yts.mx/",
     "description": "Download high-quality movie torrents in small file sizes from the official YTS website.",
@@ -512,7 +470,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 43,
     "name": "AnimeKayo - Best Site To Download Anime Encodes, Manga & Music",
     "url": "https://animekayo.com/",
     "description": "Download anime, manga, and music in different formats and quality levels from AnimeKayo.",
@@ -525,7 +482,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 44,
     "name": "AnimeHeaven - Watch HD Anime Online Free",
     "url": "https://animeheaven.ru/",
     "description": "Watch a wide selection of HD anime series and movies online for free.",
@@ -538,7 +494,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 45,
     "name": "KickassTorrents - Download torrents from Kickass Torrents",
     "url": "https://kickasstorrents.to/",
     "description": "Access and download a variety of torrents including movies, music, software, and more.",
@@ -551,7 +506,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 46,
     "name": "123anime - Watch download Anime Online English Sub and Dub",
     "url": "https://123animes.mobi/",
     "description": "Stream and download English-subbed and dubbed anime series online.",
@@ -564,7 +518,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 47,
     "name": "Where and How to Batch Download Anime Most Efficiently?",
     "url": "https://www.videoconverterfactory.com/tips/batch-download-anime.html",
     "description": "Guide on the most efficient methods for batch downloading anime series.",
@@ -577,7 +530,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 48,
     "name": "Watch Free Movies and TV Shows Online | Free Streaming Video | Tubi",
     "url": "https://tubitv.com/",
     "description": "Stream a wide range of movies and TV shows online for free on Tubi.",
@@ -590,7 +542,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 49,
     "name": "Cineb.net - Watch Full HD Movies Online and Stream Free Movies Online Now",
     "url": "https://cineb.net/",
     "description": "Stream HD movies online for free with a vast collection of genres.",
@@ -603,7 +554,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 50,
     "name": "GOKU - Watch Movies Online & Free Movies Streaming",
     "url": "https://goku.to/",
     "description": "Watch free movies online and stream a variety of genres and titles.",
@@ -615,7 +565,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 51,
     "name": "FilmyZilla Bollywood Hollywood Hindi Dubbed Movies Filmywap 2022 Filmyzilla 2023 FilmyzillaHD 2023",
     "url": "https://www.filmyzilla.credit/",
     "description": "Download Bollywood, Hollywood, and Hindi dubbed movies for free from FilmyZilla.",
@@ -629,7 +578,6 @@
     "categories": "Bookmarks bar / website / Film"
   },
   {
-    "id": 52,
     "name": "AniDL",
     "url": "https://anidl.org/",
     "description": "A platform to download anime series and episodes in different formats.",
@@ -641,7 +589,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 53,
     "name": "[AnimeRG]",
     "url": "https://animereleasegroup.blogspot.com/p/main.html",
     "description": "Anime Release Group offering a collection of anime downloads and resources.",
@@ -653,7 +600,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 54,
     "name": "Kayoanime » News, Reviews & Updates of Anime",
     "url": "https://kayoanime.com/",
     "description": "Read news, reviews, and updates about the latest anime series and releases.",
@@ -666,7 +612,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 55,
     "name": "AnimeKaizoku",
     "url": "https://animekaizoku.com/",
     "description": "Download high-quality anime series and episodes with various formats available.",
@@ -678,7 +623,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 56,
     "name": "Browse :: Nyaa",
     "url": "https://nyaa.si/",
     "description": "Torrent site for downloading anime series, movies, and other related content.",
@@ -690,7 +634,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 57,
     "name": "AniDB",
     "url": "https://anidb.net/",
     "description": "Database providing detailed information on anime series, characters, and episodes.",
@@ -702,7 +645,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 58,
     "name": "AnimeNana - Let's Go",
     "url": "https://animenana.com/",
     "description": "Watch and stream anime series online with English subtitles.",
@@ -714,7 +656,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 59,
     "name": "9anime - Watch Anime Online, Watch English Anime Online Subbed",
     "url": "https://ww.9animes.org/",
     "description": "Stream English-subbed anime series and movies online for free.",
@@ -727,7 +668,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 60,
     "name": "Muse Asia - YouTube",
     "url": "https://www.youtube.com/c/MuseAsia/playlists",
     "description": "Official Muse Asia YouTube channel with anime playlists available for streaming.",
@@ -740,7 +680,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 61,
     "name": "AnimeKisa: Find & Watch Anime, Subbed & Dubbed",
     "url": "https://animekisa.tv/",
     "description": "A website to find and watch anime with options for both subbed and dubbed content.",
@@ -751,7 +690,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 62,
     "name": "Reincarnated as a Slime V1 Audiobook - YouTube",
     "url": "https://www.youtube.com/watch?v=NHfPhzadolQ&list=PLPQIFQlQEbTTKNpv4XTOv34a4uklY7WBT",
     "description": "Listen to the audiobook version of 'Reincarnated as a Slime' on YouTube.",
@@ -763,7 +701,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 63,
     "name": "10 Safe Websites to Watch Animes",
     "url": "http://www.animatedexplanations.com/10-safe-websites-watch-animes/",
     "description": "A guide to ten safe websites for watching anime online.",
@@ -774,7 +711,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 64,
     "name": "Tensei Shitara Slime Datta Ken Manga Online Chapter 86 English Version",
     "url": "https://w11.tenseishitaraslimedattaken-manga.com/manga/tensei-shitara-slime-datta-ken-chapter-86/",
     "description": "Read Chapter 86 of the 'Tensei Shitara Slime Datta Ken' manga in English.",
@@ -785,7 +721,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 65,
     "name": "Ranker Who Lives A Second Time - ManhwaBookShelf",
     "url": "https://manhwabookshelf.com/manga/ranker-who-lives-a-second-time/ch-099/",
     "description": "Read the manhwa 'Ranker Who Lives A Second Time' online.",
@@ -796,7 +731,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 66,
     "name": "1920x1080px | free download | HD wallpaper: Naruto (anime), Uzumaki Naruto, Jiraiya, Naruto Shippuuden | Wallpaper Flare",
     "url": "https://www.wallpaperflare.com/naruto-anime-uzumaki-naruto-jiraiya-naruto-shippuuden-wallpaper-ymsez/download/1920x1080",
     "description": "Download HD wallpapers featuring Naruto and other characters from Naruto Shippuden.",
@@ -807,7 +741,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 67,
     "name": "AnimeHeaven - Watch Anime Online Free | animeheaven.eu",
     "url": "https://animeheaven.ru/animeheaven.eu",
     "description": "Watch anime online for free at AnimeHeaven.",
@@ -818,7 +751,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 68,
     "name": "Watch List",
     "url": "https://9anime.to/user/watchlist",
     "description": "Manage your anime watchlist on 9Anime.",
@@ -829,7 +761,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 69,
     "name": "AniMixPlay - Watch HD Anime for Free",
     "url": "https://animixplay.to/",
     "description": "Enjoy watching HD anime for free on AniMixPlay.",
@@ -840,7 +771,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 70,
     "name": "HOME - Manhuaus.com",
     "url": "https://manhuaus.com/",
     "description": "Explore a variety of manhua on Manhuaus.",
@@ -851,7 +781,6 @@
     "categories": "Bookmarks bar / website / Anime website"
   },
   {
-    "id": 71,
     "name": "Kaggle: Your Machine Learning and Data Science Community",
     "url": "https://www.kaggle.com/",
     "description": "Join the Kaggle community for data science and machine learning competitions.",
@@ -862,7 +791,6 @@
     "categories": "Bookmarks bar / website / Machine Learning"
   },
   {
-    "id": 72,
     "name": "Mathematical Foundations of Machine Learning | Udemy",
     "url": "https://www.udemy.com/course/machine-learning-data-science-foundations-masterclass/",
     "description": "Learn the mathematical foundations necessary for machine learning.",
@@ -873,7 +801,6 @@
     "categories": "Bookmarks bar / website / Machine Learning"
   },
   {
-    "id": 73,
     "name": "Math for Data Science Masterclass | Udemy",
     "url": "https://www.udemy.com/course/math-for-data-science-masterclass/",
     "description": "Master the mathematical concepts required for data science.",
@@ -884,7 +811,6 @@
     "categories": "Bookmarks bar / website / Machine Learning"
   },
   {
-    "id": 74,
     "name": "Data Science Training Course: Data Scientist Bootcamp | Udemy",
     "url": "https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/",
     "description": "Complete data science training to become a data scientist.",
@@ -895,7 +821,6 @@
     "categories": "Bookmarks bar / website / Machine Learning"
   },
   {
-    "id": 75,
     "name": "Supervised Machine Learning: Regression and Classification | Coursera",
     "url": "https://www.coursera.org/learn/machine-learning#syllabus",
     "description": "Learn about regression and classification techniques in machine learning.",
@@ -906,7 +831,6 @@
     "categories": "Bookmarks bar / website / Machine Learning"
   },
   {
-    "id": 76,
     "name": "Pandas DataFrame UltraQuick Tutorial.ipynb - Colaboratory",
     "url": "https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/pandas_dataframe_ultraquick_tutorial.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=mlcc-prework&hl=en&fbclid=IwAR3GE4gwMmeOjb2XQO9ztbb9gfpefehsHxVGb8bi6rIajV7szzGFlgUQqNY",
     "description": "A quick tutorial on using Pandas DataFrames in Python.",
@@ -917,7 +841,6 @@
     "categories": "Bookmarks bar / website / Machine Learning"
   },
   {
-    "id": 77,
     "name": "NumPy UltraQuick Tutorial - Colaboratory",
     "url": "https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/numpy_ultraquick_tutorial.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=mlcc-prework&hl=en&fbclid=IwAR0thgUyGmQSX-JGMMpxOc6c5yB1u1NAf7QjCUxeqUE1_DcDNC7oNy4G4Os#scrollTo=CjHfYWhdQYtO",
     "description": "A quick tutorial on using NumPy for numerical computing in Python.",
@@ -928,7 +851,6 @@
     "categories": "Bookmarks bar / website / Machine Learning"
   },
   {
-    "id": 78,
     "name": "Login-Legiit",
     "url": "https://legiit.com/sign-in",
     "description": "Login to Legiit, a freelancing platform.",
@@ -939,7 +861,6 @@
     "categories": "Bookmarks bar / website / Freelancing"
   },
   {
-    "id": 79,
     "name": "Personal portfolio build with React.js",
     "url": "https://reactjsexample.com/personal-portfolio-build-with-react-js/",
     "description": "Example of a personal portfolio built with React.js.",
@@ -950,7 +871,6 @@
     "categories": "Bookmarks bar / website / Portfolio"
   },
   {
-    "id": 80,
     "name": "Modern Resume Template | Free Download",
     "url": "https://www.freepik.com/free-psd/modern-resume-template_21950180.htm#page=2&query=resume&position=1&from_view=keyword",
     "description": "Download a modern resume template for free.",
@@ -961,7 +881,6 @@
     "categories": "Bookmarks bar / website / Resume"
   },
   {
-    "id": 81,
     "name": "(439) React Easy Slider with Framer Motion Tutorial - YouTube",
     "url": "https://www.youtube.com/watch?v=W0bEL93tt4k&t=1s",
     "description": "A tutorial on how to create an easy slider using React and Framer Motion.",
@@ -973,7 +892,6 @@
     "categories": "Bookmarks bar / website / Portfolio"
   },
   {
-    "id": 82,
     "name": "Create an Animated Sticky Header on Scroll (With a Bit of JavaScript)",
     "url": "https://webdesign.tutsplus.com/tutorials/create-an-animated-sticky-header-on-scroll-with-a-bit-of-javascript--cms-93428",
     "description": "Learn to create a sticky header that animates on scroll using JavaScript.",
@@ -985,7 +903,6 @@
     "categories": "Bookmarks bar / website / Portfolio"
   },
   {
-    "id": 83,
     "name": "(707) How to add PreLoader in React JS Application | Website Loading Animation | React Js Tutorial - YouTube",
     "url": "https://www.youtube.com/watch?v=-eKLme-X9nY",
     "description": "A tutorial on implementing a loading animation in a React application.",
@@ -997,7 +914,6 @@
     "categories": "Bookmarks bar / website / Portfolio"
   },
   {
-    "id": 84,
     "name": "react-blurhash examples - CodeSandbox",
     "url": "https://codesandbox.io/examples/package/react-blurhash",
     "description": "Examples demonstrating the usage of the react-blurhash library.",
@@ -1009,7 +925,6 @@
     "categories": "Bookmarks bar / website / Portfolio"
   },
   {
-    "id": 85,
     "name": "(327) Full Screen Scrolling in React js | Full Page Scroll Effect in Reactjs - YouTube",
     "url": "https://www.youtube.com/watch?v=a_f4vsNlKek&t=138s",
     "description": "Learn how to implement full-screen scrolling effects in a React application.",
@@ -1021,7 +936,6 @@
     "categories": "Bookmarks bar / website / Portfolio"
   },
   {
-    "id": 86,
     "name": "Android Basics in Kotlin course | Android Developers",
     "url": "https://developer.android.com/courses/android-basics-kotlin/course?gclid=CjwKCAjwvdajBhBEEiwAeMh1UyutI2nXUTKSI_tg8l8rDASwKNcKYV0w4_XgAifpsHyRupR6ggZllxoCzf4QAvD_BwE&gclsrc=aw.ds",
     "description": "Free course on Android basics using Kotlin programming language.",
@@ -1033,7 +947,6 @@
     "categories": "Bookmarks bar / website / Kotlin"
   },
   {
-    "id": 87,
     "name": "mohammednawas8/EasyFood",
     "url": "https://github.com/mohammednawas8/EasyFood",
     "description": "A GitHub repository for the EasyFood application, showcasing food-related features.",
@@ -1045,7 +958,6 @@
     "categories": "Bookmarks bar / website / Kotlin"
   },
   {
-    "id": 88,
     "name": "Angle 4 - Pricing",
     "url": "https://angle.sh/pricing",
     "description": "Pricing page for Angle 4, a UI toolkit for building applications.",
@@ -1056,7 +968,6 @@
     "categories": "Bookmarks bar / website / Kotlin"
   },
   {
-    "id": 89,
     "name": "Free HTML Templates on HTMLrev",
     "url": "https://htmlrev.com/",
     "description": "Collection of free HTML templates for various projects.",
@@ -1068,7 +979,6 @@
     "categories": "Bookmarks bar / website / Free Template"
   },
   {
-    "id": 90,
     "name": "Free HTML Landing Page Templates and UI Kits | UIdeck",
     "url": "https://uideck.com/",
     "description": "UIdeck offers a variety of free HTML landing page templates and UI kits.",
@@ -1080,7 +990,6 @@
     "categories": "Bookmarks bar / website / Free Template"
   },
   {
-    "id": 91,
     "name": "HTML5 UP! Responsive HTML5 and CSS3 Site Templates",
     "url": "https://html5up.net/",
     "description": "Responsive HTML5 and CSS3 templates for creating websites.",
@@ -1092,7 +1001,6 @@
     "categories": "Bookmarks bar / website / Free Template"
   },
   {
-    "id": 92,
     "name": "Web3Templates — Website Templates & Landing Pages",
     "url": "https://web3templates.com/",
     "description": "Website templates and landing pages specifically for Web3 projects.",
@@ -1104,7 +1012,6 @@
     "categories": "Bookmarks bar / website / Free Template"
   },
   {
-    "id": 93,
     "name": "588+ Free HTML CSS Website Templates by TemplateMo",
     "url": "https://templatemo.com/",
     "description": "A collection of over 588 free HTML and CSS website templates.",
@@ -1116,7 +1023,6 @@
     "categories": "Bookmarks bar / website / Free Template"
   },
   {
-    "id": 94,
     "name": "Angle 4 - 6800+ Device Mockups for Figma, Sketch and XD",
     "url": "https://angle.sh/",
     "description": "Device mockups available for Figma, Sketch, and Adobe XD.",
@@ -1127,7 +1033,6 @@
     "categories": "Bookmarks bar / website / Mockups"
   },
   {
-    "id": 95,
     "name": "Mockup your designs simply and beautifully.",
     "url": "https://cleanmock.com/",
     "description": "A platform for creating beautiful mockups of your designs.",
@@ -1138,7 +1043,6 @@
     "categories": "Bookmarks bar / website / Mockups"
   },
   {
-    "id": 96,
     "name": "Device Frames - 3D Device Mockup Generator",
     "url": "https://deviceframes.com/",
     "description": "Generate 3D mockups of your designs on various devices.",
@@ -1149,7 +1053,6 @@
     "categories": "Bookmarks bar / website / Mockups"
   },
   {
-    "id": 97,
     "name": "Mockuuups Studio: Mockup Generator [3500+ Mockups]",
     "url": "https://mockuuups.studio/",
     "description": "Access thousands of mockups to showcase your designs.",
@@ -1160,7 +1063,6 @@
     "categories": "Bookmarks bar / website / Mockups"
   },
   {
-    "id": 98,
     "name": "MedicineReminder/lib/notifications/NotificationManager.dart at main · FadiHachani/MedicineReminder",
     "url": "https://github.com/FadiHachani/MedicineReminder/blob/main/lib/notifications/NotificationManager.dart",
     "description": "Dart file for managing notifications in the Medicine Reminder app.",
@@ -1172,7 +1074,6 @@
     "categories": "Bookmarks bar / website / Mockups"
   },
   {
-    "id": 99,
     "name": "app.rotato.app",
     "url": "https://app.rotato.app/",
     "description": "Create stunning device mockups with this online app.",
@@ -1183,7 +1084,6 @@
     "categories": "Bookmarks bar / website / Mockups"
   },
   {
-    "id": 100,
     "name": "carblacac/twitter-sentiment-analysis · Datasets at Hugging Face",
     "url": "https://huggingface.co/datasets/carblacac/twitter-sentiment-analysis/viewer/default/test",
     "description": "Dataset for analyzing Twitter sentiment.",
@@ -1195,7 +1095,6 @@
     "categories": "Bookmarks bar / website / ML / Dataset"
   },
   {
-    "id": 101,
     "name": "Amazon review data",
     "url": "http://jmcauley.ucsd.edu/data/amazon/index_2014.html",
     "description": "Amazon review data for research purposes.",
@@ -1207,7 +1106,6 @@
     "categories": "Bookmarks bar / website / ML / Dataset"
   },
   {
-    "id": 102,
     "name": "Kaggle - sentiment140 dataset",
     "url": "https://www.kaggle.com/datasets/kazanova/sentiment140",
     "description": "Sentiment140 dataset for sentiment analysis tasks.",
@@ -1219,7 +1117,6 @@
     "categories": "Bookmarks bar / website / ML / Dataset"
   },
   {
-    "id": 103,
     "name": "webmd.com: Depression & Anxiety Disorders: A guide to emotional health - WebMD",
     "url": "https://www.webmd.com/depression/guide/depression-anxiety-disorders",
     "description": "A comprehensive guide on depression and anxiety disorders.",
@@ -1230,7 +1127,6 @@
     "categories": "Bookmarks bar / website / Mental Health"
   },
   {
-    "id": 104,
     "name": "kaggle.com - sentiment analysis dataset",
     "url": "https://www.kaggle.com/datasets/sohailj/sentiment-analysis-dataset",
     "description": "Dataset for sentiment analysis projects.",
@@ -1242,7 +1138,6 @@
     "categories": "Bookmarks bar / website / ML / Dataset"
   },
   {
-    "id": 105,
     "name": "UCI Machine Learning Repository - Sentiment Analysis Dataset",
     "url": "https://archive.ics.uci.edu/ml/datasets/Sentiment+Labelled+Sentences",
     "description": "Dataset containing sentences labeled for sentiment analysis.",
@@ -1254,7 +1149,6 @@
     "categories": "Bookmarks bar / website / ML / Dataset"
   },
   {
-    "id": 106,
     "name": "Kaggle - Amazon Fine Food Reviews",
     "url": "https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews",
     "description": "Dataset containing reviews of Amazon fine foods.",
@@ -1266,7 +1160,6 @@
     "categories": "Bookmarks bar / website / ML / Dataset"
   },
   {
-    "id": 107,
     "name": "Tailwind Card Component — Tailwind CSS Components",
     "url": "https://daisyui.com/components/card/",
     "description": "A collection of card components built with Tailwind CSS for quick use in your projects.",
@@ -1277,7 +1170,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 108,
     "name": "shadcn/ui",
     "url": "https://ui.shadcn.com/",
     "description": "A comprehensive UI library with components designed for React and Tailwind CSS.",
@@ -1289,7 +1181,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 109,
     "name": "Tailwind CSS Components - 600+ Free Examples and Templates",
     "url": "https://tailwindcomponents.com/",
     "description": "A vast collection of free components and templates built with Tailwind CSS.",
@@ -1301,7 +1192,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 110,
     "name": "Components — Tailwind CSS Components",
     "url": "https://daisyui.com/components/",
     "description": "Explore a wide range of components styled with Tailwind CSS for immediate use.",
@@ -1312,7 +1202,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 111,
     "name": "Small Filled Buttons | Tailwind Starter Kit by Creative Tim",
     "url": "https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/css/buttons/small/filled",
     "description": "Documentation for creating small filled buttons using the Tailwind CSS framework.",
@@ -1324,7 +1213,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 112,
     "name": "Genz - Creative Personal Blog Portfolio NextJS Template Preview - ThemeForest",
     "url": "https://preview.themeforest.net/item/genz-creative-personal-blog-portfolio-nextjs-template/full_screen_preview/42139590?_ga=2.39077795.1860617899.1700403651-737896263.1699628577",
     "description": "Preview of a Next.js template designed for creative personal blogs and portfolios.",
@@ -1336,7 +1224,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 113,
     "name": "Flutter Component Library",
     "url": "https://fluttercomponentlibrary.com/",
     "description": "A library of Flutter components for building mobile applications.",
@@ -1348,7 +1235,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 114,
     "name": "FlutterBricks - Pre-Built Widgets for Flutter",
     "url": "https://www.flutterbricks.com/preview",
     "description": "A collection of pre-built widgets for Flutter applications to speed up development.",
@@ -1360,7 +1246,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 115,
     "name": "Subframe – The best way to build UI, fast.",
     "url": "https://www.subframe.com/library/components/alert",
     "description": "A platform offering various UI components to accelerate web application development.",
@@ -1371,7 +1256,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 116,
     "name": "hevar/awesome-react-tailwindcss-ui-components at dailydev",
     "url": "https://github.com/hevar/awesome-react-tailwindcss-ui-components?ref=dailydev",
     "description": "A curated list of UI components built with React and Tailwind CSS.",
@@ -1383,7 +1267,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 117,
     "name": "Variant Vault - A collection of Framer Motion variants for your next project.",
     "url": "https://variantvault.chrisabdo.dev/?ck_subscriber_id=2311470955&utm_source=convertkit&utm_medium=email&utm_campaign=Copy-and-paste%20Framer%20Motion%20code?%20Sign%20me%20up!%20-%2014019240",
     "description": "A collection of animation variants for Framer Motion to enhance UI interactions.",
@@ -1395,7 +1278,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 118,
     "name": "How to Move a Text along an SVG Path on Scroll using React and Framer Motion",
     "url": "https://blog.olivierlarose.com/tutorials/text-along-path",
     "description": "A tutorial on animating text along an SVG path using React and Framer Motion.",
@@ -1407,7 +1289,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 119,
     "name": "Explore 3000+ Free UI Elements: CSS & Tailwind",
     "url": "https://uiverse.io/",
     "description": "A resource for free UI elements and components designed with CSS and Tailwind.",
@@ -1419,7 +1300,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 120,
     "name": "Magic UI",
     "url": "https://magicui.design/",
     "description": "A toolkit of UI components designed for modern web applications.",
@@ -1430,7 +1310,6 @@
     "categories": "Bookmarks bar / website / Copy Paste Components"
   },
   {
-    "id": 140,
     "name": "Drag To Select Demo - CodeSandbox",
     "url": "https://codesandbox.io/p/sandbox/drag-to-select-demo-lge1c?file=%2Fsrc%2FApp.tsx",
     "description": "A demonstration of drag-to-select functionality implemented in a CodeSandbox project.",
@@ -1442,7 +1321,6 @@
     "categories": "Drag Select"
   },
   {
-    "id": 141,
     "name": "dnd-demo (forked) - CodeSandbox",
     "url": "https://codesandbox.io/p/sandbox/dnd-demo-forked-2tyngq?file=%2Fsrc%2FMouseSelection.tsx%3A11%2C49",
     "description": "A forked demo showcasing drag-and-drop functionality in a CodeSandbox environment.",
@@ -1454,7 +1332,6 @@
     "categories": "Drag Select"
   },
   {
-    "id": 142,
     "name": "Architect/Civil Engineer, Engineer, ND engineering Consultancy Pvt. Ltd. Kathmandu: Jobs Nepal",
     "url": "https://www.jobsnepal.com/job/architect-civil-engineer/115455",
     "description": "Job listing for an Architect/Civil Engineer position at ND Engineering Consultancy in Kathmandu.",
@@ -1466,7 +1343,6 @@
     "categories": ""
   },
   {
-    "id": 143,
     "name": "Adobe Photoshop Lightroom CC Full 5.0 Apk android (Unlocked)",
     "url": "https://www.revdl.net/adobe-photoshop-lightroom-cc-apk-unlocked-llilil.html/?r=1058036586",
     "description": "Download the unlocked version of Adobe Photoshop Lightroom CC for Android.",
@@ -1478,7 +1354,6 @@
     "categories": ""
   },
   {
-    "id": 144,
     "name": "purple line neon spiral tumblr edit png pngedit sticker...",
     "url": "https://picsart.com/i/sticker-spiral-spiralneon-neon-neonstickers-overlay-overlays-318016727381211",
     "description": "A neon spiral sticker available for editing and use in digital projects.",
@@ -1490,7 +1365,6 @@
     "categories": ""
   },
   {
-    "id": 145,
     "name": "Online UniConverter (Media.io) - Free Online File Converter, Editor, Compressor",
     "url": "https://www.media.io/?utm_source=youtube&utm_medium=GadgetByte&utm_campaign=200423OVleicx02",
     "description": "A free online tool for converting, editing, and compressing various file types.",
@@ -1502,7 +1376,6 @@
     "categories": ""
   },
   {
-    "id": 146,
     "name": "Do you know your NHS number? - Book a coronavirus vaccination - NHS",
     "url": "https://www.nhs.uk/book-a-coronavirus-vaccination/do-you-have-an-nhs-number",
     "description": "Information on how to book a coronavirus vaccination through the NHS.",
@@ -1514,7 +1387,6 @@
     "categories": ""
   },
   {
-    "id": 147,
     "name": ".:: ONLINE DRIVING LICENSE ::.",
     "url": "https://onlineedlreg.dotm.gov.np/Nepal_DLReg/checkAppStatus.action",
     "description": "Online portal for checking the status of your driving license application in Nepal.",
@@ -1526,7 +1398,6 @@
     "categories": ""
   },
   {
-    "id": 148,
     "name": "Sentiment Analysis on Amazon Product (RNN-97% Acc) | Kaggle",
     "url": "https://www.kaggle.com/code/aherparesh/sentiment-analysis-on-amazon-product-rnn-97-acc",
     "description": "A Kaggle project demonstrating sentiment analysis on Amazon product reviews using RNN.",
@@ -1538,7 +1409,6 @@
     "categories": ""
   },
   {
-    "id": 149,
     "name": "10 Fun Web Development Project Ideas for Bored Coders to Do - DEV Community",
     "url": "https://dev.to/best_codes/10-fun-web-development-project-ideas-for-bored-coders-51dl",
     "description": "A list of ten engaging web development project ideas for developers looking for inspiration.",
@@ -1550,7 +1420,6 @@
     "categories": ""
   },
   {
-    "id": 130,
     "name": "Stopwords Remover for Nepali language (488 entries) | stopwords_iso | Spark NLP 3.4.1",
     "url": "https://sparknlp.org/2022/03/07/stopwords_iso_ne_3_0.html",
     "description": "A tool for removing stopwords from the Nepali language, featuring 488 entries.",
@@ -1562,7 +1431,6 @@
     "categories": "Bookmarks bar / website / NepSense"
   },
   {
-    "id": 131,
     "name": "AI4Bharat/IndicXlit: Transliteration models for 21 Indic languages",
     "url": "https://github.com/AI4Bharat/IndicXlit?tab=readme-ov-file#license",
     "description": "Transliteration models for 21 Indic languages, facilitating language processing tasks.",
@@ -1574,7 +1442,6 @@
     "categories": "Bookmarks bar / website / NepSense"
   },
   {
-    "id": 132,
     "name": "IndicXlit_python_inference.ipynb - Colab",
     "url": "https://colab.research.google.com/drive/1P78Tbr6zhe-5LeiKk525N3SGPKn2ofGg?usp=sharing#scrollTo=GCCpEKTQj2Yy",
     "description": "A Colab notebook for running inference using IndicXlit transliteration models.",
@@ -1586,7 +1453,6 @@
     "categories": "Bookmarks bar / website / NepSense"
   },
   {
-    "id": 133,
     "name": "llSourcell/How_to_make_a_language_translator: This is the code for \"How to Make a Language Translator - Intro to Deep Learning #11' by Siraj Raval on YouTube",
     "url": "https://github.com/llSourcell/How_to_make_a_language_translator",
     "description": "Code repository for building a language translator using deep learning techniques.",
@@ -1598,7 +1464,6 @@
     "categories": "Bookmarks bar / website / NepSense"
   },
   {
-    "id": 134,
     "name": "Internships matching your Preferences | Internshala",
     "url": "https://internshala.com/internships/matching-preferences/",
     "description": "A platform to find internships that match your preferences and skills.",
@@ -1610,7 +1475,6 @@
     "categories": "Bookmarks bar / website / Jobs"
   },
   {
-    "id": 135,
     "name": "Machine_Translation/Seq2Seq.ipynb at main · bharadwaj1098/Machine_Translation",
     "url": "https://github.com/bharadwaj1098/Machine_Translation/blob/main/Seq2Seq.ipynb",
     "description": "A Jupyter notebook demonstrating sequence-to-sequence models for machine translation.",
@@ -1622,7 +1486,6 @@
     "categories": "Bookmarks bar / website / JapToEng"
   },
   {
-    "id": 136,
     "name": "FLutter-Bloc-Tutorials/lib/view/favourite/favourite_screen.dart at main · axiftaj/FLutter-Bloc-Tutorials",
     "url": "https://github.com/axiftaj/FLutter-Bloc-Tutorials/blob/main/lib/view/favourite/favourite_screen.dart",
     "description": "Dart file for the favorite screen in a Flutter application using the Bloc pattern.",
@@ -1634,7 +1497,6 @@
     "categories": "Bookmarks bar"
   },
   {
-    "id": 137,
     "name": "VirusTotal - Analysing file",
     "url": "https://www.virustotal.com/gui/file-analysis/NGJjYmE4NWEzNzRjMjk5YzVjOTY0NzEwNDc1NmFhY2Q6MTcyNTU0NjQ0Ng==",
     "description": "A service for analyzing files and URLs for viruses and other threats.",
@@ -1646,7 +1508,6 @@
     "categories": "Bookmarks bar"
   },
   {
-    "id": 138,
     "name": "DragSelect – select what we love",
     "url": "https://codepen.io/ThibaultJanBeyer/pen/YzvVYyR",
     "description": "A CodePen demo showcasing drag-to-select functionality for selecting multiple items.",
@@ -1658,7 +1519,6 @@
     "categories": "Drag Select"
   },
   {
-    "id": 139,
     "name": "react - CodeSandbox",
     "url": "https://codesandbox.io/p/sandbox/react-5y8onl?file=%2Fpackage.json",
     "description": "A CodeSandbox project demonstrating the use of React for building web applications.",
@@ -1670,7 +1530,6 @@
     "categories": "Drag Select"
   },
   {
-    "id": 140,
     "name": "Drag To Select Demo - CodeSandbox",
     "url": "https://codesandbox.io/p/sandbox/drag-to-select-demo-lge1c?file=%2Fsrc%2FApp.tsx",
     "description": "A demonstration of drag-to-select functionality implemented in a CodeSandbox project.",
@@ -1682,7 +1541,6 @@
     "categories": "Drag Select"
   },
   {
-    "id": 141,
     "name": "dnd-demo (forked) - CodeSandbox",
     "url": "https://codesandbox.io/p/sandbox/dnd-demo-forked-2tyngq?file=%2Fsrc%2FMouseSelection.tsx%3A11%2C49",
     "description": "A forked demo showcasing drag-and-drop functionality in a CodeSandbox environment.",
@@ -1694,7 +1552,6 @@
     "categories": "Drag Select"
   },
   {
-    "id": 142,
     "name": "Architect/Civil Engineer, Engineer, ND engineering Consultancy Pvt. Ltd. Kathmandu: Jobs Nepal",
     "url": "https://www.jobsnepal.com/job/architect-civil-engineer/115455",
     "description": "Job listing for an Architect/Civil Engineer position at ND Engineering Consultancy in Kathmandu.",
@@ -1706,7 +1563,6 @@
     "categories": ""
   },
   {
-    "id": 143,
     "name": "Adobe Photoshop Lightroom CC Full 5.0 Apk android (Unlocked)",
     "url": "https://www.revdl.net/adobe-photoshop-lightroom-cc-apk-unlocked-llilil.html/?r=1058036586",
     "description": "Download the unlocked version of Adobe Photoshop Lightroom CC for Android.",
@@ -1718,7 +1574,6 @@
     "categories": ""
   },
   {
-    "id": 144,
     "name": "purple line neon spiral tumblr edit png pngedit sticker...",
     "url": "https://picsart.com/i/sticker-spiral-spiralneon-neon-neonstickers-overlay-overlays-318016727381211",
     "description": "A neon spiral sticker available for editing and use in digital projects.",
@@ -1730,7 +1585,6 @@
     "categories": ""
   },
   {
-    "id": 145,
     "name": "Online UniConverter (Media.io) - Free Online File Converter, Editor, Compressor",
     "url": "https://www.media.io/?utm_source=youtube&utm_medium=GadgetByte&utm_campaign=200423OVleicx02",
     "description": "A free online tool for converting, editing, and compressing various file types.",
@@ -1742,7 +1596,6 @@
     "categories": ""
   },
   {
-    "id": 146,
     "name": "Do you know your NHS number? - Book a coronavirus vaccination - NHS",
     "url": "https://www.nhs.uk/book-a-coronavirus-vaccination/do-you-have-an-nhs-number",
     "description": "Information on how to book a coronavirus vaccination through the NHS.",
@@ -1754,7 +1607,6 @@
     "categories": ""
   },
   {
-    "id": 147,
     "name": ".:: ONLINE DRIVING LICENSE ::.",
     "url": "https://onlineedlreg.dotm.gov.np/Nepal_DLReg/checkAppStatus.action",
     "description": "Online portal for checking the status of your driving license application in Nepal.",
@@ -1766,7 +1618,6 @@
     "categories": ""
   },
   {
-    "id": 148,
     "name": "Sentiment Analysis on Amazon Product (RNN-97% Acc) | Kaggle",
     "url": "https://www.kaggle.com/code/aherparesh/sentiment-analysis-on-amazon-product-rnn-97-acc",
     "description": "A Kaggle project demonstrating sentiment analysis on Amazon product reviews using RNN.",
@@ -1778,7 +1629,6 @@
     "categories": ""
   },
   {
-    "id": 149,
     "name": "10 Fun Web Development Project Ideas for Bored Coders to Do - DEV Community",
     "url": "https://dev.to/best_codes/10-fun-web-development-project-ideas-for-bored-coders-51dl",
     "description": "A list of ten engaging web development project ideas for developers looking for inspiration.",
@@ -1790,7 +1640,6 @@
     "categories": ""
   },
   {
-    "id": 150,
     "name": "Realtime Dashboard",
     "url": "https://codepen.io/apexcharts/pen/pxZKqL",
     "description": "An interactive dashboard example showcasing real-time data visualization using ApexCharts.",
@@ -1802,7 +1651,6 @@
     "categories": ""
   },
   {
-    "id": 151,
     "name": "The Freelancer 2023 Hotstar Original Web Series Free Download Filmyzilla",
     "url": "https://www.filmyzilla.com.ng/movie/15353/The-freelancer-(2023)-web-series.html",
     "description": "Watch the 2023 Hotstar original web series 'The Freelancer' available for free download.",
@@ -1814,7 +1662,6 @@
     "categories": ""
   },
   {
-    "id": 152,
     "name": "B. SC CSIT Computer Graphics Unit 2 By Tekendra Nath Yogi | PPT",
     "url": "https://www.slideshare.net/tekendray/b-sc-csit-computer-graphics-unit-2-by-tekendra-nath-yogi",
     "description": "Presentation slides covering the second unit of Computer Graphics for B. SC CSIT students.",
@@ -1826,7 +1673,6 @@
     "categories": ""
   },
   {
-    "id": 153,
     "name": "Portfolio of Abu Said - Software Developer",
     "url": "https://www.abusaid.me/",
     "description": "A personal portfolio showcasing the projects and skills of Abu Said, a software developer specializing in web and mobile applications.",

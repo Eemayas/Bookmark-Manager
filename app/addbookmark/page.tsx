@@ -39,30 +39,30 @@ const page = () => {
   // };
 
   const addPopularWebistes = async () => {
-    // Object.keys(popularBookmarks).map((categories: string, index) =>
-    //   (
-    //     popularBookmarks[
-    //       categories as keyof typeof popularBookmarks
-    //     ] as PopularLinksType[]
-    //   ).map(async (links) => {
-    //     console.log({ categories, links });
-    //     try {
-    //       const response = await fetch(
-    //         `http://localhost:3000/api/poularwebsite`,
-    //         {
-    //           method: "POST",
-    //           headers: { "Content-Type": "application/json" },
-    //           body: JSON.stringify({ category: categories, newLink: links }),
-    //         },
-    //       );
-    //       const data = await response.json();
-    //       // console.log({ data });
-    //       return { categories, links };
-    //     } catch (error) {
-    //       return console.error(`Failed to add link ${error}`);
-    //     }
-    //   }),
-    // );
+    Object.keys(popularBookmarks).map((categories: string, index) =>
+      (
+        popularBookmarks[
+          categories as keyof typeof popularBookmarks
+        ] as PopularLinksType[]
+      ).map(async (links) => {
+        console.log({ categories, links });
+        try {
+          const response = await fetch(
+            `http://localhost:3000/api/poularwebsite`,
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ category: categories, newLink: links }),
+            },
+          );
+          const data = await response.json();
+          // console.log({ data });
+          return { categories, links };
+        } catch (error) {
+          return console.error(`Failed to add link ${error}`);
+        }
+      }),
+    );
 
     Object.keys(popularBookmarks)
       .sort()
