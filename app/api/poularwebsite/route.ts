@@ -85,7 +85,7 @@ export async function PUT(req: Request) {
     const updatedData = await PopularLinks.findOneAndUpdate(
       { [`data.${category}._id`]: _id },
       { $set: { [`data.${category}.$`]: updateData } },
-      { new: true },
+      // { new: true },
     );
 
     return NextResponse.json({

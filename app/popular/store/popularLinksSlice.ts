@@ -138,7 +138,7 @@ const popularLinksSlice = createSlice({
       // updateLink
       .addCase(updateLink.fulfilled, (state, action) => {
         const { category, id, updateData } = action.payload;
-        const index = state.data[category].findIndex((link) => link.id === id);
+        const index = state.data[category].findIndex((link) => link._id === id);
         if (index >= 0) {
           state.data[category][index] = {
             ...state.data[category][index],

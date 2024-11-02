@@ -9,7 +9,6 @@ export async function POST(req: Request) {
 
     const body: IWebsite = await req.json();
     const {
-      id,
       name,
       url,
       description,
@@ -20,7 +19,6 @@ export async function POST(req: Request) {
     } = body;
 
     const missingFields = [];
-    if (!id) missingFields.push("id");
     if (!name) missingFields.push("name");
     if (!url) missingFields.push("url");
     if (!tags) missingFields.push("tags");
@@ -45,7 +43,6 @@ export async function POST(req: Request) {
 
     // Create and save new website
     const newWebsite = new Website({
-      id,
       name,
       url,
       description,
@@ -105,7 +102,7 @@ export async function PUT(req: Request) {
 
     const body = await req.json();
     const {
-      id,
+      _id,
       name,
       url,
       description,
@@ -117,7 +114,7 @@ export async function PUT(req: Request) {
 
     // Validate required fields
     const missingFields = [];
-    if (!id) missingFields.push("id");
+    if (!_id) missingFields.push("_id");
     if (!name) missingFields.push("name");
     if (!url) missingFields.push("url");
     if (!tags) missingFields.push("tags");
@@ -132,19 +129,15 @@ export async function PUT(req: Request) {
     }
 
     // Update website
-    const updatedWebsite = await Website.findByIdAndUpdate(
-      id,
-      {
-        name,
-        url,
-        description,
-        tags,
-        categories,
-        isFavorities,
-        email_address,
-      },
-      { new: true },
-    );
+    const updatedWebsite = await Website.findByIdAndUpdate(_id, {
+      name,
+      url,
+      description,
+      tags,
+      categories,
+      isFavorities,
+      email_address,
+    });
 
     if (!updatedWebsite) {
       return NextResponse.json({ error: "Website not found" }, { status: 404 });
@@ -167,25 +160,28 @@ export async function DELETE(req: Request) {
   try {
     await connectToDB();
 
-    const { id } = await req.json();
+    const { _id } = await req.json();
 
     // Validate required field
-    if (!id) {
+    if (!_id) {
       return NextResponse.json(
-        { error: "Missing required field: id" },
+        { error: "Missing required field: _id" },
         { status: 400 },
       );
     }
 
     // Delete website
-    const deletedWebsite = await Website.findByIdAndDelete(id);
+    const deletedWebsite = await Website.findByIdAndDelete(_id);
 
     if (!deletedWebsite) {
-      return NextResponse.json({ error: "Website not found" }, { status: 404 });
+      return NextResponse.json(
+        { error: `Website with _id "${_id}" not found` },
+        { status: 404 },
+      );
     }
 
     return NextResponse.json(
-      { message: "Website deleted successfully" },
+      { message: "Website deleted successfully", website: deletedWebsite },
       { status: 200 },
     );
   } catch (error) {
