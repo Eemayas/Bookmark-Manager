@@ -38,11 +38,9 @@ const modalSlice = createSlice({
         section: "Personal_Website" | "Popular_Links";
       }>,
     ) {
-      console.log({ action });
       state.deletemodal.isShow = action.payload.isShow;
       state.deletemodal._id = action.payload._id;
       state.deletemodal.section = action.payload.section;
-      console.log({ state });
       return state;
     },
     showSuccessModal(
