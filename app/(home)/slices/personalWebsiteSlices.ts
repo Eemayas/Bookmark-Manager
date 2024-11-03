@@ -1,8 +1,8 @@
-import { IWebsite } from "@/models/Website";
+import { PersonalWebsiteType } from "@/app/types";
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 
 export interface WebsiteState {
-  websites: IWebsite[];
+  websites: PersonalWebsiteType[];
   loading: boolean;
   error: string | null;
   successMessage: string | null;
@@ -18,7 +18,7 @@ const initialState: WebsiteState = {
 
 export const createPersonalWebsite = createAsyncThunk(
   "personalWebsite/createPersonalWebsite",
-  async (website: IWebsite, { rejectWithValue }) => {
+  async (website: PersonalWebsiteType, { rejectWithValue }) => {
     try {
       const response = await fetch("/api/website", {
         method: "POST",
@@ -54,7 +54,7 @@ export const getPersonalWebsites = createAsyncThunk(
 
 export const updatePersonalWebsite = createAsyncThunk(
   "personalWebsite/updatePersonalWebsite",
-  async (website: IWebsite, { rejectWithValue }) => {
+  async (website: PersonalWebsiteType, { rejectWithValue }) => {
     try {
       const response = await fetch("/api/website", {
         method: "PUT",
@@ -75,12 +75,14 @@ export const deletePersonalWebsite = createAsyncThunk(
   "personalWebsite/deletePersonalWebsite",
   async (_id: string, { rejectWithValue }) => {
     try {
+      console.log({ _id });
       const response = await fetch("/api/website", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ _id }),
       });
       const data = await response.json();
+      console.log({ data });
       if (!response.ok)
         throw new Error(data.error || "Failed to delete website");
       return _id;

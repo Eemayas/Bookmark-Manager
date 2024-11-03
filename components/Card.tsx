@@ -65,7 +65,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
       store.dispatch(
         showDeleteModal({
           isShow: true,
-          _id: website._id,
+          _id: website._id || "",
           section: "Personal_Website",
         }),
       );

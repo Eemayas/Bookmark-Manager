@@ -1,14 +1,5 @@
+import { PersonalWebsiteType } from "@/app/types";
 import mongoose, { Document, Model, Schema } from "mongoose";
-
-export interface IWebsite extends Document {
-  name: string;
-  url: string;
-  description?: string;
-  tags: string[];
-  categories: string;
-  isFavorities?: boolean;
-  email_address: string;
-}
 
 const WebsiteSchema: Schema = new Schema({
   name: { type: String, required: true },
@@ -20,8 +11,8 @@ const WebsiteSchema: Schema = new Schema({
   email_address: { type: String, required: true }, // Updated schema to expect an array of strings
 });
 
-const Website: Model<IWebsite> =
+const Website: Model<PersonalWebsiteType> =
   mongoose.models.Personal_Website ||
-  mongoose.model<IWebsite>("Personal_Website", WebsiteSchema);
+  mongoose.model<PersonalWebsiteType>("Personal_Website", WebsiteSchema);
 
 export default Website;

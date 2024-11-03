@@ -1,5 +1,5 @@
 export type PersonalWebsiteType = {
-  _id: string;
+  _id?: string;
   name: string;
   url: string;
   description?: string;

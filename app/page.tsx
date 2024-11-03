@@ -109,7 +109,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log({ websites });
-    // setFetchedWebsites(websites);
+    setFetchedWebsites(websites);
   }, [websites]);
 
   return (
