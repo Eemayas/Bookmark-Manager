@@ -5,7 +5,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // Define the initial state
 const initialState = {
   spinner: { isShow: false },
-  urlQuery: { isShow: false },
+
+  deletemodal: { isShow: false, _id: "1", section: "Personal_Website" },
   successModal: {
     isShow: false,
     title: "Success",
@@ -28,8 +29,21 @@ const modalSlice = createSlice({
     showSpinner(state, action: PayloadAction<boolean>) {
       state.spinner.isShow = action.payload;
     },
-    showUrlEntry(state, action: PayloadAction<boolean>) {
-      state.urlQuery.isShow = action.payload;
+
+    showDeleteModal(
+      state,
+      action: PayloadAction<{
+        isShow: boolean;
+        _id: string;
+        section: "Personal_Website" | "Popular_Links";
+      }>,
+    ) {
+      console.log({ action });
+      state.deletemodal.isShow = action.payload.isShow;
+      state.deletemodal._id = action.payload._id;
+      state.deletemodal.section = action.payload.section;
+      console.log({ state });
+      return state;
     },
     showSuccessModal(
       state,
@@ -61,8 +75,12 @@ const modalSlice = createSlice({
 });
 
 // Export actions for use in components
-export const { showSpinner, showUrlEntry, showSuccessModal, showErrorModal } =
-  modalSlice.actions;
+export const {
+  showSpinner,
+  showDeleteModal,
+  showSuccessModal,
+  showErrorModal,
+} = modalSlice.actions;
 
 // Export the reducer to include in the store
 export default modalSlice.reducer;

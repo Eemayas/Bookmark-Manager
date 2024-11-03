@@ -1,4 +1,5 @@
 export type PopularLinksType = {
+  _id: string;
   name: string;
   url: string;
   description?: string;

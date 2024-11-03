@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // Create a slice for bookmarks
 const personalBookmarksSlice = createSlice({
-  name: "personalBookmark",
+  name: "personalBookmark/searchFilteration",
   initialState: {
     searchTerm: "",
     selectedTags: [],

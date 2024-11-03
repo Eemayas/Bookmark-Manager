@@ -2,7 +2,7 @@
 
 "use client";
 import React, { useState, useEffect } from "react";
-import { Website } from "@/app/types";
+import { PersonalWebsiteType } from "@/app/types";
 import { LinkPreview } from "./ui/link-preview";
 import {
   Modal,
@@ -11,9 +11,12 @@ import {
   ModalTrigger,
 } from "./ui/animated-modal";
 import { PopularLinksType } from "@/app/popular/types";
+import { RootState, store } from "@/store";
+import { showDeleteModal } from "@/store/slices/modalReducer";
+import { useSelector } from "react-redux";
 
 type CardProps = {
-  website: Website | PopularLinksType;
+  website: PersonalWebsiteType | PopularLinksType;
   width?: number;
   height?: number;
   quality?: number;
@@ -57,6 +60,18 @@ export const BookMarkCard: React.FC<CardProps> = ({
   const handleActionClick = (action: "edit" | "delete") => {
     setPopupAction(action);
     setShowPopup(true);
+    if (action === "delete") {
+      console.log("delete", website);
+      store.dispatch(
+        showDeleteModal({
+          isShow: true,
+          _id: website._id,
+          section: "Personal_Website",
+        }),
+      );
+    } else if (action === "edit") {
+      console.log("edit");
+    }
   };
 
   return (
@@ -205,7 +220,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
           </ModalBody>
         </Modal>
 
-        {showPopup && (
+        {/* {showPopup && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
             <div className="rounded-lg bg-white p-6 shadow-xl">
               <h2 className="mb-4 text-xl font-bold">
@@ -236,7 +251,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

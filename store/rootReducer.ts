@@ -1,10 +1,14 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import popularlinks from "@/app/popular/store/popularLinksSlice";
-import personalBookmarksReducer from "@/app/(home)/slices/bookmarksSlice";
+import searchFilterationReducer from "@/app/(home)/slices/searchFilterationSlice";
+import personalWebsiteReducer from "@/app/(home)/slices/personalWebsiteSlices";
+import modalReducer from "./slices/modalReducer";
 
 const rootReducer = combineReducers({
-  personalBookmark: personalBookmarksReducer,
+  searchFilteration: searchFilterationReducer,
   popularLinks: popularlinks,
+  modalState: modalReducer,
+  personalWebsite: personalWebsiteReducer,
 });
 
 export default rootReducer;

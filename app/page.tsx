@@ -2,9 +2,12 @@
 import React, { useState, useEffect } from "react";
 import personalBookmarks from "../constants/bookmarks.json";
 import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
-import { Website } from "./types";
+import { PersonalWebsiteType } from "./types";
 import BookmarkModal from "./(home)/components/BookmarkModal";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/store";
+import { getPersonalWebsites } from "./(home)/slices/personalWebsiteSlices";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState<string>(""); // State for search term
@@ -12,36 +15,39 @@ const Home = () => {
   const [selectedFilterSearchBar, setSelectedFilterSearchBar] =
     useState("Website");
   const { user, isLoading } = useUser();
-  const [fetchedWebsites, setFetchedWebsites] = useState<Website[]>([]); // New state for fetched websites
+  const [fetchedWebsites, setFetchedWebsites] = useState<PersonalWebsiteType[]>(
+    [],
+  ); // New state for fetched websites
 
-  // Function to fetch websites
-  async function fetchWebsites() {
-    try {
-      const emailAddress = user?.nickname || ""; // Get the email address from the user object
-      const response = await fetch(
-        `http://localhost:3000/api/website?email_address=${encodeURIComponent(emailAddress)}`,
-      );
+  // // Function to fetch websites
+  // async function fetchWebsites() {
+  //   try {
+  //     const emailAddress = user?.nickname || ""; // Get the email address from the user object
+  //     const response = await fetch(
+  //       `http://localhost:3000/api/website?email_address=${encodeURIComponent(emailAddress)}`,
+  //     );
 
-      if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`);
-      }
+  //     if (!response.ok) {
+  //       throw new Error(`Error: ${response.statusText}`);
+  //     }
 
-      const data = await response.json();
-      console.log("Websites retrieved successfully:", data.websites);
-      setFetchedWebsites(data.websites); // Store fetched websites in state
-    } catch (error) {
-      console.error("Failed to fetch websites:", error);
-    }
-  }
+  //     const data = await response.json();
+  //     // console.log("Websites retrieved successfully:", data.websites);
+  //     console.log("Websites retrieved successfully");
+  //     setFetchedWebsites(data.websites); // Store fetched websites in state
+  //   } catch (error) {
+  //     console.error("Failed to fetch websites:", error);
+  //   }
+  // }
 
-  // Call the function to fetch websites only once when the component mounts
-  useEffect(() => {
-    fetchWebsites();
-    console.log({ user });
-  }, [user]); // Empty dependency array ensures it runs only once
+  // // Call the function to fetch websites only once when the component mounts
+  // useEffect(() => {
+  //   fetchWebsites();
+  //   console.log({ user });
+  // }, [user]); // Empty dependency array ensures it runs only once
 
   // Filter bookmarks based on search term
-  const filteredBookmarks: Website[] = fetchedWebsites // Use fetchedWebsites instead of personalBookmarks
+  const filteredBookmarks: PersonalWebsiteType[] = fetchedWebsites // Use fetchedWebsites instead of personalBookmarks
     .filter((website) => {
       const searchValue = searchTerm.toLowerCase();
 
@@ -90,6 +96,21 @@ const Home = () => {
     );
 
   tagCount = sortedTagCount;
+
+  const dispatch = useDispatch<AppDispatch>();
+  const { websites, loading, error, successMessage } = useSelector(
+    (state: RootState) => state.personalWebsite,
+  );
+
+  useEffect(() => {
+    const emailAddress = user?.nickname || "";
+    dispatch(getPersonalWebsites(emailAddress));
+  }, [dispatch, user]);
+
+  useEffect(() => {
+    console.log({ websites });
+    // setFetchedWebsites(websites);
+  }, [websites]);
 
   return (
     <div>

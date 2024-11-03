@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import popularlinkss from "@/constants/popularslinks.json";
-import { Website } from "../types";
+import { PersonalWebsiteType } from "../types";
 import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
 
 type PopularLinksType = {
-  [key: string]: Website[];
+  [key: string]: PersonalWebsiteType[];
 };
 
 const PopularLinks = () => {

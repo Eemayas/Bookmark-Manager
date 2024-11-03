@@ -7,6 +7,7 @@ import { ReduxProviders, ThemeProviders } from "./providers";
 import NavBar from "@/components/NavBar";
 import TailwindScreenIndicators from "@/components/TailwindScreenIndicators";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
+import DeleteModal from "@/components/Modals/DeleteModal";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,6 +41,7 @@ export default function RootLayout({
                 {children}
               </main>
               <TailwindScreenIndicators />
+              <DeleteModal />
             </ThemeProviders>
           </ReduxProviders>
         </UserProvider>

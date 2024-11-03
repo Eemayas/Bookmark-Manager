@@ -6,11 +6,11 @@ import { BookMarkCard } from "@/components/Card";
 import Sidebar from "./components/Sidebar";
 import SearchBar from "./components/SearchBar";
 import { MosaicList } from "@/components/MosaicList/MosaicList";
-import { Website } from "@/app/types";
+import { PersonalWebsiteType } from "@/app/types";
 import { PopularLinksType } from "@/app/popular/types";
 
 interface BookmarkLayoutProps {
-  bookmarkstoDisplay: Website[] | PopularLinksType[];
+  bookmarkstoDisplay: PersonalWebsiteType[] | PopularLinksType[];
   tagCount: Record<string, number>;
   setSelectedTags: React.Dispatch<React.SetStateAction<string[]>>;
   selectedTags: string[];
@@ -60,10 +60,6 @@ const BookmarkLayout: React.FC<BookmarkLayoutProps> = ({
       ); // Load more items
     }
   };
-  console.log({
-    bookmarkstoDisplaylength: bookmarkstoDisplay.length,
-    updated: Math.min(displayCount + 20, bookmarkstoDisplay.length),
-  });
   // Add scroll event listener
   React.useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -89,8 +85,8 @@ const BookmarkLayout: React.FC<BookmarkLayoutProps> = ({
         />
         <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
         <MosaicList columns={{ md: 2 }}>
-          {bookmarkstoDisplay.slice(0, displayCount).map((website) => (
-            <BookMarkCard key={website.id} website={website} />
+          {bookmarkstoDisplay.slice(0, displayCount).map((website, index) => (
+            <BookMarkCard key={`${website._id}-${index}`} website={website} />
           ))}
         </MosaicList>
       </main>

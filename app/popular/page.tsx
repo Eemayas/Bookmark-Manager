@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Website } from "../types";
+import { PersonalWebsiteType } from "../types";
 import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store";

@@ -1,14 +1,15 @@
-export type Website = {
-  id: number;
+export type PersonalWebsiteType = {
+  _id: string;
   name: string;
   url: string;
   description?: string;
   tags: string[];
   categories: string;
   isFavorities?: boolean;
+  email_address: string;
 };
 export type NestedCategory = {
-  [key: string]: Website[] | NestedCategory;
+  [key: string]: PersonalWebsiteType[] | NestedCategory;
 };
 
 export type DataStructure = {
