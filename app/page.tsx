@@ -6,8 +6,10 @@ import { PersonalWebsiteType } from "./types";
 import BookmarkModal from "./(home)/components/BookmarkModal";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "@/store";
+import { AppDispatch, RootState, store } from "@/store";
 import { getPersonalWebsites } from "./(home)/slices/personalWebsiteSlices";
+import { AddIcon } from "@/components/social-icons/icons";
+import { showAddWebsiteModal } from "@/components/Modals/store/modalReducer";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState<string>(""); // State for search term
@@ -18,33 +20,6 @@ const Home = () => {
   const [fetchedWebsites, setFetchedWebsites] = useState<PersonalWebsiteType[]>(
     [],
   ); // New state for fetched websites
-
-  // // Function to fetch websites
-  // async function fetchWebsites() {
-  //   try {
-  //     const emailAddress = user?.nickname || ""; // Get the email address from the user object
-  //     const response = await fetch(
-  //       `http://localhost:3000/api/website?email_address=${encodeURIComponent(emailAddress)}`,
-  //     );
-
-  //     if (!response.ok) {
-  //       throw new Error(`Error: ${response.statusText}`);
-  //     }
-
-  //     const data = await response.json();
-  //     // console.log("Websites retrieved successfully:", data.websites);
-  //     console.log("Websites retrieved successfully");
-  //     setFetchedWebsites(data.websites); // Store fetched websites in state
-  //   } catch (error) {
-  //     console.error("Failed to fetch websites:", error);
-  //   }
-  // }
-
-  // // Call the function to fetch websites only once when the component mounts
-  // useEffect(() => {
-  //   fetchWebsites();
-  //   console.log({ user });
-  // }, [user]); // Empty dependency array ensures it runs only once
 
   // Filter bookmarks based on search term
   const filteredBookmarks: PersonalWebsiteType[] = fetchedWebsites // Use fetchedWebsites instead of personalBookmarks
@@ -125,7 +100,20 @@ const Home = () => {
         setSelectedFilterSearchBar={setSelectedFilterSearchBar}
         // displayCount={displayCount}
       />
-      <BookmarkModal />
+      <button
+        onClick={() =>
+          store.dispatch(
+            showAddWebsiteModal({
+              isShow: true,
+              section: "Personal_Website",
+            }),
+          )
+        }
+        className="fixed bottom-3 right-3 z-50 flex size-14 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 p-2 text-white shadow-xl"
+      >
+        <AddIcon />
+      </button>
+      {/* <BookmarkModal /> */}
     </div>
   );
 };

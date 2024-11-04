@@ -12,7 +12,10 @@ import {
 } from "./ui/animated-modal";
 import { PopularLinksType } from "@/app/popular/types";
 import { RootState, store } from "@/store";
-import { showDeleteModal } from "@/components/Modals/store/modalReducer";
+import {
+  showAddWebsiteModal,
+  showDeleteModal,
+} from "@/components/Modals/store/modalReducer";
 import { useSelector } from "react-redux";
 
 type CardProps = {
@@ -71,6 +74,21 @@ export const BookMarkCard: React.FC<CardProps> = ({
       );
     } else if (action === "edit") {
       console.log("edit");
+      store.dispatch(
+        showAddWebsiteModal({
+          isShow: true,
+          section: "Personal_Website",
+          isEdit: true,
+          data: {
+            _id: website._id || "",
+            name: website.name,
+            link: website.url,
+            tags: website.tags,
+            folder_path: website.categories,
+            description: website.description || "",
+          },
+        }),
+      );
     }
   };
 
@@ -203,22 +221,6 @@ export const BookMarkCard: React.FC<CardProps> = ({
             </button>
           </div>
         </div>
-
-        <Modal>
-          <ModalTrigger>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-            </svg>
-          </ModalTrigger>
-          <ModalBody>
-            <ModalContent>fvf</ModalContent>
-          </ModalBody>
-        </Modal>
 
         {/* {showPopup && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">

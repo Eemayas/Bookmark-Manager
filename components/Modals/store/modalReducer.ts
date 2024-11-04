@@ -5,7 +5,6 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // Define the initial state
 const initialState = {
   spinner: { isShow: false },
-
   deletemodal: { isShow: false, _id: "1", section: "Personal_Website" },
   statusModal: {
     isShow: false,
@@ -14,17 +13,18 @@ const initialState = {
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, consequatur.",
   },
-  successModal: {
+  addWebsiteModal: {
     isShow: false,
-    title: "Success",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, consequatur.",
-  },
-  errorModal: {
-    isShow: false,
-    title: "Error",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, consequatur.",
+    section: "Personal_Website",
+    isEdit: false,
+    data: {
+      _id: "",
+      name: "",
+      link: "",
+      tags: [""],
+      folder_path: "",
+      description: "",
+    },
   },
 };
 
@@ -63,33 +63,43 @@ const modalSlice = createSlice({
       state.statusModal.status = action.payload.status;
       state.statusModal.title = action.payload.title;
       if (action.payload.description)
-        state.successModal.description = action.payload.description;
+        state.statusModal.description = action.payload.description;
     },
-    showSuccessModal(
+    showAddWebsiteModal(
       state,
       action: PayloadAction<{
         isShow: boolean;
-        title?: string;
-        description?: string;
+        section: "Personal_Website" | "Popular_Links";
+        isEdit?: boolean;
+        data?: {
+          _id: string;
+          name: string;
+          link: string;
+          tags: string[];
+          folder_path: string;
+          description: string;
+        };
       }>,
     ) {
-      state.successModal.isShow = action.payload.isShow;
-      if (action.payload.title) state.successModal.title = action.payload.title;
-      if (action.payload.description)
-        state.successModal.description = action.payload.description;
-    },
-    showErrorModal(
-      state,
-      action: PayloadAction<{
-        isShow: boolean;
-        title?: string;
-        description?: string;
-      }>,
-    ) {
-      state.errorModal.isShow = action.payload.isShow;
-      if (action.payload.title) state.errorModal.title = action.payload.title;
-      if (action.payload.description)
-        state.errorModal.description = action.payload.description;
+      state.addWebsiteModal.isShow = action.payload.isShow;
+      state.addWebsiteModal.section = action.payload.section;
+      if (action.payload.isEdit) {
+        state.addWebsiteModal.isEdit = action.payload.isEdit;
+      } else {
+        state.addWebsiteModal.isEdit = false;
+      }
+      if (action.payload.data) {
+        state.addWebsiteModal.data = action.payload.data;
+      } else {
+        state.addWebsiteModal.data = {
+          _id: "",
+          name: "",
+          link: "",
+          tags: [],
+          folder_path: "",
+          description: "",
+        };
+      }
     },
   },
 });
@@ -99,8 +109,7 @@ export const {
   showSpinner,
   showDeleteModal,
   showStatusModal,
-  showSuccessModal,
-  showErrorModal,
+  showAddWebsiteModal,
 } = modalSlice.actions;
 
 // Export the reducer to include in the store

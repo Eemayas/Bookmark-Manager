@@ -10,13 +10,14 @@ import { ExclamationTriangleIcon, PlusIcon } from "@radix-ui/react-icons";
 import { useSelector } from "react-redux";
 import { RootState, store } from "@/store";
 import {
+  showAddWebsiteModal,
   showDeleteModal,
-  showErrorModal,
-  showSuccessModal,
+  showStatusModal,
 } from "@/components/Modals/store/modalReducer";
 import {
   createPersonalWebsite,
   deletePersonalWebsite,
+  updatePersonalWebsite,
 } from "@/app/(home)/slices/personalWebsiteSlices";
 import { AddIcon } from "../social-icons/icons";
 import { useEffect, useState } from "react";
@@ -27,29 +28,24 @@ export default function AddPersonalBookmarkModal() {
   const personalWebsiteState = useSelector(
     (state: RootState) => state.personalWebsite,
   );
-  const deletemodalState = useSelector(
-    (state: RootState) => state.modalState.deletemodal,
+  const addWebsiteModalState = useSelector(
+    (state: RootState) => state.modalState.addWebsiteModal,
   );
-  const addBookmarkModalState = {
-    isShow: true,
-    section: "Personal_Website",
-  };
-  const closeDeleteModal = () => {
+
+  const closeAddWebsiteModal = () => {
     store.dispatch(
-      showDeleteModal({
+      showAddWebsiteModal({
         isShow: false,
-        _id: "",
         section: "Personal_Website",
       }),
     );
   };
-  const handleDeleteClicked = () => {
-    store.dispatch(deletePersonalWebsite(deletemodalState._id));
-    closeDeleteModal();
-  };
 
   const { user } = useUser();
+  const { _id, description, folder_path, link, name, tags } =
+    addWebsiteModalState.data;
   const [formData, setFormData] = useState({
+    _id: "",
     name: "",
     link: "",
     tags: "",
@@ -70,7 +66,8 @@ export default function AddPersonalBookmarkModal() {
     if (!user) {
       console.error("User not found");
       store.dispatch(
-        showErrorModal({
+        showStatusModal({
+          status: "error",
           isShow: true,
           title: "Error",
           description: "User not found",
@@ -78,46 +75,34 @@ export default function AddPersonalBookmarkModal() {
       );
       return;
     }
+    if (!addWebsiteModalState.isEdit) {
+      store.dispatch(
+        createPersonalWebsite({
+          name: formData.name,
+          url: formData.link,
+          tags: formData.tags.split(","), // Split tags by comma
+          categories: formData.folder_path,
+          email_address: user?.nickname || "",
+        }),
+      );
+    } else {
+      store.dispatch(
+        updatePersonalWebsite({
+          _id: formData._id,
+          name: formData.name,
+          url: formData.link,
+          tags: formData.tags.split(","),
+          categories: formData.folder_path,
+          description: formData.description,
+          email_address: user?.nickname || "",
+        }),
+      );
+    }
 
-    store.dispatch(
-      createPersonalWebsite({
-        name: formData.name,
-        url: formData.link,
-        tags: formData.tags.split(","), // Split tags by comma
-        categories: formData.folder_path,
-        email_address: user?.nickname || "",
-      }),
-    );
-
-    // const tempWebsite = {
-    //   ...formData,
-    //   email_address: user?.email,
-    // };
-    // console.log({ tempWebsite });
-    // try {
-    //   const response = await fetch("http://localhost:3000/api/website", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(tempWebsite), // Use tempWebsite instead of website
-    //   });
-
-    //   if (!response.ok) {
-    //     console.log({ response });
-    //     throw new Error(`Error: ${response.statusText}`); // Handle error response
-    //   }
-    //   const data = await response.json(); // Assuming the API returns JSON
-    //   console.log("Success:", data); // Log success message
-    // } catch (error) {
-    //   console.error("Failed to add websites:", error); // Log error message
-    // }
-  };
-
-  useEffect(() => {
     if (personalWebsiteState.error) {
       store.dispatch(
-        showErrorModal({
+        showStatusModal({
+          status: "error",
           isShow: true,
           title: "Error",
           description: personalWebsiteState.error,
@@ -127,21 +112,36 @@ export default function AddPersonalBookmarkModal() {
 
     if (personalWebsiteState.successMessage) {
       store.dispatch(
-        showSuccessModal({
+        showStatusModal({
+          status: "success",
           isShow: true,
           title: "Success",
           description: personalWebsiteState.successMessage,
         }),
       );
+      closeAddWebsiteModal();
     }
 
     console.log({ personalWebsiteState });
-  }, [personalWebsiteState]);
+  };
+
+  useEffect(() => {
+    if (addWebsiteModalState.isEdit) {
+      setFormData({
+        _id,
+        name,
+        link,
+        tags: tags.join(","),
+        folder_path,
+        description,
+      });
+    }
+  }, [addWebsiteModalState]);
 
   return (
     <Dialog
-      open={true}
-      onClose={() => closeDeleteModal()}
+      open={addWebsiteModalState.isShow}
+      onClose={() => closeAddWebsiteModal()}
       className="relative z-10"
     >
       <DialogBackdrop
@@ -166,8 +166,8 @@ export default function AddPersonalBookmarkModal() {
                     className="h-5 w-5 text-green-600"
                   />
                 </div>{" "}
-                Add New{" "}
-                {addBookmarkModalState.section === "Personal_Website"
+                {addWebsiteModalState.isEdit ? "Edit" : "Add New"}{" "}
+                {addWebsiteModalState.section === "Personal_Website"
                   ? "Personal Bookmark"
                   : "Popular Bookmark"}
               </div>
@@ -216,12 +216,12 @@ export default function AddPersonalBookmarkModal() {
                   type="submit"
                   className="inline-flex w-full justify-center rounded-sm bg-blue-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:hover:bg-blue-800 sm:ml-3 sm:w-auto"
                 >
-                  Add new
+                  {addWebsiteModalState.isEdit ? "Edit" : "Add new"}
                 </button>
                 <button
                   type="button"
                   data-autofocus
-                  onClick={() => closeDeleteModal()}
+                  onClick={() => closeAddWebsiteModal()}
                   className="mt-3 inline-flex w-full justify-center rounded-sm bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
                 >
                   Cancel
