@@ -7,6 +7,13 @@ const initialState = {
   spinner: { isShow: false },
 
   deletemodal: { isShow: false, _id: "1", section: "Personal_Website" },
+  statusModal: {
+    isShow: false,
+    status: "success",
+    title: "Success",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, consequatur.",
+  },
   successModal: {
     isShow: false,
     title: "Success",
@@ -43,6 +50,21 @@ const modalSlice = createSlice({
       state.deletemodal.section = action.payload.section;
       return state;
     },
+    showStatusModal(
+      state,
+      action: PayloadAction<{
+        isShow: boolean;
+        status: "success" | "error";
+        title: string;
+        description?: string;
+      }>,
+    ) {
+      state.statusModal.isShow = action.payload.isShow;
+      state.statusModal.status = action.payload.status;
+      state.statusModal.title = action.payload.title;
+      if (action.payload.description)
+        state.successModal.description = action.payload.description;
+    },
     showSuccessModal(
       state,
       action: PayloadAction<{
@@ -76,6 +98,7 @@ const modalSlice = createSlice({
 export const {
   showSpinner,
   showDeleteModal,
+  showStatusModal,
   showSuccessModal,
   showErrorModal,
 } = modalSlice.actions;

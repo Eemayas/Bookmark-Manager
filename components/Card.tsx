@@ -12,7 +12,7 @@ import {
 } from "./ui/animated-modal";
 import { PopularLinksType } from "@/app/popular/types";
 import { RootState, store } from "@/store";
-import { showDeleteModal } from "@/store/slices/modalReducer";
+import { showDeleteModal } from "@/components/Modals/store/modalReducer";
 import { useSelector } from "react-redux";
 
 type CardProps = {

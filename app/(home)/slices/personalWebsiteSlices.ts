@@ -75,14 +75,13 @@ export const deletePersonalWebsite = createAsyncThunk(
   "personalWebsite/deletePersonalWebsite",
   async (_id: string, { rejectWithValue }) => {
     try {
-      console.log({ _id });
       const response = await fetch("/api/website", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ _id }),
       });
       const data = await response.json();
-      console.log({ data });
+
       if (!response.ok)
         throw new Error(data.error || "Failed to delete website");
       return _id;

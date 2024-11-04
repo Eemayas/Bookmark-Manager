@@ -1,5 +1,6 @@
+import { PersonalWebsiteType } from "@/app/types";
 import { connectToDB } from "@/lib/mongoose";
-import Website, { IWebsite } from "@/models/Website";
+import Website from "@/models/Website";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 
@@ -7,7 +8,7 @@ export async function POST(req: Request) {
   try {
     await connectToDB();
 
-    const body: IWebsite = await req.json();
+    const body: PersonalWebsiteType = await req.json();
     const {
       name,
       url,

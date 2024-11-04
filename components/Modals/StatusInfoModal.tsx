@@ -8,37 +8,34 @@ import {
 } from "@headlessui/react";
 import {
   CheckCircledIcon,
-  CheckIcon,
   ExclamationTriangleIcon,
 } from "@radix-ui/react-icons";
 import { useSelector } from "react-redux";
 import { RootState, store } from "@/store";
-import { showDeleteModal } from "@/store/slices/modalReducer";
-import { deletePersonalWebsite } from "@/app/(home)/slices/personalWebsiteSlices";
+import { showStatusModal } from "@/components/Modals/store/modalReducer";
 
-export default function SucessModal() {
-  const deletemodalState = useSelector(
-    (state: RootState) => state.modalState.deletemodal,
+export default function StatusInfoModal() {
+  const statusModalState = useSelector(
+    (state: RootState) => state.modalState.statusModal,
   );
 
-  const closeDeleteModal = () => {
+  const closeStatusInfoModal = () => {
     store.dispatch(
-      showDeleteModal({
+      showStatusModal({
         isShow: false,
-        _id: "",
-        section: "Personal_Website",
+        status: "success",
+        title: "Success",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, consequatur.",
       }),
     );
   };
-  const handleDeleteClicked = () => {
-    store.dispatch(deletePersonalWebsite(deletemodalState._id));
-    closeDeleteModal();
-  };
+  console.log(statusModalState);
 
   return (
     <Dialog
-      open={true}
-      onClose={() => closeDeleteModal()}
+      open={statusModalState.isShow}
+      onClose={() => closeStatusInfoModal()}
       className="relative z-10"
     >
       <DialogBackdrop
@@ -50,26 +47,34 @@ export default function SucessModal() {
         <div className="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
           <DialogPanel
             transition
-            className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in p-5 sm:my-8 sm:w-full sm:max-w-md data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+            className="relative transform overflow-hidden rounded-lg bg-white p-5 text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-md data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
           >
             <div className="bg-white px-4 pb-4 pt-5">
-              <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100">
-                <CheckCircledIcon
-                  aria-hidden="true"
-                  className="h-6 w-6 text-green-600"
-                />
-              </div>
+              {statusModalState.status === "success" ? (
+                <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100">
+                  <CheckCircledIcon
+                    aria-hidden="true"
+                    className="h-6 w-6 text-green-600"
+                  />
+                </div>
+              ) : (
+                <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100">
+                  <ExclamationTriangleIcon
+                    aria-hidden="true"
+                    className="h-6 w-6 text-red-600"
+                  />
+                </div>
+              )}
               <div className="mt-3 text-center">
                 <DialogTitle
                   as="h3"
                   className="text-base font-semibold text-gray-900"
                 >
-                  Payment Sucessfull
+                  {statusModalState.title}
                 </DialogTitle>
 
                 <p className="mt-2 text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Consequatur amet labore.
+                  {statusModalState.description}
                 </p>
               </div>
             </div>
@@ -77,7 +82,7 @@ export default function SucessModal() {
               <button
                 type="button"
                 data-autofocus
-                onClick={() => closeDeleteModal()}
+                onClick={() => closeStatusInfoModal()}
                 className="mt-3 inline-flex w-full justify-center rounded-sm bg-blue-600 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-blue-500 sm:mt-0"
               >
                 Go back
