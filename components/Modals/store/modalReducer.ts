@@ -17,12 +17,13 @@ const initialState = {
     isShow: false,
     section: "Personal_Website",
     isEdit: false,
+    category: "",
     data: {
       _id: "",
       name: "",
       link: "",
       tags: [""],
-      folder_path: "",
+      folderPath: "",
       description: "",
     },
   },
@@ -71,18 +72,20 @@ const modalSlice = createSlice({
         isShow: boolean;
         section: "Personal_Website" | "Popular_Links";
         isEdit?: boolean;
+        category?: string;
         data?: {
           _id: string;
           name: string;
           link: string;
           tags: string[];
-          folder_path: string;
+          folderPath: string;
           description: string;
         };
       }>,
     ) {
       state.addWebsiteModal.isShow = action.payload.isShow;
       state.addWebsiteModal.section = action.payload.section;
+
       if (action.payload.isEdit) {
         state.addWebsiteModal.isEdit = action.payload.isEdit;
       } else {
@@ -96,10 +99,19 @@ const modalSlice = createSlice({
           name: "",
           link: "",
           tags: [],
-          folder_path: "",
+          folderPath: "",
           description: "",
         };
       }
+    },
+
+    updateAddWebsiteCategory(
+      state,
+      action: PayloadAction<{
+        category: string;
+      }>,
+    ) {
+      state.addWebsiteModal.category = action.payload.category;
     },
   },
 });
@@ -110,6 +122,7 @@ export const {
   showDeleteModal,
   showStatusModal,
   showAddWebsiteModal,
+  updateAddWebsiteCategory,
 } = modalSlice.actions;
 
 // Export the reducer to include in the store

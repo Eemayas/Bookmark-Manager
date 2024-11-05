@@ -95,7 +95,7 @@ const personalWebsiteSlice = createSlice({
   name: "website",
   initialState,
   reducers: {
-    clearMessages(state) {
+    clearPersonalWebisteMessages(state) {
       state.error = null;
       state.successMessage = null;
     },
@@ -122,6 +122,7 @@ const personalWebsiteSlice = createSlice({
       .addCase(getPersonalWebsites.fulfilled, (state, action) => {
         state.loading = false;
         state.websites = action.payload;
+        state.successMessage = "Website fetched successfully";
       })
       .addCase(getPersonalWebsites.rejected, (state, action) => {
         state.loading = false;
@@ -160,5 +161,5 @@ const personalWebsiteSlice = createSlice({
   },
 });
 
-export const { clearMessages } = personalWebsiteSlice.actions;
+export const { clearPersonalWebisteMessages } = personalWebsiteSlice.actions;
 export default personalWebsiteSlice.reducer;

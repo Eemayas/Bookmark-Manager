@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { PersonalWebsiteType } from "../types";
 import BookmarkLayout from "@/layouts/BookmarkLayout/BookmarkLayout";
 import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "@/store";
-import { fetchLinks } from "./store/popularLinksSlice";
+import { AppDispatch, RootState, store } from "@/store";
 import { PopularLinksCategoriesType } from "./types";
+import { showAddWebsiteModal } from "@/components/Modals/store/modalReducer";
+import { AddIcon } from "@/components/social-icons/icons";
+import { fetchPopularLinks } from "./store/popularLinksSlice";
 
 const PopularLinks = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -18,14 +19,17 @@ const PopularLinks = () => {
   );
   const [selectedFilterSearchBar, setSelectedFilterSearchBar] =
     useState("Website");
-
+  console.log("Again");
   useEffect(() => {
-    dispatch(fetchLinks({}));
+    dispatch(fetchPopularLinks({}));
   }, [dispatch]);
 
   useEffect(() => {
-    setSelectedTags([Object.keys(data)[0]]);
-    console.log({ data });
+    console.log({ selectedTags, data, tag: Object.keys(data)[0] });
+    if (selectedTags.length === 0 && Object.keys(data)[0]) {
+      setSelectedTags([Object.keys(data)[0]]);
+      console.log({ data });
+    }
   }, [data]);
 
   let tagCount: Record<string, number> = {};
@@ -40,19 +44,35 @@ const PopularLinks = () => {
   }
 
   return (
-    <BookmarkLayout
-      bookmarkstoDisplay={
-        (data as PopularLinksCategoriesType)[selectedTags[0]] || []
-      }
-      tagCount={tagCount}
-      setSelectedTags={setSelectedTags}
-      selectedTags={selectedTags}
-      searchTerm={searchTerm}
-      setSearchTerm={setSearchTerm}
-      selectedFilterSearchBar={selectedFilterSearchBar}
-      setSelectedFilterSearchBar={setSelectedFilterSearchBar}
-      sidebarMultiSelect={false}
-    />
+    <>
+      <BookmarkLayout
+        bookmarkstoDisplay={
+          (data as PopularLinksCategoriesType)[selectedTags[0]] || []
+        }
+        tagCount={tagCount}
+        setSelectedTags={setSelectedTags}
+        selectedTags={selectedTags}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        selectedFilterSearchBar={selectedFilterSearchBar}
+        setSelectedFilterSearchBar={setSelectedFilterSearchBar}
+        sidebarMultiSelect={false}
+        isPersonalBookmark={false}
+      />
+      <button
+        onClick={() =>
+          store.dispatch(
+            showAddWebsiteModal({
+              isShow: true,
+              section: "Popular_Links",
+            }),
+          )
+        }
+        className="fixed bottom-3 right-3 z-50 flex size-14 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 p-2 text-white shadow-xl"
+      >
+        <AddIcon />
+      </button>
+    </>
   );
 };
 

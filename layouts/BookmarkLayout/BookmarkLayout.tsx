@@ -8,6 +8,8 @@ import SearchBar from "./components/SearchBar";
 import { MosaicList } from "@/components/MosaicList/MosaicList";
 import { PersonalWebsiteType } from "@/app/types";
 import { PopularLinksType } from "@/app/popular/types";
+import { store } from "@/store";
+import { updateAddWebsiteCategory } from "@/components/Modals/store/modalReducer";
 
 interface BookmarkLayoutProps {
   bookmarkstoDisplay: PersonalWebsiteType[] | PopularLinksType[];
@@ -19,6 +21,7 @@ interface BookmarkLayoutProps {
   selectedFilterSearchBar: string;
   setSelectedFilterSearchBar: React.Dispatch<React.SetStateAction<string>>;
   sidebarMultiSelect?: boolean;
+  isPersonalBookmark?: boolean;
   // displayCount?: number;
 }
 
@@ -32,12 +35,17 @@ const BookmarkLayout: React.FC<BookmarkLayoutProps> = ({
   selectedFilterSearchBar,
   setSelectedFilterSearchBar,
   sidebarMultiSelect = true,
+  isPersonalBookmark = true,
   // displayCount = 20,
 }) => {
   const [displayCount, setDisplayCount] = useState<number>(20);
 
   const filteredBookmarksRef = useRef(bookmarkstoDisplay); // Create a ref for filteredBookmarks
-
+  React.useEffect(() => {
+    if (!isPersonalBookmark) {
+      store.dispatch(updateAddWebsiteCategory({ category: selectedTags[0] }));
+    }
+  }, [selectedTags]);
   // Update the ref whenever filteredBookmarks changes
   React.useEffect(() => {
     filteredBookmarksRef.current = bookmarkstoDisplay;
@@ -74,6 +82,7 @@ const BookmarkLayout: React.FC<BookmarkLayoutProps> = ({
         setSelectedTags={setSelectedTags}
         selectedTags={selectedTags}
         multiSelect={sidebarMultiSelect}
+        isPersonalBookmark={isPersonalBookmark}
       />
 
       <main className="flex-1">
@@ -86,7 +95,11 @@ const BookmarkLayout: React.FC<BookmarkLayoutProps> = ({
         <hr className="my-8 h-[2px] border-0 bg-gray-300 dark:bg-gray-600" />
         <MosaicList columns={{ md: 2 }}>
           {bookmarkstoDisplay.slice(0, displayCount).map((website, index) => (
-            <BookMarkCard key={`${website._id}-${index}`} website={website} />
+            <BookMarkCard
+              key={`${website._id}-${index}`}
+              website={website}
+              isPersonalBookmark={isPersonalBookmark}
+            />
           ))}
         </MosaicList>
       </main>

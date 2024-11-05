@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import { store } from "@/store";
+import { updateAddWebsiteCategory } from "@/components/Modals/store/modalReducer";
 
 type SidebarProps = {
   tagCount: Record<string, number>;
   setSelectedTags: React.Dispatch<React.SetStateAction<string[]>>;
   selectedTags: string[];
   multiSelect?: boolean;
+  isPersonalBookmark?: boolean;
 };
 
 const Sidebar: React.FC<SidebarProps> = ({
@@ -13,6 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   setSelectedTags,
   selectedTags,
   multiSelect = true,
+  isPersonalBookmark = true,
 }) => {
   function transformString(s: string): string {
     const parts = s.split("_");
@@ -23,6 +27,9 @@ const Sidebar: React.FC<SidebarProps> = ({
   }
 
   const handleTagClick = (tag: string) => {
+    if (!isPersonalBookmark) {
+      store.dispatch(updateAddWebsiteCategory({ category: tag }));
+    }
     if (multiSelect) {
       setSelectedTags?.((prev) =>
         prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag],
@@ -34,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   };
 
   return (
-    <aside className="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-64 shrink-0 overflow-hidden lg:sticky lg:block lg:self-start">
+    <aside className="fixed top-14 -ml-2 hidden h-[calc(100vh-3.5rem)] w-64 shrink-0 overflow-hidden lg:sticky lg:block lg:self-start">
       <div className="relative h-full overflow-hidden py-6 pr-6 lg:py-8">
         <style>
           {`
