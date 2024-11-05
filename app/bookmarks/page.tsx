@@ -12,22 +12,22 @@
 //   return res.json();
 // }
 
-// async function FileUploadDemo() {
-//   const bookmarks = await getBookmarks();
-//   console.log({bookmarks})
+async function FileUploadDemo() {
+  //   const bookmarks = await getBookmarks();
+  //   console.log({bookmarks})
 
-//   // const [files, setFiles] = useState<File[]>([]);
-//   // const handleFileUpload = (files: File[]) => {
-//   //   setFiles(files);
-//   //   console.log(files);
-//   // };
+  //   // const [files, setFiles] = useState<File[]>([]);
+  //   // const handleFileUpload = (files: File[]) => {
+  //   //   setFiles(files);
+  //   //   console.log(files);
+  //   // };
 
-//   return (
-//     <>sv</>
-//     // <div className="mx-auto min-h-96 w-full max-w-4xl rounded-lg border border-dashed border-neutral-200 bg-white dark:border-neutral-800 dark:bg-black">
-//     //   <FileUpload onChange={handleFileUpload} />
-//     // </div>
-//   );
-// }
+  return (
+    <>sv</>
+    // <div className="mx-auto min-h-96 w-full max-w-4xl rounded-lg border border-dashed border-neutral-200 bg-white dark:border-neutral-800 dark:bg-black">
+    //   <FileUpload onChange={handleFileUpload} />
+    // </div>
+  );
+}
 
-// export default FileUploadDemo;
+export default FileUploadDemo;
