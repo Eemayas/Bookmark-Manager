@@ -9,13 +9,30 @@ import {
 import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import { useSelector } from "react-redux";
 import { RootState, store } from "@/store";
-import { showDeleteModal } from "@/components/Modals/store/modalReducer";
+import {
+  showDeleteModal,
+  showStatusModal,
+} from "@/components/Modals/store/modalReducer";
 import { deletePersonalWebsite } from "@/app/(home)/slices/personalWebsiteSlices";
+import { deletePopularLink } from "@/app/popular/store/popularLinksSlice";
+import { useEffect } from "react";
 
 export default function DeleteModal() {
   const deletemodalState = useSelector(
     (state: RootState) => state.modalState.deletemodal,
   );
+  const personalWebsiteState = useSelector(
+    (state: RootState) => state.personalWebsite,
+  );
+  const addWebsiteModalState = useSelector(
+    (state: RootState) => state.modalState.addWebsiteModal,
+  );
+  const popularLinkState = useSelector(
+    (state: RootState) => state.popularLinks,
+  );
+  useEffect(() => {
+    console.log({ addWebsiteModalState });
+  }, [addWebsiteModalState]);
 
   const closeDeleteModal = () => {
     store.dispatch(
@@ -27,8 +44,62 @@ export default function DeleteModal() {
     );
   };
   const handleDeleteClicked = () => {
-    store.dispatch(deletePersonalWebsite(deletemodalState._id));
-    closeDeleteModal();
+    if (deletemodalState.section === "Personal_Website") {
+      store.dispatch(deletePersonalWebsite(deletemodalState._id));
+    }
+
+    if (deletemodalState.section === "Popular_Links") {
+      store.dispatch(
+        deletePopularLink({
+          category: addWebsiteModalState.category,
+          _id: deletemodalState._id,
+        }),
+      );
+    }
+    if (personalWebsiteState.error) {
+      store.dispatch(
+        showStatusModal({
+          status: "error",
+          isShow: true,
+          title: "Error",
+          description: personalWebsiteState.error,
+        }),
+      );
+    }
+
+    if (personalWebsiteState.successMessage) {
+      store.dispatch(
+        showStatusModal({
+          status: "success",
+          isShow: true,
+          title: "Success",
+          description: personalWebsiteState.successMessage,
+        }),
+      );
+      closeDeleteModal();
+    }
+    if (popularLinkState.error) {
+      store.dispatch(
+        showStatusModal({
+          status: "error",
+          isShow: true,
+          title: "Error",
+          description: popularLinkState.error,
+        }),
+      );
+    }
+
+    if (popularLinkState.successMessage) {
+      store.dispatch(
+        showStatusModal({
+          status: "success",
+          isShow: true,
+          title: "Success",
+          description: popularLinkState.successMessage,
+        }),
+      );
+      closeDeleteModal();
+    }
   };
 
   return (

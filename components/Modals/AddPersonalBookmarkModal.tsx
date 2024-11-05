@@ -23,6 +23,7 @@ import { AddIcon } from "../social-icons/icons";
 import { useEffect, useState } from "react";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { InputField, TextAreaField } from "../CustomsInputs";
+import { createPopularLink } from "@/app/popular/store/popularLinksSlice";
 
 export default function AddPersonalBookmarkModal() {
   const personalWebsiteState = useSelector(
@@ -30,6 +31,9 @@ export default function AddPersonalBookmarkModal() {
   );
   const addWebsiteModalState = useSelector(
     (state: RootState) => state.modalState.addWebsiteModal,
+  );
+  const popularLinkState = useSelector(
+    (state: RootState) => state.popularLinks,
   );
 
   const closeAddWebsiteModal = () => {
@@ -42,15 +46,16 @@ export default function AddPersonalBookmarkModal() {
   };
 
   const { user } = useUser();
-  const { _id, description, folder_path, link, name, tags } =
+  const { _id, description, folderPath, link, name, tags } =
     addWebsiteModalState.data;
   const [formData, setFormData] = useState({
     _id: "",
-    name: "",
-    link: "",
-    tags: "",
-    folder_path: "",
-    description: "",
+    name: "dfbd",
+    link: "bdfb",
+    tags: "dfbd",
+    folderPath: "dbd",
+    description: "fbdf",
+    category: "stock_photosx",
   });
 
   const handleInputChange = (
@@ -63,66 +68,110 @@ export default function AddPersonalBookmarkModal() {
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted", formData);
-    if (!user) {
-      console.error("User not found");
-      store.dispatch(
-        showStatusModal({
-          status: "error",
-          isShow: true,
-          title: "Error",
-          description: "User not found",
-        }),
-      );
-      return;
-    }
-    if (!addWebsiteModalState.isEdit) {
-      store.dispatch(
-        createPersonalWebsite({
-          name: formData.name,
-          url: formData.link,
-          tags: formData.tags.split(","), // Split tags by comma
-          categories: formData.folder_path,
-          email_address: user?.nickname || "",
-        }),
-      );
-    } else {
-      store.dispatch(
-        updatePersonalWebsite({
-          _id: formData._id,
-          name: formData.name,
-          url: formData.link,
-          tags: formData.tags.split(","),
-          categories: formData.folder_path,
-          description: formData.description,
-          email_address: user?.nickname || "",
-        }),
-      );
+
+    if (addWebsiteModalState.section === "Personal_Website") {
+      if (!user) {
+        console.error("User not found");
+        store.dispatch(
+          showStatusModal({
+            status: "error",
+            isShow: true,
+            title: "Error",
+            description: "User not found",
+          }),
+        );
+        return;
+      }
+      if (!addWebsiteModalState.isEdit) {
+        store.dispatch(
+          createPersonalWebsite({
+            name: formData.name,
+            url: formData.link,
+            tags: formData.tags.split(","), // Split tags by comma
+            folderPath: formData.folderPath,
+            email_address: user?.nickname || "",
+          }),
+        );
+      } else {
+        store.dispatch(
+          updatePersonalWebsite({
+            _id: formData._id,
+            name: formData.name,
+            url: formData.link,
+            tags: formData.tags.split(","),
+            folderPath: formData.folderPath,
+            description: formData.description,
+            email_address: user?.nickname || "",
+          }),
+        );
+      }
+
+      if (personalWebsiteState.error) {
+        store.dispatch(
+          showStatusModal({
+            status: "error",
+            isShow: true,
+            title: "Error",
+            description: personalWebsiteState.error,
+          }),
+        );
+      }
+
+      if (personalWebsiteState.successMessage) {
+        store.dispatch(
+          showStatusModal({
+            status: "success",
+            isShow: true,
+            title: "Success",
+            description: personalWebsiteState.successMessage,
+          }),
+        );
+        closeAddWebsiteModal();
+      }
+      console.log({ personalWebsiteState });
     }
 
-    if (personalWebsiteState.error) {
+    if (addWebsiteModalState.section === "Popular_Links") {
+      // Add Popular Links
+      console.log("Add Popular Links");
       store.dispatch(
-        showStatusModal({
-          status: "error",
-          isShow: true,
-          title: "Error",
-          description: personalWebsiteState.error,
+        createPopularLink({
+          category: formData.category,
+          newLink: {
+            name: formData.name,
+            url: formData.link,
+            description: formData.description,
+            tags: formData.tags.split(","),
+            folderPath: formData.folderPath,
+          },
         }),
       );
+
+      if (popularLinkState.error) {
+        store.dispatch(
+          showStatusModal({
+            status: "error",
+            isShow: true,
+            title: "Error",
+            description: popularLinkState.error,
+          }),
+        );
+      }
+
+      if (popularLinkState.successMessage) {
+        store.dispatch(
+          showStatusModal({
+            status: "success",
+            isShow: true,
+            title: "Success",
+            description: popularLinkState.successMessage,
+          }),
+        );
+        closeAddWebsiteModal();
+      }
     }
 
-    if (personalWebsiteState.successMessage) {
-      store.dispatch(
-        showStatusModal({
-          status: "success",
-          isShow: true,
-          title: "Success",
-          description: personalWebsiteState.successMessage,
-        }),
-      );
-      closeAddWebsiteModal();
-    }
-
-    console.log({ personalWebsiteState });
+    
   };
 
   useEffect(() => {
@@ -132,8 +181,9 @@ export default function AddPersonalBookmarkModal() {
         name,
         link,
         tags: tags.join(","),
-        folder_path,
+        folderPath,
         description,
+        category: "",
       });
     }
   }, [addWebsiteModalState]);
@@ -169,42 +219,54 @@ export default function AddPersonalBookmarkModal() {
                 {addWebsiteModalState.isEdit ? "Edit" : "Add New"}{" "}
                 {addWebsiteModalState.section === "Personal_Website"
                   ? "Personal Bookmark"
-                  : "Popular Bookmark"}
+                  : "Popular Links"}
               </div>
             </DialogTitle>
 
             <form className="mt-4" onSubmit={handleFormSubmit}>
               <div className="mb-4 grid grid-cols-2 gap-4">
+                {addWebsiteModalState.section === "Personal_Website" ? (
+                  ""
+                ) : (
+                  <InputField
+                    label="Category"
+                    name="category"
+                    placeholder="Type webiste category"
+                    value={formData.category}
+                    onChange={handleInputChange}
+                  />
+                )}
+
                 <InputField
                   label="Name"
                   name="name"
-                  placeholder="Type product name"
+                  placeholder="Type webiste name"
                   value={formData.name}
                   onChange={handleInputChange}
                 />
                 <InputField
                   label="Link"
                   name="link"
-                  placeholder="Type product link"
+                  placeholder="Type webiste link"
                   value={formData.link}
                   onChange={handleInputChange}
                 />
                 <InputField
                   label="Tags"
                   name="tags"
-                  placeholder="Type product tags"
+                  placeholder="Type webiste tags"
                   value={formData.tags}
                   onChange={handleInputChange}
                 />
                 <InputField
                   label="Folder Path"
-                  name="folder_path"
+                  name="folderPath"
                   placeholder="Type folder path"
-                  value={formData.folder_path}
+                  value={formData.folderPath}
                   onChange={handleInputChange}
                 />
                 <TextAreaField
-                  label="Product Description"
+                  label="Webiste Description"
                   name="description"
                   value={formData.description}
                   onChange={handleInputChange}

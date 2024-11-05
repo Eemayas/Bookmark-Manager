@@ -4,7 +4,7 @@ export type PersonalWebsiteType = {
   url: string;
   description?: string;
   tags: string[];
-  categories: string;
+  folderPath: string;
   isFavorities?: boolean;
   email_address: string;
 };

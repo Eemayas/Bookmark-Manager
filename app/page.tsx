@@ -35,7 +35,7 @@ const Home = () => {
           tag.toLowerCase().includes(searchValue),
         );
       } else if (selectedFilterSearchBar === "Folder") {
-        return website.categories.toLowerCase().includes(searchValue);
+        return website.folderPath.toLowerCase().includes(searchValue);
       }
 
       return false;
@@ -113,7 +113,6 @@ const Home = () => {
       >
         <AddIcon />
       </button>
-      {/* <BookmarkModal /> */}
     </div>
   );
 };

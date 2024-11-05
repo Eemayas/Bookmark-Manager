@@ -13,6 +13,8 @@ import {
 import { useSelector } from "react-redux";
 import { RootState, store } from "@/store";
 import { showStatusModal } from "@/components/Modals/store/modalReducer";
+import { clearPersonalWebisteMessages } from "@/app/(home)/slices/personalWebsiteSlices";
+import { clearPeronalLinksMessages } from "@/app/popular/store/popularLinksSlice";
 
 export default function StatusInfoModal() {
   const statusModalState = useSelector(
@@ -29,8 +31,9 @@ export default function StatusInfoModal() {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, consequatur.",
       }),
     );
+    // store.dispatch(clearPersonalWebisteMessages());
+    // store.dispatch(clearPeronalLinksMessages());
   };
-  console.log(statusModalState);
 
   return (
     <Dialog

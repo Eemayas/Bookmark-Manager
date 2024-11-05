@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { PopularLinksType } from "./types";
 import { AppDispatch, RootState } from "@/store";
 import {
-  addLink,
+  addPopularLink,
   deleteLink,
   fetchLinks,
   updateLink,
@@ -23,13 +23,13 @@ const PopularLinks = () => {
 
   const handleAddLink = () => {
     dispatch(
-      addLink({
+      addPopularLink({
         category: "stock_photos",
         newLink: {
           name: "Another Photo Site",
           url: "https://anotherphotosite.com",
           tags: ["Stock Photos"],
-          categories: "/Stock Photos",
+          folderPath: "/Stock Photos",
         },
       }),
     );

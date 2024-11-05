@@ -15,7 +15,7 @@ function BookmarkModal() {
     name: "",
     link: "",
     tags: "",
-    folder_path: "",
+    folderPath: "",
     description: "",
   });
 
@@ -92,9 +92,9 @@ function BookmarkModal() {
                 />
                 <InputField
                   label="Folder Path"
-                  name="folder_path"
+                  name="folderPath"
                   placeholder="Type folder path"
-                  value={formData.folder_path}
+                  value={formData.folderPath}
                   onChange={handleInputChange}
                 />
                 <TextAreaField
