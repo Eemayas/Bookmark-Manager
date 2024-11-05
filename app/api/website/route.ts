@@ -14,7 +14,7 @@ export async function POST(req: Request) {
       url,
       description,
       tags,
-      categories,
+      folderPath: categories,
       isFavorities,
       email_address,
     } = body;
@@ -135,7 +135,7 @@ export async function PUT(req: Request) {
       url,
       description,
       tags,
-      categories,
+      folderPath: categories,
       isFavorities,
       email_address,
     });

@@ -11,15 +11,32 @@ export async function POST(req: Request) {
 
   try {
     // Check if a link with the same name or URL already exists in the specified category
-    const existingLink = await PopularLinks.findOne({
+    const existingLinkName = await PopularLinks.findOne({
       [`data.${category}`]: {
-        $elemMatch: { $or: [{ name: newLink.name }, { url: newLink.url }] },
+        $elemMatch: { $or: [{ name: newLink.name }] },
+      },
+    });
+    const existingLinkLink = await PopularLinks.findOne({
+      [`data.${category}`]: {
+        $elemMatch: { $or: [{ url: newLink.url }] },
       },
     });
 
-    if (existingLink) {
+    if (existingLinkName && existingLinkLink) {
+      return NextResponse.json(
+        { message: "Duplicate link and name found", category },
+        { status: 400 },
+      );
+    }
+    if (existingLinkLink) {
       return NextResponse.json(
         { message: "Duplicate link found", category },
+        { status: 400 },
+      );
+    }
+    if (existingLinkName) {
+      return NextResponse.json(
+        { message: "Duplicate name found", category },
         { status: 400 },
       );
     }
