@@ -3,6 +3,46 @@ import fs from "fs";
 import path from "path";
 import { JSDOM } from "jsdom";
 
+function processDL(dlElement: Element, currentPath: string[]): any[] {
+  const bookmarks: any[] = [];
+  let currentFolder: string | null = null;
+  const allTags = Array.from(dlElement.querySelectorAll("dt, dl"));
+
+  allTags.forEach((tag) => {
+    if (tag.tagName.toLowerCase() === "dt") {
+      const h3Tag = tag.querySelector("h3");
+      const aTag = tag.querySelector("a");
+
+      if (h3Tag) {
+        currentFolder = h3Tag.textContent || "";
+        const nestedDL = tag.nextElementSibling;
+
+        if (nestedDL && nestedDL.tagName.toLowerCase() === "dl") {
+          const newPath = [...currentPath, currentFolder];
+          bookmarks.push(...processDL(nestedDL, newPath));
+        }
+      }
+
+      if (aTag) {
+        const link = aTag.getAttribute("href");
+        const name = aTag.textContent || "";
+        const path = currentPath.join(" / ");
+        bookmarks.push({
+          name,
+          link,
+          path,
+        });
+      }
+    } else if (tag.tagName.toLowerCase() === "dl" && currentFolder) {
+      const newPath = [...currentPath, currentFolder];
+      bookmarks.push(...processDL(tag, newPath));
+    }
+  });
+
+  return bookmarks;
+}
+
+
 function parseBookmarks(htmlFile: string): any[] {
   let htmlContent: string;
 
@@ -16,45 +56,6 @@ function parseBookmarks(htmlFile: string): any[] {
   try {
     const dom = new JSDOM(htmlContent);
     const document = dom.window.document;
-
-    function processDL(dlElement: Element, currentPath: string[]): any[] {
-      const bookmarks: any[] = [];
-      let currentFolder: string | null = null;
-      const allTags = Array.from(dlElement.querySelectorAll("dt, dl"));
-
-      allTags.forEach((tag) => {
-        if (tag.tagName.toLowerCase() === "dt") {
-          const h3Tag = tag.querySelector("h3");
-          const aTag = tag.querySelector("a");
-
-          if (h3Tag) {
-            currentFolder = h3Tag.textContent || "";
-            const nestedDL = tag.nextElementSibling;
-
-            if (nestedDL && nestedDL.tagName.toLowerCase() === "dl") {
-              const newPath = [...currentPath, currentFolder];
-              bookmarks.push(...processDL(nestedDL, newPath));
-            }
-          }
-
-          if (aTag) {
-            const link = aTag.getAttribute("href");
-            const name = aTag.textContent || "";
-            const path = currentPath.join(" / ");
-            bookmarks.push({
-              name,
-              link,
-              path,
-            });
-          }
-        } else if (tag.tagName.toLowerCase() === "dl" && currentFolder) {
-          const newPath = [...currentPath, currentFolder];
-          bookmarks.push(...processDL(tag, newPath));
-        }
-      });
-
-      return bookmarks;
-    }
 
     const dlElement = document.querySelector("dl");
     if (!dlElement) {

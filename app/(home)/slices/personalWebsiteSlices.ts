@@ -137,6 +137,7 @@ const personalWebsiteSlice = createSlice({
         state.loading = true;
         state.error = null;
         state.successMessage = null;
+        console.log("updating website");
       })
       .addCase(updatePersonalWebsite.fulfilled, (state, action) => {
         state.loading = false;

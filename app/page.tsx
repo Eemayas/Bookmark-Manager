@@ -7,7 +7,10 @@ import BookmarkModal from "./(home)/components/BookmarkModal";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState, store } from "@/store";
-import { getPersonalWebsites } from "./(home)/slices/personalWebsiteSlices";
+import {
+  clearPersonalWebisteMessages,
+  getPersonalWebsites,
+} from "./(home)/slices/personalWebsiteSlices";
 import { AddIcon } from "@/components/social-icons/icons";
 import { showAddWebsiteModal } from "@/components/Modals/store/modalReducer";
 
@@ -80,7 +83,12 @@ const Home = () => {
   useEffect(() => {
     const emailAddress = user?.nickname || "";
     dispatch(getPersonalWebsites(emailAddress));
+    dispatch(clearPersonalWebisteMessages());
   }, [dispatch, user]);
+
+  useEffect(() => {
+    console.log({ websites, loading, error, successMessage });
+  }, [successMessage]);
 
   useEffect(() => {
     console.log({ websites });

@@ -1,8 +1,8 @@
+import { PersonalWebsiteType } from "@/app/types";
 import React from "react";
-import { Website } from "../types";
 
 type BookmarksListProps = {
-  websites: Website[];
+  websites: PersonalWebsiteType[];
   selectedTags: string[];
   searchTerm: string;
 };
@@ -28,8 +28,8 @@ const BookmarksList: React.FC<BookmarksListProps> = ({
         <p>No bookmarks found.</p>
       ) : (
         <ul className="space-y-4">
-          {filteredWebsites.map((website) => (
-            <li key={website.id}>
+          {filteredWebsites.map((website, index) => (
+            <li key={`${website._id}-${index}`}>
               <div className="flex items-center justify-between rounded-md border border-gray-300 p-4">
                 <div>
                   <h5 className="text-lg font-semibold">{website.name}</h5>
