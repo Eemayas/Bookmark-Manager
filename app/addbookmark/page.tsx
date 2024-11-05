@@ -75,8 +75,13 @@ const page = () => {
   };
 
   // addPopularWebistes();
-  addPersonalWebsite();
-  return <div>page</div>;
+  // addPersonalWebsite();
+  return (
+    <div>
+      <button onClick={addPersonalWebsite}>Add Personal Websites</button>
+      <button onClick={addPopularWebistes}>Add Popular Websites</button>
+    </div>
+  );
 };
 
 export default page;

@@ -23,7 +23,10 @@ import { AddIcon } from "../social-icons/icons";
 import { useEffect, useState } from "react";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { InputField, TextAreaField } from "../CustomsInputs";
-import { createPopularLink } from "@/app/popular/store/popularLinksSlice";
+import {
+  createPopularLink,
+  updatePopularLink,
+} from "@/app/popular/store/popularLinksSlice";
 
 export default function AddPersonalBookmarkModal() {
   const personalWebsiteState = useSelector(
@@ -50,12 +53,12 @@ export default function AddPersonalBookmarkModal() {
     addWebsiteModalState.data;
   const [formData, setFormData] = useState({
     _id: "",
-    name: "dfbd",
-    link: "bdfb",
-    tags: "dfbd",
-    folderPath: "dbd",
-    description: "fbdf",
-    category: "stock_photosx",
+    name: "",
+    link: "",
+    tags: "",
+    folderPath: "",
+    description: "",
+    category: "",
   });
 
   const handleInputChange = (
@@ -133,19 +136,35 @@ export default function AddPersonalBookmarkModal() {
 
     if (addWebsiteModalState.section === "Popular_Links") {
       // Add Popular Links
-      console.log("Add Popular Links");
-      store.dispatch(
-        createPopularLink({
-          category: formData.category,
-          newLink: {
-            name: formData.name,
-            url: formData.link,
-            description: formData.description,
-            tags: formData.tags.split(","),
-            folderPath: formData.folderPath,
-          },
-        }),
-      );
+
+      if (!addWebsiteModalState.isEdit) {
+        store.dispatch(
+          createPopularLink({
+            category: formData.category,
+            newLink: {
+              name: formData.name,
+              url: formData.link,
+              description: formData.description,
+              tags: formData.tags.split(","),
+              folderPath: formData.folderPath,
+            },
+          }),
+        );
+      } else {
+        store.dispatch(
+          updatePopularLink({
+            category: formData.category,
+            _id: formData._id,
+            updateData: {
+              name: formData.name,
+              url: formData.link,
+              description: formData.description,
+              tags: formData.tags.split(","),
+              folderPath: formData.folderPath,
+            },
+          }),
+        );
+      }
 
       if (popularLinkState.error) {
         store.dispatch(
@@ -170,21 +189,33 @@ export default function AddPersonalBookmarkModal() {
         closeAddWebsiteModal();
       }
     }
-
-    
   };
 
   useEffect(() => {
     if (addWebsiteModalState.isEdit) {
-      setFormData({
-        _id,
-        name,
-        link,
-        tags: tags.join(","),
-        folderPath,
-        description,
-        category: "",
-      });
+      if (addWebsiteModalState.section === "Personal_Website") {
+        setFormData({
+          _id,
+          name,
+          link,
+          tags: tags.join(","),
+          folderPath,
+          description,
+          category: "",
+        });
+      }
+
+      if (addWebsiteModalState.section === "Popular_Links") {
+        setFormData({
+          _id,
+          name,
+          link,
+          tags: tags.join(","),
+          folderPath,
+          description,
+          category: addWebsiteModalState.category,
+        });
+      }
     }
   }, [addWebsiteModalState]);
 

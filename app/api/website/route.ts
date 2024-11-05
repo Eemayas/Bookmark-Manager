@@ -145,7 +145,7 @@ export async function PUT(req: Request) {
     }
 
     return NextResponse.json(
-      { message: "Website updated successfully", website: updatedWebsite },
+      { message: "Website updated successfully", website: body },
       { status: 200 },
     );
   } catch (error) {

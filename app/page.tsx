@@ -43,7 +43,7 @@ const Home = () => {
     .filter((website) => {
       // Check if the website tags include any of the selectedTags
       if (selectedTags.length === 0) return true; // If no tags are selected, include all
-      console.log({ selectedTags });
+
       return selectedTags.every((tag) => {
         return website.tags
           .map((t) => t.toLowerCase())

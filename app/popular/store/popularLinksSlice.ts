@@ -117,6 +117,7 @@ const popularLinksSlice = createSlice({
       .addCase(fetchPopularLinks.pending, (state) => {
         state.loading = true;
         state.error = null;
+        state.successMessage = null;
       })
       .addCase(fetchPopularLinks.fulfilled, (state, action) => {
         state.loading = false;
@@ -136,6 +137,7 @@ const popularLinksSlice = createSlice({
       .addCase(createPopularLink.pending, (state) => {
         state.loading = true;
         state.error = null;
+        state.successMessage = null;
       })
       .addCase(createPopularLink.fulfilled, (state, action) => {
         state.loading = false;
@@ -152,6 +154,7 @@ const popularLinksSlice = createSlice({
       .addCase(deletePopularLink.pending, (state) => {
         state.loading = true;
         state.error = null;
+        state.successMessage = null;
       })
       .addCase(deletePopularLink.fulfilled, (state, action) => {
         state.loading = false;
@@ -170,6 +173,7 @@ const popularLinksSlice = createSlice({
       .addCase(updatePopularLink.pending, (state) => {
         state.loading = true;
         state.error = null;
+        state.successMessage = null;
       })
       .addCase(updatePopularLink.fulfilled, (state, action) => {
         state.loading = false;

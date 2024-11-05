@@ -19,13 +19,13 @@ const PopularLinks = () => {
   );
   const [selectedFilterSearchBar, setSelectedFilterSearchBar] =
     useState("Website");
-  console.log("Again");
+    
   useEffect(() => {
     dispatch(fetchPopularLinks({}));
   }, [dispatch]);
 
   useEffect(() => {
-    console.log({ selectedTags, data, tag: Object.keys(data)[0] });
+ 
     if (selectedTags.length === 0 && Object.keys(data)[0]) {
       setSelectedTags([Object.keys(data)[0]]);
       console.log({ data });

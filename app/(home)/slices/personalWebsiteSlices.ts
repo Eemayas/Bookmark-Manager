@@ -64,6 +64,7 @@ export const updatePersonalWebsite = createAsyncThunk(
       const data = await response.json();
       if (!response.ok)
         throw new Error(data.error || "Failed to update website");
+      console.log(data.website);
       return data.website;
     } catch (error: any) {
       return rejectWithValue(error.message);
@@ -105,6 +106,7 @@ const personalWebsiteSlice = createSlice({
       .addCase(createPersonalWebsite.pending, (state) => {
         state.loading = true;
         state.error = null;
+        state.successMessage = null;
       })
       .addCase(createPersonalWebsite.fulfilled, (state, action) => {
         state.loading = false;
@@ -115,9 +117,11 @@ const personalWebsiteSlice = createSlice({
         state.loading = false;
         state.error = action.payload as string;
       })
+
       .addCase(getPersonalWebsites.pending, (state) => {
         state.loading = true;
         state.error = null;
+        state.successMessage = null;
       })
       .addCase(getPersonalWebsites.fulfilled, (state, action) => {
         state.loading = false;
@@ -128,9 +132,11 @@ const personalWebsiteSlice = createSlice({
         state.loading = false;
         state.error = action.payload as string;
       })
+
       .addCase(updatePersonalWebsite.pending, (state) => {
         state.loading = true;
         state.error = null;
+        state.successMessage = null;
       })
       .addCase(updatePersonalWebsite.fulfilled, (state, action) => {
         state.loading = false;
@@ -143,9 +149,11 @@ const personalWebsiteSlice = createSlice({
         state.loading = false;
         state.error = action.payload as string;
       })
+
       .addCase(deletePersonalWebsite.pending, (state) => {
         state.loading = true;
         state.error = null;
+        state.successMessage = null;
       })
       .addCase(deletePersonalWebsite.fulfilled, (state, action) => {
         state.loading = false;

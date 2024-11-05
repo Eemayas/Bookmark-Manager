@@ -30,9 +30,6 @@ export default function DeleteModal() {
   const popularLinkState = useSelector(
     (state: RootState) => state.popularLinks,
   );
-  useEffect(() => {
-    console.log({ addWebsiteModalState });
-  }, [addWebsiteModalState]);
 
   const closeDeleteModal = () => {
     store.dispatch(

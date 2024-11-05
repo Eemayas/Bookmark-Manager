@@ -78,7 +78,6 @@ export const BookMarkCard: React.FC<CardProps> = ({
       );
     }
   };
-  console.log({ website });
 
   return (
     <div className="card mx-auto max-h-fit w-full break-inside-avoid rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1">
@@ -148,9 +147,9 @@ export const BookMarkCard: React.FC<CardProps> = ({
             className="scroll flex h-full flex-row flex-wrap gap-2 overflow-x-auto"
             data-radix-scroll-area-viewport=""
           >
-            {website.tags.map((tag) => (
+            {website.tags.map((tag, index) => (
               <span
-                key={tag}
+                key={tag + index}
                 className="inline-block rounded-full border border-blue-200 bg-blue-100 px-3 py-1 text-xs font-normal capitalize text-blue-800 shadow-sm transition-all duration-300 hover:bg-blue-200 hover:text-blue-900 hover:shadow-md"
               >
                 {tag}
