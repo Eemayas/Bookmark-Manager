@@ -5,7 +5,7 @@ const websiteSchema = new Schema({
   url: { type: String, required: true },
   description: { type: String, default: "" },
   tags: { type: [String], required: true },
-  categories: { type: String, required: true },
+  folderPath: { type: String, required: true },
 });
 
 const popularLinksSchema = new Schema({

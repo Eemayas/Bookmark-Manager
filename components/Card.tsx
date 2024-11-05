@@ -78,6 +78,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
       );
     }
   };
+  console.log({ website });
 
   return (
     <div className="card mx-auto max-h-fit w-full break-inside-avoid rounded-lg bg-[#24233b] p-4 shadow-lg transition-transform duration-500 hover:-translate-y-1">

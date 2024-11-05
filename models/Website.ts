@@ -6,7 +6,7 @@ const WebsiteSchema: Schema = new Schema({
   url: { type: String, required: true },
   description: { type: String },
   tags: { type: [String], required: true },
-  categories: { type: String, required: true },
+  folderPath: { type: String, required: true },
   isFavorities: { type: Boolean },
   email_address: { type: String, required: true }, // Updated schema to expect an array of strings
 });

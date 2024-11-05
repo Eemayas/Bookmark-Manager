@@ -14,7 +14,7 @@ export async function POST(req: Request) {
       url,
       description,
       tags,
-      folderPath: categories,
+      folderPath,
       isFavorities,
       email_address,
     } = body;
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     if (!name) missingFields.push("name");
     if (!url) missingFields.push("url");
     if (!tags) missingFields.push("tags");
-    if (!categories) missingFields.push("categories");
+    if (!folderPath) missingFields.push("folderPath");
     if (!email_address) missingFields.push("email_address");
 
     if (missingFields.length > 0) {
@@ -48,7 +48,7 @@ export async function POST(req: Request) {
       url,
       description,
       tags,
-      categories,
+      folderPath,
       isFavorities,
       email_address,
     });
@@ -108,7 +108,7 @@ export async function PUT(req: Request) {
       url,
       description,
       tags,
-      categories,
+      folderPath,
       isFavorities,
       email_address,
     } = body;
@@ -119,7 +119,7 @@ export async function PUT(req: Request) {
     if (!name) missingFields.push("name");
     if (!url) missingFields.push("url");
     if (!tags) missingFields.push("tags");
-    if (!categories) missingFields.push("categories");
+    if (!folderPath) missingFields.push("folderPath");
     if (!email_address) missingFields.push("email_address");
 
     if (missingFields.length > 0) {
@@ -135,7 +135,7 @@ export async function PUT(req: Request) {
       url,
       description,
       tags,
-      folderPath: categories,
+      folderPath,
       isFavorities,
       email_address,
     });
