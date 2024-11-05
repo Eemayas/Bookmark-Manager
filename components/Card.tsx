@@ -4,22 +4,16 @@
 import React, { useState, useEffect } from "react";
 import { PersonalWebsiteType } from "@/app/types";
 import { LinkPreview } from "./ui/link-preview";
-import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalTrigger,
-} from "./ui/animated-modal";
 import { PopularLinksType } from "@/app/popular/types";
-import { RootState, store } from "@/store";
+import { store } from "@/store";
 import {
   showAddWebsiteModal,
   showDeleteModal,
 } from "@/components/Modals/store/modalReducer";
-import { useSelector } from "react-redux";
 
 type CardProps = {
   website: PersonalWebsiteType | PopularLinksType;
+  isPersonalBookmark?: boolean;
   width?: number;
   height?: number;
   quality?: number;
@@ -31,15 +25,12 @@ type CardProps = {
 
 export const BookMarkCard: React.FC<CardProps> = ({
   website,
+  isPersonalBookmark = true,
   width = 200,
   height = 125,
   quality = 50,
 }) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupAction, setPopupAction] = useState<"edit" | "delete" | null>(
-    null,
-  );
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
@@ -61,30 +52,26 @@ export const BookMarkCard: React.FC<CardProps> = ({
   };
 
   const handleActionClick = (action: "edit" | "delete") => {
-    setPopupAction(action);
-    setShowPopup(true);
     if (action === "delete") {
-      console.log("delete", website);
       store.dispatch(
         showDeleteModal({
           isShow: true,
           _id: website._id || "",
-          section: "Personal_Website",
+          section: isPersonalBookmark ? "Personal_Website" : "Popular_Links",
         }),
       );
     } else if (action === "edit") {
-      console.log("edit");
       store.dispatch(
         showAddWebsiteModal({
           isShow: true,
-          section: "Personal_Website",
+          section: isPersonalBookmark ? "Personal_Website" : "Popular_Links",
           isEdit: true,
           data: {
             _id: website._id || "",
             name: website.name,
             link: website.url,
             tags: website.tags,
-            folder_path: website.categories,
+            folderPath: website.folderPath,
             description: website.description || "",
           },
         }),
@@ -186,7 +173,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
               />
               <path d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
             </svg>
-            <span>{website.categories}</span>
+            <span>{website.folderPath}</span>
           </div>
           <div className="flex space-x-2">
             <button
@@ -221,49 +208,7 @@ export const BookMarkCard: React.FC<CardProps> = ({
             </button>
           </div>
         </div>
-
-        {/* {showPopup && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="rounded-lg bg-white p-6 shadow-xl">
-              <h2 className="mb-4 text-xl font-bold">
-                {popupAction === "edit" ? "Edit Website" : "Delete Website"}
-              </h2>
-              <p>Are you sure you want to {popupAction} this website?</p>
-              <div className="mt-4 flex justify-end space-x-2">
-                <button
-                  onClick={() => setShowPopup(false)}
-                  className="rounded bg-gray-300 px-4 py-2 text-gray-800 hover:bg-gray-400"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={() => {
-                    // Implement edit or delete logic here
-                    console.log(`${popupAction} website:`, website);
-                    setShowPopup(false);
-                  }}
-                  className={`rounded px-4 py-2 text-white ${
-                    popupAction === "edit"
-                      ? "bg-blue-500 hover:bg-blue-600"
-                      : "bg-red-500 hover:bg-red-600"
-                  }`}
-                >
-                  Confirm
-                </button>
-              </div>
-            </div>
-          </div>
-        )} */}
       </div>
     </div>
   );
 };
-{
-  /* <Image
-          src={src}
-          alt="jordans"
-          height="200"
-          width="200"
-          className="w-[300px] rounded-md object-contain"
-        /> */
-}
