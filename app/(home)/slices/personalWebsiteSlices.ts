@@ -1,5 +1,5 @@
 import { PersonalWebsiteType } from "@/app/types";
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export interface WebsiteState {
   websites: PersonalWebsiteType[];

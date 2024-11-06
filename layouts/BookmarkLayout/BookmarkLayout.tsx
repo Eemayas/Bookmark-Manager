@@ -1,6 +1,6 @@
 /** @format */
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import React from "react";
 import { BookMarkCard } from "@/components/Card";
 import Sidebar from "./components/Sidebar";

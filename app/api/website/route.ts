@@ -1,7 +1,6 @@
 import { PersonalWebsiteType } from "@/app/types";
 import { connectToDB } from "@/lib/mongoose";
 import Website from "@/models/Website";
-import type { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {

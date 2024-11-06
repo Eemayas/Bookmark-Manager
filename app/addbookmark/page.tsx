@@ -1,6 +1,6 @@
 "use client";
 import { useUser } from "@auth0/nextjs-auth0/client";
-import React, { use } from "react";
+import React from "react";
 import personalBookmarks from "@/constants/bookmarks.json";
 import popularBookmarks from "@/constants/popularslinks.json";
 import { PopularLinksType } from "../popular/types";

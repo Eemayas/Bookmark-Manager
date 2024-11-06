@@ -15,30 +15,13 @@ import { CloseIcons, MenuIcons } from "../social-icons/icons";
 import ThemeSwitch from "./components/ThemeSwitch";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
-export const NavBarImage =
-  "https://images.unsplash.com/photo-1521239365713-1e26965c69ac?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+export const NavBarImage = "/assets/logo.png";
 
 export const navLinks = [
   {
     id: "popular",
     title: "Popular ",
   },
-  // {
-  //   id: "property",
-  //   title: "Property",
-  // },
-  // {
-  //   id: "search",
-  //   title: "Search",
-  // },
-  // {
-  //   id: "profile",
-  //   title: "Profile",
-  // },
-  // {
-  //   id: "about-us",
-  //   title: "About Us",
-  // },
 ];
 
 const Navbar = () => {

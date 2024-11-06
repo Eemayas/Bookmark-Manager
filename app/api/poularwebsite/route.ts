@@ -1,6 +1,5 @@
 import { connectToDB } from "@/lib/mongoose";
 import PopularLinks from "@/models/PopularWebsite";
-import PopularWebsite from "@/models/PopularWebsite";
 import { Types } from "mongoose";
 import { NextResponse } from "next/server";
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { store } from "@/store";
 import { updateAddWebsiteCategory } from "@/components/Modals/store/modalReducer";
