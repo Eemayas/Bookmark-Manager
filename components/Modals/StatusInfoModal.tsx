@@ -31,8 +31,8 @@ export default function StatusInfoModal() {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, consequatur.",
       }),
     );
-    // store.dispatch(clearPersonalWebisteMessages());
-    // store.dispatch(clearPeronalLinksMessages());
+    store.dispatch(clearPersonalWebisteMessages());
+    store.dispatch(clearPeronalLinksMessages());
   };
 
   return (

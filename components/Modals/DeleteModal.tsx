@@ -53,6 +53,9 @@ export default function DeleteModal() {
         }),
       );
     }
+  };
+
+  useEffect(() => {
     if (personalWebsiteState.error) {
       store.dispatch(
         showStatusModal({
@@ -97,7 +100,7 @@ export default function DeleteModal() {
       );
       closeDeleteModal();
     }
-  };
+  }, [personalWebsiteState, popularLinkState]);
 
   return (
     <Dialog

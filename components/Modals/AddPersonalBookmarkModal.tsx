@@ -6,20 +6,17 @@ import {
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
-import { ExclamationTriangleIcon, PlusIcon } from "@radix-ui/react-icons";
+import { PlusIcon } from "@radix-ui/react-icons";
 import { useSelector } from "react-redux";
 import { RootState, store } from "@/store";
 import {
   showAddWebsiteModal,
-  showDeleteModal,
   showStatusModal,
 } from "@/components/Modals/store/modalReducer";
 import {
   createPersonalWebsite,
-  deletePersonalWebsite,
   updatePersonalWebsite,
 } from "@/app/(home)/slices/personalWebsiteSlices";
-import { AddIcon } from "../social-icons/icons";
 import { useEffect, useState } from "react";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { InputField, TextAreaField } from "../CustomsInputs";
@@ -44,6 +41,22 @@ export default function AddPersonalBookmarkModal() {
       showAddWebsiteModal({
         isShow: false,
         section: "Personal_Website",
+      }),
+    );
+    store.dispatch(
+      showAddWebsiteModal({
+        isShow: false,
+        section: "Personal_Website",
+        isEdit: false,
+        category: "",
+        data: {
+          _id: "",
+          name: "",
+          link: "",
+          tags: [""],
+          folderPath: "",
+          description: "",
+        },
       }),
     );
   };
@@ -108,29 +121,6 @@ export default function AddPersonalBookmarkModal() {
           }),
         );
       }
-
-      if (personalWebsiteState.error) {
-        store.dispatch(
-          showStatusModal({
-            status: "error",
-            isShow: true,
-            title: "Error",
-            description: personalWebsiteState.error,
-          }),
-        );
-      }
-
-      if (personalWebsiteState.successMessage) {
-        store.dispatch(
-          showStatusModal({
-            status: "success",
-            isShow: true,
-            title: "Success",
-            description: personalWebsiteState.successMessage,
-          }),
-        );
-        closeAddWebsiteModal();
-      }
       console.log({ personalWebsiteState });
     }
 
@@ -165,29 +155,6 @@ export default function AddPersonalBookmarkModal() {
           }),
         );
       }
-
-      if (popularLinkState.error) {
-        store.dispatch(
-          showStatusModal({
-            status: "error",
-            isShow: true,
-            title: "Error",
-            description: popularLinkState.error,
-          }),
-        );
-      }
-
-      if (popularLinkState.successMessage) {
-        store.dispatch(
-          showStatusModal({
-            status: "success",
-            isShow: true,
-            title: "Success",
-            description: popularLinkState.successMessage,
-          }),
-        );
-        closeAddWebsiteModal();
-      }
     }
   };
 
@@ -203,6 +170,7 @@ export default function AddPersonalBookmarkModal() {
           description,
           category: "",
         });
+      } else {
       }
 
       if (addWebsiteModalState.section === "Popular_Links") {
@@ -216,8 +184,65 @@ export default function AddPersonalBookmarkModal() {
           category: addWebsiteModalState.category,
         });
       }
+    } else {
+      setFormData({
+        _id: "",
+        name: "",
+        link: "",
+        tags: "",
+        folderPath: "",
+        description: "",
+        category: "",
+      });
     }
   }, [addWebsiteModalState]);
+
+  useEffect(() => {
+    if (personalWebsiteState.error) {
+      store.dispatch(
+        showStatusModal({
+          status: "error",
+          isShow: true,
+          title: "Error",
+          description: personalWebsiteState.error,
+        }),
+      );
+    }
+
+    if (personalWebsiteState.successMessage) {
+      store.dispatch(
+        showStatusModal({
+          status: "success",
+          isShow: true,
+          title: "Success",
+          description: personalWebsiteState.successMessage,
+        }),
+      );
+      closeAddWebsiteModal();
+    }
+    if (popularLinkState.error) {
+      store.dispatch(
+        showStatusModal({
+          status: "error",
+          isShow: true,
+          title: "Error",
+          description: popularLinkState.error,
+        }),
+      );
+    }
+
+    if (popularLinkState.successMessage) {
+      store.dispatch(
+        showStatusModal({
+          status: "success",
+          isShow: true,
+          title: "Success",
+          description: popularLinkState.successMessage,
+        }),
+      );
+      closeAddWebsiteModal();
+    }
+  }, [personalWebsiteState, popularLinkState]);
 
   return (
     <Dialog
