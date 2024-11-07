@@ -9,6 +9,7 @@ import { UserProvider } from "@auth0/nextjs-auth0/client";
 import DeleteModal from "@/components/Modals/DeleteModal";
 import StatusInfoModal from "@/components/Modals/StatusInfoModal";
 import AddPersonalBookmarkModal from "@/components/Modals/AddPersonalBookmarkModal";
+import GridLoader from "@/components/GridLoader";
 
 export const metadata: Metadata = {
   title: "Bookmark Manager",
@@ -27,6 +28,7 @@ export default function RootLayout({
         <UserProvider>
           <ReduxProviders>
             <ThemeProviders>
+              <GridLoader />
               <NavBar />
               <main className={`mx-auto max-w-[104rem] px-5 pt-24`}>
                 {children}
