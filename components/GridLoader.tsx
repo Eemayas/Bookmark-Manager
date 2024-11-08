@@ -1,6 +1,9 @@
-"use client const [isModalOpen, setIsModalOpen] = useState(false);";
+"use client";
 import { ReactNode, useState } from "react";
 import "./GridLoader.css";
+import { RootState } from "@/store";
+import { useSelector } from "react-redux";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 interface ModalProps {
   isOpen: boolean;
@@ -8,28 +11,18 @@ interface ModalProps {
   children: ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative w-full max-w-md rounded-lg bg-white p-6 shadow-lg">
-        <button
-          onClick={onClose}
-          className="absolute right-2 top-2 text-gray-400 hover:text-gray-600"
-        >
-          ✕
-        </button>
-        {children}
-      </div>
-    </div>
+const GridLoader = ({}) => {
+  const { loading: popularLinksLoading } = useSelector(
+    (state: RootState) => state.popularLinks,
   );
-};
-
-const GridLoader = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { loading: personalWebsiteLoading } = useSelector(
+    (state: RootState) => state.personalWebsite,
+  );
+  const { isLoading: userLoading } = useUser();
+  if (!popularLinksLoading && !personalWebsiteLoading && !userLoading)
+    return null;
   return (
-    <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-md">
       <div className="main">
         <div className="tap"></div>
         <div className="tap"></div>
@@ -38,7 +31,7 @@ const GridLoader = () => {
         <div className="body"></div>
         <div className="thumb"></div>
       </div>
-    </Modal>
+    </div>
   );
 };
 
