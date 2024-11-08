@@ -87,10 +87,6 @@ const Home = () => {
   }, [dispatch, user]);
 
   useEffect(() => {
-    console.log({ websites, loading, error, successMessage });
-  }, [successMessage]);
-
-  useEffect(() => {
     console.log({ websites });
     setFetchedWebsites(websites);
   }, [websites]);

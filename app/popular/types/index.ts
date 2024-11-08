@@ -5,6 +5,7 @@ export type PopularLinksType = {
   description?: string;
   tags: string[];
   folderPath: string;
+  isFavorities?: boolean;
 };
 export interface PopularLinksCategoriesType {
   [key: string]: PopularLinksType[]; // Allows dynamic string keys
